@@ -4,9 +4,11 @@ import time
 
 audios = (
     # User ids here
+    '42513160',
     '54986774',
     '167495259',
-    '70855032'
+    '70855032',
+    '76995859'
 )
 
 baseurl = "https://vk.com/"
@@ -33,10 +35,18 @@ print('тормозим')
 time.sleep(5)
 print('поехали')
 
+#Парсинг найденного массива
+def viewMusic(array):
+    for i in range(0,len(array)):
+        print(i,array[i].text)
 
 for audio in audios:
     mydriver.get(baseurl + 'audios' + audio)
+    print(mydriver.current_url)
     for i in range(100):
         mydriver.execute_script("window.scrollBy(0,1000)")
-    time.sleep(5)
+    content = mydriver.find_elements_by_css_selector('a.audio_row__performer')
+    print("\nКоличество треков = ",len(content))
+    viewMusic(content)
+    time.sleep(2)
     # Parse logic here
