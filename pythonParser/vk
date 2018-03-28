@@ -6,6 +6,8 @@ audios = (
     # User ids here
     '42513160',
     '54986774',
+    '42513160',
+    '42513160',
     '167495259',
     '70855032',
     '76995859'
@@ -41,12 +43,18 @@ def viewMusic(array):
         print(i,array[i].text)
 
 for audio in audios:
-    mydriver.get(baseurl + 'audios' + audio)
+    urlaudio = baseurl + 'audios' + audio
+    mydriver.get(urlaudio)
+    print(urlaudio)
     print(mydriver.current_url)
-    for i in range(100):
-        mydriver.execute_script("window.scrollBy(0,1000)")
-    content = mydriver.find_elements_by_css_selector('a.audio_row__performer')
-    print("\nКоличество треков = ",len(content))
-    viewMusic(content)
-    time.sleep(2)
+    if urlaudio == mydriver.current_url:
+        for i in range(100):
+            mydriver.execute_script("window.scrollBy(0,1000)")
+        content = mydriver.find_elements_by_css_selector('a.audio_row__performer')
+        print("\nКоличество треков = ", len(content))
+        viewMusic(content)
+        time.sleep(2)
     # Parse logic here
+    else:
+        print("Доступ к аудио закрыт id", audio)
+        continue
