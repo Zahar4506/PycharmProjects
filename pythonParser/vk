@@ -11,7 +11,7 @@ except:
     print("Не удалось подключиться к БД")
 # Создаем курсор для работы
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-
+"""
 try:
     cur.execute("SELECT * FROM musicband")
 except:
@@ -37,6 +37,8 @@ except psycopg2.DatabaseError as e:
 # INSERT INTO public.musicband(nameband) VALUES (upper('"+musicbandname+"'))
 # "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('12', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('"+musicbandname+"')))"
 """
+
+"""
 print("тип arr:", type(results))
 print("Кол-во полей с строке: ", len(results))
 print("Доступ по индексу:", results[0][1])
@@ -51,7 +53,8 @@ for i in range(0, len(results)):
     print(results[i][1])
 
 """
-
+#Список пользователей
+#TODO сделать ввод из файла
 audios = (
     # User ids here
     '42513160',
@@ -120,10 +123,9 @@ def setUser(userid):
     try:
         # Попожить пользователя
         # TODO имя пользователя?
-        cur.execute(
-            "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('" + userid + "', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('" + musicbandname + "')))")
+        cur.execute("INSERT INTO public.vkuser (uservkid) VALUES ('"+userid+"')")
         conn.commit()
-        print("Положил")
+        print("Положил пользователя")
     except psycopg2.DatabaseError as e:
         if conn:
             conn.rollback()
@@ -134,26 +136,31 @@ def setUser(userid):
 # Парсинг найденного массива
 def viewMusic(array):
     for i in range(0, len(array)):
+        setMusic(array[i].text)
         print(i, array[i].text)
+        setUserMusic(audio, array[i].text)
 
 
 for audio in audios:
     urlaudio = baseurl + 'audios' + audio
-    mydriver.get(urlaudio)
-    print(urlaudio)
-    print(mydriver.current_url)
-    if urlaudio == mydriver.current_url:
-        for i in range(100):
-            mydriver.execute_script("window.scrollBy(0,1000)")
-        content = mydriver.find_elements_by_css_selector('a.audio_row__performer')
-        print("\nКоличество треков = ", len(content))
-        viewMusic(content)
-        time.sleep(2)
-    # Parse logic here
-    else:
-        print("Доступ к аудио закрыт id", audio)
+    try:
+        mydriver.get(urlaudio)
+        print(urlaudio)
+        print(mydriver.current_url)
+        if urlaudio == mydriver.current_url:
+            for i in range(100):
+                mydriver.execute_script("window.scrollBy(0,1000)")
+            setUser(audio)
+            content = mydriver.find_elements_by_css_selector('a.audio_row__performer')
+            print("\nКоличество треков = ", len(content))
+            viewMusic(content)
+            time.sleep(2)
+        else:
+            print("Доступ к аудио закрыт id", audio)
+            continue
+    except:
+        print("не удалось обратиться у url")
         continue
-
 # Закрываем соединение с БД
 cur.close()
 conn.close()
