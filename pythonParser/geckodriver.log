@@ -512,3 +512,73 @@ Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrp
 1522211614680	Marionette	INFO	Listening on port 64966
 1522211614712	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_54732195289, line 3: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+1522231109187	geckodriver	INFO	geckodriver 0.19.1
+1522231109194	geckodriver	INFO	Listening on 127.0.0.1:51191
+1522231112329	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.6yjIP3fb4IsL"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522231114440	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522231117624	Marionette	INFO	Listening on port 51200
+1522231117682	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1522232280642	geckodriver	INFO	geckodriver 0.19.1
+1522232280649	geckodriver	INFO	Listening on 127.0.0.1:54741
+1522232283770	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.e2xpyEUoT1a0"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522232285542	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 11332, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1522232295164	Marionette	INFO	Listening on port 54764
+1522232295446	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from UC:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+nable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522232575680	geckodriver	INFO	geckodriver 0.19.1
+1522232575688	geckodriver	INFO	Listening on 127.0.0.1:56124
+1522232578774	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.tPmABbzAT6OR"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522232580614	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522232587426	Marionette	INFO	Listening on port 56147
+1522232588228	Marionette	WARN	TLS certificate errors will be ignored for this session
+1522411287768	geckodriver	INFO	geckodriver 0.19.1
+1522411287786	geckodriver	INFO	Listening on 127.0.0.1:60826
+1522411290913	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.Lng1PAo24JFq"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522411295164	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522411299826	Marionette	INFO	Listening on port 60849
+1522411300770	Marionette	WARN	TLS certificate errors will be ignored for this session
+1522411357559	geckodriver	INFO	geckodriver 0.19.1
+1522411357572	geckodriver	INFO	Listening on 127.0.0.1:61143
+1522411581871	geckodriver	INFO	geckodriver 0.19.1
+1522411581888	geckodriver	INFO	Listening on 127.0.0.1:62063
+1522411993956	geckodriver	INFO	geckodriver 0.19.1
+1522411993970	geckodriver	INFO	Listening on 127.0.0.1:63774
+1522412069501	geckodriver	INFO	geckodriver 0.19.1
+1522412069517	geckodriver	INFO	Listening on 127.0.0.1:64083
+1522412072666	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.6coPavGSgmjS"
+1522412084294	geckodriver	INFO	geckodriver 0.19.1
+1522412084310	geckodriver	INFO	Listening on 127.0.0.1:64156
+1522412098980	geckodriver	INFO	geckodriver 0.19.1
+1522412098997	geckodriver	INFO	Listening on 127.0.0.1:64217
+1522412108281	geckodriver	INFO	geckodriver 0.19.1
+1522412108298	geckodriver	INFO	Listening on 127.0.0.1:64262
+1522412300964	geckodriver	INFO	geckodriver 0.19.1
+1522412300978	geckodriver	INFO	Listening on 127.0.0.1:65036
+1522412337307	geckodriver	INFO	geckodriver 0.19.1
+1522412337317	geckodriver	INFO	Listening on 127.0.0.1:65169
+1522414030633	geckodriver	INFO	geckodriver 0.19.1
+1522414030650	geckodriver	INFO	Listening on 127.0.0.1:55704
+1522414220756	geckodriver	INFO	geckodriver 0.19.1
+1522414220769	geckodriver	INFO	Listening on 127.0.0.1:56522
+1522414223886	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.8uTZy0VonJF2"

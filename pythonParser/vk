@@ -2,6 +2,44 @@ from selenium import webdriver
 
 import time
 
+import psycopg2
+import psycopg2.extras
+try:
+    conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
+except:
+    print("Не удалось подключиться к БД")
+#Создаем курсор для работы
+cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+try:
+    cur.execute("SELECT * FROM musicband")
+except:
+    print("Запрос не удался")
+#for row in cur:
+#    print(row)
+results = cur.fetchall()
+for row in results:
+    print(row['nameband'])
+
+"""
+print("тип arr:", type(results))
+print("Кол-во полей с строке: ", len(results))
+print("Доступ по индексу:", results[0][1])
+#Вывод названий столбцов в бд
+
+colnames = [desc[0] for desc in cur.description]
+print(colnames)
+print(results)
+#Вывод результата из бд, криво будет работать если бд изменится
+#to do как обращаться к столбцу по имени?
+for i in range(0, len(results)):
+    print(results[i][1])
+
+"""
+
+cur.close()
+conn.close()
+
 audios = (
     # User ids here
     '42513160',
@@ -39,8 +77,8 @@ print('поехали')
 
 #Парсинг найденного массива
 def viewMusic(array):
-    for i in range(0,len(array)):
-        print(i,array[i].text)
+    for i in range(0, len(array)):
+        print(i, array[i].text)
 
 for audio in audios:
     urlaudio = baseurl + 'audios' + audio
