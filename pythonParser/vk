@@ -4,23 +4,38 @@ import time
 
 import psycopg2
 import psycopg2.extras
+
 try:
     conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
 except:
     print("Не удалось подключиться к БД")
-#Создаем курсор для работы
+# Создаем курсор для работы
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 try:
     cur.execute("SELECT * FROM musicband")
 except:
     print("Запрос не удался")
-#for row in cur:
+# for row in cur:
 #    print(row)
 results = cur.fetchall()
 for row in results:
     print(row['nameband'])
-
+musicbandname = "VVVVVVVVV"
+try:
+    # Попожить найденную группу
+    # cur.execute("INSERT INTO public.musicband(nameband) VALUES (upper('"+musicbandname+"'))")
+    cur.execute(
+        "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('12', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('" + musicbandname + "')))")
+    conn.commit()
+    print("Положил")
+except psycopg2.DatabaseError as e:
+    if conn:
+        conn.rollback()
+    print('Error %s' % e)
+    print("Запрос INSERT не удался")
+# INSERT INTO public.musicband(nameband) VALUES (upper('"+musicbandname+"'))
+# "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('12', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('"+musicbandname+"')))"
 """
 print("тип arr:", type(results))
 print("Кол-во полей с строке: ", len(results))
@@ -31,14 +46,11 @@ colnames = [desc[0] for desc in cur.description]
 print(colnames)
 print(results)
 #Вывод результата из бд, криво будет работать если бд изменится
-#to do как обращаться к столбцу по имени?
+#TODO как обращаться к столбцу по имени?
 for i in range(0, len(results)):
     print(results[i][1])
 
 """
-
-cur.close()
-conn.close()
 
 audios = (
     # User ids here
@@ -56,9 +68,9 @@ username = "89821469162"
 password = "Zx1#qwerty1906ugjoij"
 
 xpaths = {
-    'usernameTxtBox' : "//*[@id='index_email']",
-    'passwordTxtBox' : "//*[@id='index_pass']",
-    'submitButton' :   "//*[@id='index_login_button']"
+    'usernameTxtBox': "//*[@id='index_email']",
+    'passwordTxtBox': "//*[@id='index_pass']",
+    'submitButton': "//*[@id='index_login_button']"
 }
 
 mydriver = webdriver.Firefox(executable_path=r'D:\parser\geckodriver.exe')
@@ -75,10 +87,55 @@ print('тормозим')
 time.sleep(5)
 print('поехали')
 
-#Парсинг найденного массива
+
+# Функиця установки музыки в бд
+def setMusic(musicbandname):
+    try:
+        # Попожить найденную группу
+        cur.execute("INSERT INTO public.musicband(nameband) VALUES (upper('" + musicbandname + "'))")
+        conn.commit()
+        print("Положил в БД")
+    except psycopg2.DatabaseError as e:
+        if conn:
+            conn.rollback()
+        print('Error %s' % e)
+        print("Запрос INSERT группы не удался")
+
+
+def setUserMusic(userid, musicbandname):
+    try:
+        # Попожить связку userid musicbamdname группу
+        cur.execute(
+            "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('" + userid + "', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('" + musicbandname + "')))")
+        conn.commit()
+        print("Положил")
+    except psycopg2.DatabaseError as e:
+        if conn:
+            conn.rollback()
+        print('Error %s' % e)
+        print("Запрос INSERT пользователя не удался")
+
+
+def setUser(userid):
+    try:
+        # Попожить пользователя
+        # TODO имя пользователя?
+        cur.execute(
+            "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('" + userid + "', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('" + musicbandname + "')))")
+        conn.commit()
+        print("Положил")
+    except psycopg2.DatabaseError as e:
+        if conn:
+            conn.rollback()
+        print('Error %s' % e)
+        print("Запрос INSERT пользователя не удался")
+
+
+# Парсинг найденного массива
 def viewMusic(array):
     for i in range(0, len(array)):
         print(i, array[i].text)
+
 
 for audio in audios:
     urlaudio = baseurl + 'audios' + audio
@@ -96,3 +153,7 @@ for audio in audios:
     else:
         print("Доступ к аудио закрыт id", audio)
         continue
+
+# Закрываем соединение с БД
+cur.close()
+conn.close()
