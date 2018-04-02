@@ -662,3 +662,134 @@ Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrp
 [Child 11956, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channe
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1522575688673	geckodriver	INFO	geckodriver 0.19.1
+1522575688686	geckodriver	INFO	Listening on 127.0.0.1:61288
+1522575691736	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.MLocc3VUNBiG"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522575693540	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522575697664	Marionette	INFO	Listening on port 61311
+1522575698762	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522577400744	geckodriver	INFO	geckodriver 0.19.1
+1522577400765	geckodriver	INFO	Listening on 127.0.0.1:58994
+1522577403828	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.3r9jG4QF7BEn"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522577405564	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522577409246	Marionette	INFO	Listening on port 59024
+1522577409874	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+[Child 9576, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9576, Chrome_ChildThread] WA[Child 6760, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 1688, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1522578021030	geckodriver	INFO	geckodriver 0.19.1
+1522578021041	geckodriver	INFO	Listening on 127.0.0.1:54836
+1522578024128	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.jQ2N8Qb6aYz3"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522578026296	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522578030218	Marionette	INFO	Listening on port 54859
+1522578030430	Marionette	WARN	TLS certificate errors will be ignored for this session
+1522578093054	geckodriver	INFO	geckodriver 0.19.1
+1522578093118	geckodriver	INFO	Listening on 127.0.0.1:55615
+1522578096112	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.TAO2DiLQ2z8d"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522578097286	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522578101170	Marionette	INFO	Listening on port 55638
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522578102094	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+[GFX1-]: (gfxWindowsPlatform) Detected device reset: 1
+[GFX1-]: (gfxWindowsPlatform) scheduled device update.
+[GFX1-]: LayerManager::EndTransaction skip RenderLayer().
+[GFX1-]: A content-only TDR is detected.
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+1522601995050	geckodriver	INFO	geckodriver 0.19.1
+1522601995058	geckodriver	INFO	Listening on 127.0.0.1:60863
+1522601998160	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.2ECEYeOWQHr9"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522602002374	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522602010430	Marionette	INFO	Listening on port 60897
+1522602010948	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/notifier.js?83281919512, line 4: TypeError: null has no properties
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/notifier.js?83281919512, line 4: TypeError: null has no properties
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
