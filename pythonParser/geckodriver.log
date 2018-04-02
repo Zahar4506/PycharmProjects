@@ -793,3 +793,21 @@ JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, li
 JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
 JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
 JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+1522653190808	geckodriver	INFO	geckodriver 0.19.1
+1522653190818	geckodriver	INFO	Listening on 127.0.0.1:53842
+1522653194182	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.KcU6e43W6o93"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522653198060	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522653204304	Marionette	INFO	Listening on port 53877
+1522653205066	Marionette	WARN	TLS certificate errors will be ignored for this session
+1522653269326	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1522653269330	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+[Parent 8752, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4824, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4824, Chrome_ChildTh
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
