@@ -811,3 +811,688 @@ Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrp
 [Child 4824, Chrome_ChildTh
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1522655276356	geckodriver	INFO	geckodriver 0.19.1
+1522655276368	geckodriver	INFO	Listening on 127.0.0.1:50838
+1522655279868	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.5ra6Zmcz5SfN"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522655285762	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522655293996	Marionette	INFO	Listening on port 50885
+1522655294218	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+1522660974994	geckodriver	INFO	geckodriver 0.19.1
+1522660975005	geckodriver	INFO	Listening on 127.0.0.1:64804
+1522660978123	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.CHJisJwLEn8L"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522660980056	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522660983828	Marionette	INFO	Listening on port 64825
+1522660983890	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+1522661667784	geckodriver	INFO	geckodriver 0.19.1
+1522661667795	geckodriver	INFO	Listening on 127.0.0.1:63796
+1522661670919	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.hHKPgdpw68Vy"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522661672212	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522661676350	Marionette	INFO	Listening on port 63819
+1522661677348	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+1522668781463	geckodriver	INFO	geckodriver 0.19.1
+1522668781480	geckodriver	INFO	Listening on 127.0.0.1:60100
+1522668784636	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.VBlTiRBOmmGL"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522668787082	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522668792064	Marionette	INFO	Listening on port 60126
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522668792440	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+1522679280640	geckodriver	INFO	geckodriver 0.19.1
+1522679280658	geckodriver	INFO	Listening on 127.0.0.1:63605
+1522679283895	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.FrFXWWCGtmYY"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522679286588	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522679292404	Marionette	INFO	Listening on port 63629
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522679293008	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+1522685993686	geckodriver	INFO	geckodriver 0.19.1
+1522685993699	geckodriver	INFO	Listening on 127.0.0.1:55007
+1522685996928	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.r8KFR1y69kEV"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522685999240	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522686004126	Marionette	INFO	Listening on port 55021
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522686004806	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: resource://devtools/client/jsonview/converter-observer.js, line 76: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/notifier.js?83281919512, line 4: TypeError: null has no properties
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/audios210498751, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210502185, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210502185, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210618172, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210618172, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210619767, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210619767, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210686031, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210686031, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210815492, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210815492, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210979561, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210979561, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210995646, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios210995646, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211101162, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211101162, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211486004, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211486004, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211536834, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211536834, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211580842, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211580842, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211747283, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211747283, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211768151, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211768151, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211770893, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211770893, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211806005, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211806005, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211941194, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211941194, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211961685, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios211961685, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212004475, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212004475, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212071476, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212071476, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212109598, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212109598, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212660275, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212660275, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212666297, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212666297, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212880223, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios212880223, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213000466, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213000466, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213042639, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213042639, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213054618, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213054618, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213097153, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213097153, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213142520, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213142520, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213237355, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213237355, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213455025, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213455025, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213718573, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213718573, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213912871, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios213912871, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214016398, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214016398, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214146747, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214146747, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214197715, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214197715, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214214873, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214214873, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214307656, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214307656, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214381437, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214381437, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214488300, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214488300, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214562846, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214562846, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214603414, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214603414, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214781527, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214781527, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214873216, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214873216, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214892933, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214892933, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214904127, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios214904127, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/audios219524590, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/audios221483589, line 345: ReferenceError: AudioPage is not defined
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+1522733158403	geckodriver	INFO	geckodriver 0.19.1
+1522733158412	geckodriver	INFO	Listening on 127.0.0.1:57409
+1522733161522	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.6LpA8JGaylsa"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522733164598	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522733169916	Marionette	INFO	Listening on port 57435
+1522733170972	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/notifier.js?83281919512, line 3: TypeError: curFastChat.needPeers is undefined
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+1522745928599	geckodriver	INFO	geckodriver 0.19.1
+1522745928610	geckodriver	INFO	Listening on 127.0.0.1:59346
+1522745931726	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.ck2AJjzAQd0t"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522745933528	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522745938862	Marionette	INFO	Listening on port 59371
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522745939882	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+[Parent 10704, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 10704, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x40001C,name=PGPU::Msg_AccumulateChildHistograms) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x400021,name=PGPU::Msg_RecordDiscardedData) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1522755736160	geckodriver	INFO	geckodriver 0.19.1
+1522755736170	geckodriver	INFO	Listening on 127.0.0.1:53304
+1522755739280	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.2IunFRruw2bx"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522755742562	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1522755746442	Marionette	INFO	Listening on port 53322
+1522755747256	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 3: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?2_55069370836, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+[Parent 8904, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11168, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11168, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 8904, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 8904, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526566195608	geckodriver	INFO	geckodriver 0.19.1
+1526566195712	geckodriver	INFO	Listening on 127.0.0.1:40775
+1526566197066	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.ADepAYOpyVz0"
+1526566315179	geckodriver	INFO	geckodriver 0.19.1
+1526566315187	geckodriver	INFO	Listening on 127.0.0.1:40808
+1526566315791	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.v1hgxJr8FXZP"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 13380, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526566345061	Marionette	INFO	Listening on port 40813
+[Child 10788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526566349342	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
+onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
+_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
+Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
+uninit()@resource://activity-stream/lib/Store.jsm:151
+uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
+uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
+shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
+callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
+observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
+[Parent 13380, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5960, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5960, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 13380, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13680, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13680, ChUnable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 13380, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3848, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3848, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13380, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 10632, Chrome_ChildThread] WARN
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526566530238	geckodriver	INFO	geckodriver 0.19.1
+1526566530248	geckodriver	INFO	Listening on 127.0.0.1:40840
+1526566530786	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.SXXUkGc7etYI"
+1526566631585	geckodriver	INFO	geckodriver 0.19.1
+1526566631592	geckodriver	INFO	Listening on 127.0.0.1:40853
+1526566632183	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.Z4SnuOIEZIp6"
+1526566742713	geckodriver	INFO	geckodriver 0.19.1
+1526566742721	geckodriver	INFO	Listening on 127.0.0.1:40890
+1526566744079	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.ej54p0dnPY8e"
+1526567031791	geckodriver	INFO	geckodriver 0.19.1
+1526567031798	geckodriver	INFO	Listening on 127.0.0.1:40916
+1526567032343	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.Jtq2PMjeFGfE"
+1526567052911	geckodriver	INFO	geckodriver 0.19.1
+1526567052921	geckodriver	INFO	Listening on 127.0.0.1:40927
+1526567053497	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.p60V8cyiMoWd"
+1526567069298	geckodriver	INFO	geckodriver 0.19.1
+1526567069306	geckodriver	INFO	Listening on 127.0.0.1:40937
+1526567069898	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.TpPqIPmMHldM"
+1526625170830	geckodriver	INFO	geckodriver 0.19.1
+1526625170862	geckodriver	INFO	Listening on 127.0.0.1:5073
+1526625171627	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.Sb90lBJtCBX5"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526625274596	geckodriver	INFO	geckodriver 0.19.1
+1526625274611	geckodriver	INFO	Listening on 127.0.0.1:5089
+1526625275205	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.UzBk94cioVLP"
+1526626976449	geckodriver	INFO	geckodriver 0.19.1
+1526626976457	geckodriver	INFO	Listening on 127.0.0.1:5501
+1526626977024	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.kzWwsVUI7Ngq"
+1526627207560	geckodriver	INFO	geckodriver 0.19.1
+1526627207568	geckodriver	INFO	Listening on 127.0.0.1:5533
+1526627208121	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.X6tzNRrHNRF6"
+1526627242680	geckodriver	INFO	geckodriver 0.19.1
+1526627242687	geckodriver	INFO	Listening on 127.0.0.1:5546
+1526627243238	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.3GxttFYJYC1K"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526627290310	geckodriver	INFO	geckodriver 0.19.1
+1526627290316	geckodriver	INFO	Listening on 127.0.0.1:5561
+1526627290892	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.8VghlJSKEWEf"
+1526627317657	geckodriver	INFO	geckodriver 0.19.1
+1526627317665	geckodriver	INFO	Listening on 127.0.0.1:5575
+1526627318236	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.GoCNCLuP3dYq"
+1526627328103	geckodriver	INFO	geckodriver 0.19.1
+1526627328110	geckodriver	INFO	Listening on 127.0.0.1:5588
+1526627328665	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.eikQGzse3hSA"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526627540337	geckodriver	INFO	geckodriver 0.19.1
+1526627540344	geckodriver	INFO	Listening on 127.0.0.1:5625
+1526627540897	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.ToQJOycVWTC6"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526630117708	geckodriver	INFO	geckodriver 0.19.1
+1526630117716	geckodriver	INFO	Listening on 127.0.0.1:13558
+1526630118234	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.lAvo5xaOldBE"
+1526630488562	geckodriver	INFO	geckodriver 0.19.1
+1526630488569	geckodriver	INFO	Listening on 127.0.0.1:14949
+1526630489128	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.xUZpCwngWJGL"
+1526630588870	geckodriver	INFO	geckodriver 0.19.1
+1526630588878	geckodriver	INFO	Listening on 127.0.0.1:15326
+1526630589434	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.kDGjBdRN3F3r"
+1526630609250	geckodriver	INFO	geckodriver 0.19.1
+1526630609260	geckodriver	INFO	Listening on 127.0.0.1:15407
+1526630609837	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.cV7f4Y1GIIJb"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526630664720	geckodriver	INFO	geckodriver 0.19.1
+1526630664730	geckodriver	INFO	Listening on 127.0.0.1:15586
+1526630665291	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.jdMvyEYz31WX"
+1526636956486	geckodriver	INFO	geckodriver 0.19.1
+1526636956492	geckodriver	INFO	Listening on 127.0.0.1:32752
+1526636959096	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.iOebf7WuriCo"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 13976, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13384, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13976, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+1526636979132	Marionette	INFO	Listening on port 32765
+1526636981610	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Child 12552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child [Parent 13976, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526639290778	geckodriver	INFO	geckodriver 0.19.1
+1526639290785	geckodriver	INFO	Listening on 127.0.0.1:37263
+1526639291311	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.yzsdODdQhfhz"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526639296585	Marionette	INFO	Listening on port 37269
+1526639297636	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 12524, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12524, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15900, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15900, Chrome_ChildThread] WARNING: pip[Child 15580, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 15580, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/sr[Parent 12524, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526639696958	geckodriver	INFO	geckodriver 0.19.1
+1526639696968	geckodriver	INFO	Listening on 127.0.0.1:38644
+1526639697484	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.VTPCq6FtEXBh"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526639702758	Marionette	INFO	Listening on port 38651
+1526639704161	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Child 16952, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13664, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16292, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16292, Chrome_ChildThread] WARNING:[GPU 11100, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526642123645	geckodriver	INFO	geckodriver 0.19.1
+1526642123651	geckodriver	INFO	Listening on 127.0.0.1:43996
+1526642124208	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.oWryDNM18RFX"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526642132743	Marionette	INFO	Listening on port 44003
+1526642133132	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526644630905	geckodriver	INFO	geckodriver 0.19.1
+1526644630912	geckodriver	INFO	Listening on 127.0.0.1:49144
+1526644631424	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.nYDBAnCCA9HH"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526644645922	Marionette	INFO	Listening on port 49154
+[Parent 17724, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526644646180	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Child 19800, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19800, Chrome_ChildThreadUnable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 17724, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 17724, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ssageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526644816305	geckodriver	INFO	geckodriver 0.19.1
+1526644816312	geckodriver	INFO	Listening on 127.0.0.1:50638
+1526644816909	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.e4nQRmt2sguO"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526644836277	Marionette	INFO	Listening on port 50655
+1526644839991	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526644836275	Marionette	INFO	Listening on port 50657
+1526644838388	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+s\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526737309780	geckodriver	INFO	geckodriver 0.19.1
+1526737309791	geckodriver	INFO	Listening on 127.0.0.1:31780
+1526737310274	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.hMuhAgL87zFY"
+1526739790079	geckodriver	INFO	geckodriver 0.19.1
+1526739790086	geckodriver	INFO	Listening on 127.0.0.1:40158
+1526739790652	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.jqqLFhraNq63"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+console.error: "Could not write session state file " (new Error("_initWorker called too early! Please read the session file from disk first.", "resource:///modules/sessionstore/SessionFile.jsm", 337)) "_initWorker/<@resource:///modules/sessionstore/SessionFile.jsm:337:15\n_initWorker@resource:///modules/sessionstore/SessionFile.jsm:330:12\n_postToWorker@resource:///modules/sessionstore/SessionFile.jsm:354:11\nwrite@resource:///modules/sessionstore/SessionFile.jsm:394:19\nwrite@resource:///modules/sessionstore/SessionFile.jsm:66:12\n_writeState@resource:///modules/sessionstore/SessionSaver.jsm:357:12\n_saveState@resource:///modules/sessionstore/SessionSaver.jsm:295:12\n_saveStateAsync@resource:///modules/sessionstore/SessionSaver.jsm:341:5\nsaveStateAsyncWhenIdle@resource:///modules/sessionstore/SessionSaver.jsm:192:9\n"
+1526739802191	Marionette	INFO	Listening on port 40166
+1526739802511	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526879857214	geckodriver	INFO	geckodriver 0.19.1
+1526879857222	geckodriver	INFO	Listening on 127.0.0.1:48554
+1526879857783	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.PJU5WdsU2jcE"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526879864026	Marionette	INFO	Listening on port 48560
+1526879864313	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 14020, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 14020, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 25136, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 25136, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6432, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6432, Chrome_Ch[Parent 14020, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526880613274	geckodriver	INFO	geckodriver 0.19.1
+1526880613282	geckodriver	INFO	Listening on 127.0.0.1:48743
+1526880613860	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.KzI6t485aXYv"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1526880619417	Marionette	INFO	Listening on port 48748
+1526880620517	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 23464, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/s[Parent 23464, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 23464, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15892, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15892, Chrome_ChildThread] WARNING: pip
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526887569869	geckodriver	INFO	geckodriver 0.19.1
+1526887569876	geckodriver	INFO	Listening on 127.0.0.1:17327
+1526887570337	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.HieZG0kEDRkC"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 16592, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17712, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 16592, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+1526887585899	Marionette	INFO	Listening on port 17339
+1526887586993	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_61205599446, line 2: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_61205599446, line 8: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+[Parent 16592, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19320, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19320, Chrome_[Child 11620, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11620[Parent 16592, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[GPU 17436, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526892412458	geckodriver	INFO	geckodriver 0.19.1
+1526892412468	geckodriver	INFO	Listening on 127.0.0.1:27521
+1526892654841	geckodriver	INFO	geckodriver 0.19.1
+1526892654849	geckodriver	INFO	Listening on 127.0.0.1:27969
+1526892918564	geckodriver	INFO	geckodriver 0.19.1
+1526892918571	geckodriver	INFO	Listening on 127.0.0.1:28466
+1526892972961	geckodriver	INFO	geckodriver 0.19.1
+1526892972968	geckodriver	INFO	Listening on 127.0.0.1:28577
+1526893260038	geckodriver	INFO	geckodriver 0.19.1
+1526893260046	geckodriver	INFO	Listening on 127.0.0.1:29139
+1526893394051	geckodriver	INFO	geckodriver 0.19.1
+1526893394058	geckodriver	INFO	Listening on 127.0.0.1:29398
+1526893394623	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.Nh1lGshFmVIS"
+1526893570804	geckodriver	INFO	geckodriver 0.19.1
+1526893570812	geckodriver	INFO	Listening on 127.0.0.1:29735
+1526893590534	geckodriver	INFO	geckodriver 0.19.1
+1526893590541	geckodriver	INFO	Listening on 127.0.0.1:29778
+1526893921985	geckodriver	INFO	geckodriver 0.19.1
+1526893921993	geckodriver	INFO	Listening on 127.0.0.1:30407
+1526893943122	geckodriver	INFO	geckodriver 0.19.1
+1526893943129	geckodriver	INFO	Listening on 127.0.0.1:30457
