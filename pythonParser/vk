@@ -1,3 +1,5 @@
+import string
+
 from selenium import webdriver
 
 import time
@@ -7,6 +9,7 @@ import psycopg2.extras
 
 import vk
 from concurrent.futures import ThreadPoolExecutor
+
 """
 session = vk.Session(access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
 vk_api = vk.API(session, v='5.71')
@@ -26,10 +29,6 @@ for i in profiles:
     print(i['faculty_name'])
     print(i['universities'])
 """
-
-
-
-
 
 """
                                                     КОНЕКИ К БД
@@ -84,90 +83,98 @@ for i in range(0, len(results)):
     print(results[i][1])
 
 """
-#Список пользователей
-#TODO сделать ввод из файла
+# Список пользователей
+# TODO сделать ввод из файла
 audios1 = (
     # Id пользователй
-  "475092562",
-  "475148630",
-  "475159239",
-  "475172908",
-  "475299098"
+    "475092562",
+    "475148630",
+    "475159239",
+    "475172908",
+    "475299098"
 )
 audios2 = (
     # Id пользователй
     "418103",
-  "958361",
-  "1682933",
-  "2009733",
-  "2162926",
-  "2382569",
-  "2391584",
-  "2581020",
-  "2596564",
-  "2690294",
-  "2775635",
-  "2923622",
-  "3119493",
-  "3150068",
-  "3280134",
-  "3323590",
-  "3447572"
+    "958361",
+    "1682933",
+    "2009733",
+    "2162926",
+    "2382569",
+    "2391584",
+    "2581020",
+    "2596564",
+    "2690294",
+    "2775635",
+    "2923622",
+    "3119493",
+    "3150068",
+    "3280134",
+    "3323590",
+    "3447572"
 )
 
 audios3 = (
     # Id пользователй
-  "5412124",
-  "5422267",
-  "5442916",
-  "5475971",
-  "5536760",
-  "5668313",
-  "5932067",
-  "5952865",
-  "6015895",
-  "6072056",
-  "6111076",
-  "6210635"
+    "5412124",
+    "5422267",
+    "5442916",
+    "5475971",
+    "5536760",
+    "5668313",
+    "5932067",
+    "5952865",
+    "6015895",
+    "6072056",
+    "6111076",
+    "6210635"
 )
 
 
-
-
-
 def program(audios):
-
-    #Функции ---------------------------------------------------------------------------------------------------------
-    def setFaculty(university,facultyid):
+    # Функции ---------------------------------------------------------------------------------------------------------
+    def setFaculty(university, facultyid):
+        print("старт факультета")
         try:
             session = vk.Session(
                 access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
             vk_api = vk.API(session, v='5.71')
-            profiles = vk_api.database.getFaculties(university_id=university)
-            print(profiles)
-            for i in profiles:
-                try:
-                    #исправить!!!!! что то нне так с массивом TODO исправлять
-                    facultyArr = i['items']
-                    for j in facultyArr:
-                        print(j['title'])
-                except:
-                    faculty_name = "null"
-                    print("------")
+            print(university != "6666666")
+            print(university)
+            if university != "6666666":
+                facultyRes = vk_api.database.getFaculties(university_id=university)
+                print(facultyRes)
+                for i in facultyRes['items']:
+                    try:
+                        # исправить!!!!! что то не так с массивом TODO исправлять
+                        print(str(i['id']) == str(facultyid))
+                        print(str(i['id']), " ===== ", facultyid, " ----- ", i['title'])
+                        if str(i['id']) == str(facultyid):
+                            faculty_name = i['title']
+                            print(faculty_name)
+                        else:
+                            faculty_name = "6666666"
+                            continue
+                    except:
+                        faculty_name = "6666666"
+                        print("------")
+            else:
+                faculty_name = "6666666"
             # Попожить факультет
             # Код для вставки
-            #Обновление БД из вк
-
-            #cur.execute("INSERT INTO public.faculty (facultyid, name) VALUES ('" + str(facultyid) + "', '" + str(faculty_name) + "')")
-            cur.execute("UPDATE public.faculty SET facultyid = '" + str(facultyid) + "', name = '" + str(faculty_name) + "' WHERE ""facultyid"" = " + str(facultyid) + "")
+            # Обновление БД из вк
+            print("ФАКУЛЬТЕТ = ", facultyid, " НАЗВАНИЕ = ", faculty_name)
+            # cur.execute("INSERT INTO public.faculty (facultyid, name) VALUES ('" + str(facultyid) + "', '" + str(faculty_name) + "')")
+            cur.execute("UPDATE public.faculty SET facultyid = '" + str(facultyid) + "', name = '" + str(
+                faculty_name) + "' WHERE ""facultyid"" = " + str(facultyid) + "")
             conn.commit()
             print("Положил данные факультета (название)")
+            facultyRes = ""
         except psycopg2.DatabaseError as e:
             if conn:
                 conn.rollback()
             print('Error %s' % e)
             print("Запрос INSERT факультета не удался")
-
 
     def setSity(cityid):
         try:
@@ -177,16 +184,21 @@ def program(audios):
             profiles = vk_api.database.getCitiesById(city_ids=cityid)
             print(profiles)
             for i in profiles:
-               try:
-                   title = i['title']
-                   print(title)
-               except:
-                   title = "null"
-               # Попожить город
+                try:
+                    title = i['title']
+                    print("ДЛИНА СТРОКИ", len(title), len(title) == 0)
+                    if len(title) == 0:
+                        title = "6666666"
+                    print(title, " <- Название города")
+                except:
+                    title = "6666666"
+            # Попожить город
             # Код для вставки
             # cur.execute("INSERT INTO public.vkuser (uservkid, fname, lname, city, faculty) VALUES ('" + str(userid) + "', '" + str(fname) + "', '" + str(lname) + "', '" + str(city) + "', '" + str(faculty) + "')")
-            #Обновление БД из вк
+            # Обновление БД из вк
+            print("ГОРОД = ", cityid, "НАЗВАНИЕ =", title)
             cur.execute("INSERT INTO public.city (id, name) VALUES ('" + str(cityid) + "', '" + str(title) + "')")
+            #cur.execute("UPDATE public.city SET id='" + str(cityid) + "', name='" + str(title) + "' WHERE id = '"+str(cityid)+"'")
             conn.commit()
             print("Положил данные города (название)")
             profiles = ""
@@ -197,8 +209,6 @@ def program(audios):
             print('Error %s' % e)
             print("Запрос INSERT города не удался")
 
-
-
     def setUserInfo(userid):
         try:
             session = vk.Session(
@@ -207,69 +217,79 @@ def program(audios):
             profiles = vk_api.users.get(user_id=userid, fields='city,connections,education,interests,sex,universities')
             print(profiles)
             for i in profiles:
-               try:
-                   fname = i['first_name']
-                   print(fname)
-               except:
-                   fname = "null"
-               try:
-                   lname = i['last_name']
-                   print(lname)
-               except:
-                   lname = "null"
-               try:
-                   city = i['city']['id']
-                   print(city)
-               except:
-                   city = "6666666"
-               try:
-                   university = i['university']
-                   if university == 0:
-                       universityArr = i['universities']
-                       for j in universityArr:
-                           university = j['id']
-                   print(university)
-               except:
-                   university = "6666666"
-
-               try:
-                   faculty = i['faculty']
-                   if faculty == 0:
-                       facultyArr = i['universities']
-                       for j in facultyArr:
-                           faculty = j['faculty']
-                   print(faculty)
-               except:
-                   faculty = "6666666"
-               try:
-                   faculty_name = i['faculty_name']
-                   print(faculty_name)
-               except:
-                   faculty_name = "6666666"
+                try:
+                    fname = i['first_name']
+                    print(fname)
+                except:
+                    fname = "null"
+                try:
+                    lname = i['last_name']
+                    print(lname)
+                except:
+                    lname = "null"
+                try:
+                    city = i['city']['id']
+                    print(city)
+                except:
+                    city = "6666666"
+                try:
+                    university = i['university']
+                    if university == 0:
+                        universityArr = i['universities']
+                        if universityArr != []:
+                            for j in universityArr:
+                                university = j['id']
+                        else:
+                            university = "6666666"
+                    else:
+                        university = "6666666"
+                    print(university," - универ")
+                except:
+                    print("По звезде пошло все универ")
+                    university = "6666666"
+                try:
+                    faculty = i['faculty']
+                    if faculty == 0:
+                        facultyArr = i['universities']
+                        if facultyArr != []:
+                            for j in facultyArr:
+                                faculty = j['faculty']
+                        else:
+                            faculty = "6666666"
+                    else:
+                        faculty = "6666666"
+                    print(faculty)
+                except:
+                    faculty = "6666666"
+                try:
+                    faculty_name = i['faculty_name']
+                    print(faculty_name)
+                except:
+                    faculty_name = "6666666"
             # Попожить пользователя
             # Код для вставки TODO вставить в основной код программы при выполнении запроса к обновлению
             # cur.execute("INSERT INTO public.vkuser (uservkid, fname, lname, city, faculty) VALUES ('" + str(userid) + "', '" + str(fname) + "', '" + str(lname) + "', '" + str(city) + "', '" + str(faculty) + "')")
 
-        #ПРОВЕРИТЬ СЕТ СИТИ и факульти
+            # ПРОВЕРИТЬ СЕТ СИТИ и факульти
             setSity(str(city))
-            setFaculty(str(university),str(faculty))
-            #Обновление БД из вк
-            cur.execute("UPDATE public.vkuser SET fname = '" + str(fname) + "', lname = '" + str(lname) + "', city = '" + str(city) + "', faculty = '" + str(faculty) +"' WHERE ""uservkid"" = " + str(userid)+ "")
+            print(university,"=-=-=-=-=-=-=-=-=-=-=-=")
+            setFaculty(str(university), str(faculty))
+            # Обновление БД из вк
+            cur.execute(
+                "UPDATE public.vkuser SET fname = '" + str(fname) + "', lname = '" + str(lname) + "', city = '" + str(
+                    city) + "', faculty = '" + str(faculty) + "' WHERE ""uservkid"" = " + str(userid) + "")
             conn.commit()
-            print("Положил данные пользователя(имя, город, факультет)")
+            print("Положил данные пользователя(имя, город, факультет) setInfoUser")
             profiles = ""
             time.sleep(0.33)
         except psycopg2.DatabaseError as e:
             if conn:
                 conn.rollback()
             print('Error %s' % e)
-            print("Запрос INSERT пользователя не удался")
-
-
-
+            print("Запрос INSERT пользователя не удался setInfoUser")
 
     # Функиця установки музыки в бд
-        #Заносим в БД в верхнем регистре
+    # Заносим в БД в верхнем регистре
     def setMusic(musicbandname):
         try:
             # Попожить найденную группу
@@ -286,7 +306,8 @@ def program(audios):
     def setUserMusic(userid, musicbandname):
         try:
             # Попожить связку userid musicbamdname группу
-            cur.execute("INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('" + userid + "', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('" + musicbandname + "')))")
+            cur.execute(
+                "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('" + userid + "', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('" + musicbandname + "')))")
             conn.commit()
             print("Положил")
         except psycopg2.DatabaseError as e:
@@ -295,13 +316,12 @@ def program(audios):
             print('Error %s' % e)
             print("Запрос INSERT пользователя-музыка не удался")
 
-
     # Функция занесения пользователя в БД
     def setUser(userid):
         try:
             # Попожить пользователя
             # TODO имя пользователя?
-            cur.execute("INSERT INTO public.vkuser (uservkid) VALUES ('"+userid+"')")
+            cur.execute("INSERT INTO public.vkuser (uservkid) VALUES ('" + userid + "')")
             conn.commit()
             print("Положил пользователя")
         except psycopg2.DatabaseError as e:
@@ -310,7 +330,6 @@ def program(audios):
             print('Error %s' % e)
             print("Запрос INSERT пользователя не удался")
 
-
     # Функиця парсинг найденного массива музыкальных групп
     def viewMusic(array):
         for i in range(0, len(array)):
@@ -318,10 +337,7 @@ def program(audios):
             print(i, array[i].text)
             setUserMusic(audio, array[i].text)
 
-
-
-    #--------------------------------------------------СТАРТ ПРОГРАММЫ ----------------------------------------------------
-
+    # --------------------------------------------------СТАРТ ПРОГРАММЫ ----------------------------------------------------
 
     try:
         conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
@@ -331,29 +347,25 @@ def program(audios):
     # Создаем курсор для работы
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
-
     try:
-        cur.execute("SELECT uservkid FROM public.vkuser WHERE uservkid = 3119493")
-        #cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
+        cur.execute("SELECT uservkid FROM public.vkuser")
+        # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
         results = cur.fetchall()
+        print(results)
         for j in results:
             print(j[0])
             setUserInfo(j[0])
     except psycopg2.DatabaseError as e:
-            if conn:
-                conn.rollback()
-            print('Error %s' % e)
-            print("ЧТО то пошло не так")
-
-
-
+        if conn:
+            conn.rollback()
+        print('Error %s' % e)
+        print("ЧТО то пошло не так")
 
     baseurl = "https://vk.com/"
-    #username = "89821469162"
+    # username = "89821469162"
     username = "89505375037"
-    #password = "Zx1#qwerty1906ugjoij"
+    # password = "Zx1#qwerty1906ugjoij"
     password = "Zx1$qwerty1906"
-
 
     xpaths = {
         'usernameTxtBox': "//*[@id='index_email']",
@@ -375,8 +387,7 @@ def program(audios):
     time.sleep(5)
     print('поехали')
 
-
-    #Разбираем список пользователей
+    # Разбираем список пользователей
     for audio in audios:
         urlaudio = baseurl + 'audios' + audio
         try:
@@ -408,11 +419,11 @@ def program(audios):
 
 def main():
     with ThreadPoolExecutor(max_workers=3) as executor:
-        executor.submit(program,(audios1))
-       # executor.submit(program,(audios2))
-       # executor.submit(program,(audios3))
+        executor.submit(program, (audios1))
+    # executor.submit(program,(audios2))
+    # executor.submit(program,(audios3))
 
 
-#program(audios1)
-if __name__== '__main__':
+# program(audios1)
+if __name__ == '__main__':
     main()
