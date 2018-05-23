@@ -139,9 +139,10 @@ def program(audios):
             session = vk.Session(
                 access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
             vk_api = vk.API(session, v='5.71')
-            print(university != "6666666")
+            print(university != 6666666)
             print(university)
-            if university != "6666666":
+            if university != 6666666:
+                print("зашло в проверку")
                 facultyRes = vk_api.database.getFaculties(university_id=university)
                 print(facultyRes)
                 for i in facultyRes['items']:
@@ -159,6 +160,7 @@ def program(audios):
                         faculty_name = "6666666"
                         print("------")
             else:
+                print("Не сработала проверка на факультет ни одна")
                 faculty_name = "6666666"
             # Попожить факультет
             # Код для вставки
@@ -168,7 +170,7 @@ def program(audios):
             cur.execute("UPDATE public.faculty SET facultyid = '" + str(facultyid) + "', name = '" + str(
                 faculty_name) + "' WHERE ""facultyid"" = " + str(facultyid) + "")
             conn.commit()
-            print("Положил данные факультета (название)")
+            print("Положил данные факультета (название)-> ",facultyid," ",faculty_name)
             facultyRes = ""
         except psycopg2.DatabaseError as e:
             if conn:
@@ -200,7 +202,7 @@ def program(audios):
             cur.execute("INSERT INTO public.city (id, name) VALUES ('" + str(cityid) + "', '" + str(title) + "')")
             #cur.execute("UPDATE public.city SET id='" + str(cityid) + "', name='" + str(title) + "' WHERE id = '"+str(cityid)+"'")
             conn.commit()
-            print("Положил данные города (название)")
+            print("Положил данные города (название) -> ",cityid," ",title)
             profiles = ""
             time.sleep(0.33)
         except psycopg2.DatabaseError as e:
@@ -241,8 +243,6 @@ def program(audios):
                                 university = j['id']
                         else:
                             university = "6666666"
-                    else:
-                        university = "6666666"
                     print(university," - универ")
                 except:
                     print("По звезде пошло все универ")
@@ -256,8 +256,6 @@ def program(audios):
                                 faculty = j['faculty']
                         else:
                             faculty = "6666666"
-                    else:
-                        faculty = "6666666"
                     print(faculty)
                 except:
                     faculty = "6666666"
@@ -281,7 +279,7 @@ def program(audios):
             conn.commit()
             print("Положил данные пользователя(имя, город, факультет) setInfoUser")
             profiles = ""
-            time.sleep(0.33)
+            time.sleep(0.01)
         except psycopg2.DatabaseError as e:
             if conn:
                 conn.rollback()
