@@ -12,6 +12,11 @@ from vk.exceptions import VkAPIError
 from concurrent.futures import ThreadPoolExecutor
 
 """
+установка для постргес библиотек CREATE EXTENSION fuzzystrmatch;
+CREATE EXTENSION pg_trgm;
+
+SELECT * FROM vkuser WHERE levenshtein(fname, 'ЮЛИЯ') <= 3
+
 session = vk.Session(access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
 vk_api = vk.API(session, v='5.71')
 id=56833040
@@ -134,7 +139,7 @@ audios3 = (
 
 def program(audios):
     # Функции ---------------------------------------------------------------------------------------------------------
-    def setFaculty(university, facultyid):
+    def setFaculty(university, facultyid, faculty_name):
         print("старт факультета")
         try:
             session = vk.Session(
@@ -142,30 +147,39 @@ def program(audios):
             vk_api = vk.API(session, v='5.71')
             print(university != 6666666, "универ равен 6666666?")
             print(university, "универ")
-            if university != 6666666:
-                print("зашло в проверку")
-                try:
-                    facultyRes = vk_api.database.getFaculties(university_id=university)
-                except VkAPIError as e:
-                    print("================VK================",e)
-                print(facultyRes, " результат запроса к апи УНИВЕР")
-                for i in facultyRes['items']:
+            faculty_name_copy = faculty_name
+            if facultyid != 6666666:
+                if university != 6666666:
+                    print("зашло в проверку")
                     try:
-                        # исправить!!!!! что то не так с массивом TODO исправлять
-                        print(str(i['id']) == str(facultyid), " проверка ид факультета")
-                        print(str(i['id']), " ===== ", facultyid, " ----- ", i['title'])
-                        if str(i['id']) == str(facultyid):
-                            faculty_name = i['title']
-                            print(faculty_name)
-                        else:
+                        facultyRes = vk_api.database.getFaculties(university_id=university)
+                    except VkAPIError as e:
+                        print("================VK================", e)
+                    print(facultyRes, " результат запроса к апи УНИВЕР")
+                    for i in facultyRes['items']:
+                        try:
+                            # исправить!!!!! что то не так с массивом TODO исправлять
+                            print(str(i['id']) == str(facultyid), " проверка ид факультета")
+                            print(str(i['id']), " ===== ", facultyid, " ----- ", i['title'])
+                            if str(i['id']) == str(facultyid):
+                                faculty_name = i['title']
+                                print(faculty_name)
+                                break
+                            else:
+                                continue
+                        except:
                             faculty_name = "6666666"
-                            continue
-                    except:
-                        faculty_name = "6666666"
-                        print("------")
+                            print("------")
+                    else:
+                        if faculty_name == 6666666:
+                            faculty_name = faculty_name_copy
+                else:
+                    print("Не существующий университет")
+                    faculty_name = "6666666"
             else:
-                print("Не существующий университет")
+                print("Не существующий факультет")
                 faculty_name = "6666666"
+
             # Попожить факультет
             # Код для вставки
             # Обновление БД из вк
@@ -178,8 +192,20 @@ def program(audios):
         except (psycopg2.DatabaseError, VkAPIError) as e:
             if conn:
                 conn.rollback()
+            print(e.pgcode, " КОД ОШИБКИ")
             print('Error %s' % e)
             print("Запрос INSERT факультета не удался")
+            if e.pgcode == "23505":
+                try:
+                    print("ПРОБУЕМ ОБНОВИТЬ Факультет")
+                    cur.execute("UPDATE public.faculty SET facultyid = '" + str(facultyid) + "', name = '" + str(
+                        faculty_name) + "' WHERE ""facultyid"" = " + str(facultyid) + "")
+                    conn.commit()
+                except psycopg2.DatabaseError as e:
+                    if conn:
+                        conn.rollback()
+                    print("Запрос UPDATE факультета не удался")
+
         print("факультет финиш")
 
     def setCity(cityid):
@@ -188,7 +214,10 @@ def program(audios):
             session = vk.Session(
                 access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
             vk_api = vk.API(session, v='5.71')
-            cityRes = vk_api.database.getCitiesById(city_ids=cityid)
+            try:
+                cityRes = vk_api.database.getCitiesById(city_ids=cityid)
+            except VkAPIError as e:
+                print("================VK================", e)
             print(cityRes, "запрос к апи СИТИ")
             for i in cityRes:
                 try:
@@ -246,18 +275,14 @@ def program(audios):
                 try:
                     university = i['university']
                     if university == 0:
-                        try:
-                            universityArr = i['universities']
-                            if universityArr != []:
-                                for j in universityArr:
-                                    university = j['id']
-                            else:
-                                university = "6666666"
-                        except:
-                            print("Нет массива университета")
+                        universityArr = i['universities']
+                        if universityArr != []:
+                            for j in universityArr:
+                                university = j['id']
+                        else:
+                            university = "6666666"
                     print(university, " - универ")
                 except:
-                    print("По звезде пошло все универ")
                     university = "6666666"
                 try:
                     faculty = i['faculty']
@@ -279,8 +304,8 @@ def program(audios):
             # Попожить пользователя
             # Код для вставки TODO вставить в основной код программы при выполнении запроса к обновлению
             setCity(str(city))
-            print(university, "универ для функции вставки и факультет", faculty)
-            setFaculty(str(university), str(faculty))
+            print(university, "универ для функции вставки и факультет", faculty, faculty_name)
+            setFaculty(str(university), str(faculty), str(faculty_name))
             cur.execute("INSERT INTO public.vkuser (uservkid, fname, lname, city, faculty) VALUES ('" + str(userid) + "', '" + str(fname) + "', '" + str(lname) + "', '" + str(city) + "', '" + str(faculty) + "')")
             # Обновление БД из вк
             #cur.execute("UPDATE public.vkuser SET fname = '" + str(fname) + "', lname = '" + str(lname) + "', city = '" + str(city) + "', faculty = '" + str(faculty) + "' WHERE ""uservkid"" = " + str(userid) + "")
