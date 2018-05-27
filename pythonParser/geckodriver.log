@@ -1616,3 +1616,7 @@ Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrp
 1527074453347	geckodriver	INFO	geckodriver 0.19.1
 1527074453357	geckodriver	INFO	Listening on 127.0.0.1:56111
 1527074453799	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.2YTrrrUCLeLq"
+1527398715821	geckodriver	INFO	geckodriver 0.19.1
+1527398715828	geckodriver	INFO	Listening on 127.0.0.1:64500
+1527398716214	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.L65RdcrDszzv"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
