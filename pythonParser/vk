@@ -389,7 +389,7 @@ def program(audios):
     # Создаем курсор для работы
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
-
+    """
     try:
         cur.execute("SELECT uservkid FROM public.vkuser")
         # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
@@ -403,7 +403,27 @@ def program(audios):
             conn.rollback()
         print('Error %s' % e)
         print("ЧТО то пошло не так")
+    """
+    try:
+        cur.execute("SELECT fname FROM public.vkuser")
+        # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
+        results = cur.fetchall()
+        print(results)
+        for j in results:
+            cur.execute("SELECT word_similarity('"+j[0]+"', 'Алексей посет гусей Илья')")
+            res = cur.fetchone()
+            if res[0] > 0.5:
+                print(j[0])
+                print(res[0], "<<<<<<<")
 
+    except psycopg2.DatabaseError as e:
+        if conn:
+            conn.rollback()
+        print('Error %s' % e)
+        print("ЧТО то пошло не так")
+
+    print("ПАУЗА 10")
+    time.sleep(10)
 
 
     baseurl = "https://vk.com/"
