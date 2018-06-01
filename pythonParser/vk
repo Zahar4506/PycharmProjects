@@ -383,16 +383,22 @@ def program(audios):
     def cleaningMusicBand(nameband):
         try:
             result = re.sub(r'[^a-zA-Zа-яА-Я0-9( )ёЁ]','', nameband)
+            result = re.sub(r'OST', '', result)
             result = re.sub(r'[()]', ' ', result)
             result = re.sub(r'\s+', ' ', result)
             resFind = result.find('FEAT')
             if resFind != -1:
                 result = result[0:resFind:1]
-                print(resFind,"-----------FEAT")
+                print(resFind, "-----------FEAT")
             resFind = result.find('FT')
             if resFind != -1:
-                result = result[0:resFind:1]
-                print(resFind, "-----------FT")
+                if result.find("DAFT") != -1:
+                    print("daft")
+                elif result.find("DRIFTMOON") != -1:
+                    print("driftmoon")
+                else:
+                    result = result[0:resFind:1]
+                    print(resFind, "-----------FT")
             if len(result) > 25:
                 result = result[0:25:1]
             resFind = result.find('HZ ')
@@ -403,8 +409,33 @@ def program(audios):
                 if resFind != -1:
                     result = result[resFind + 3:len(result):1]
                     print(resFind, "<========hz2")
-
-            CARMUSICKZ
+            resFind = result.find('CARMUSICKZ')
+            if resFind != -1:
+                result = result[resFind+10:len(result):1]
+                print(resFind, "<========carmuzic")
+            resFind = result.find('CLUB RAЙ')
+            if resFind != -1:
+                result = result[resFind + 8:len(result):1]
+                print(resFind, "<========CLUB RAЙ")
+            resFind = result.find('145MUSIC')
+            if resFind != -1:
+                result = result[resFind + 8:len(result):1]
+                print(resFind, "<========145MUSIC")
+            result = re.sub(r'VKCOMSADINSTR', '', result)
+            result = re.sub(r'VKHPNET', '', result)
+            result = re.sub(r'МУЗЫКА', '', result)
+            result = re.sub(r'НОВИНКА', '', result)
+            result = re.sub(r'НОВИНКИ', '', result)
+            result = re.sub(r'РИНГТОН', '', result)
+            result = re.sub(r'ХИТ', '', result)
+            result = re.sub(r'ХИТЫ', '', result)
+            result = re.sub(r'EUROPA PLUS', '', result)
+            result = re.sub(r'МЕСТО', '', result)
+            result = re.sub(r'RADIO RECORD', '', result)
+            result = re.sub(r'BOMBAFM', '', result)
+            result = re.sub(r'CLUB', '', result)
+            result = re.sub(r'DEEP HOUSE', '', result)
+            result = re.sub(r'DFM', '', result)
             return result
         except:
             print("очитска трека упала")
