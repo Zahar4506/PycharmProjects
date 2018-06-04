@@ -390,12 +390,18 @@ def program(audios):
             if resFind != -1:
                 result = result[0:resFind:1]
                 print(resFind, "-----------FEAT")
+            resFind = result.find('GLOBAL TUNING')
+            if resFind != -1:
+                result = result[resFind+13:len(result):1]
+                print(resFind, "-----------GLOBAL TUNING")
             resFind = result.find('FT')
             if resFind != -1:
                 if result.find("DAFT") != -1:
                     print("daft")
                 elif result.find("DRIFTMOON") != -1:
                     print("driftmoon")
+                elif result.find("FIFTH HARMONY") != -1:
+                    print("FIFTH HARMONy")
                 else:
                     result = result[0:resFind:1]
                     print(resFind, "-----------FT")
@@ -436,10 +442,33 @@ def program(audios):
             result = re.sub(r'CLUB', '', result)
             result = re.sub(r'DEEP HOUSE', '', result)
             result = re.sub(r'DFM', '', result)
+            result = re.sub(r'EUROVISION', '', result)
+            result = re.sub(r'FDM', '', result)
+            result = re.sub(r'BPANMUSIC', '', result)
+
+            result = re.sub(r'\s+', ' ', result)
+            result = re.sub(r'\d+', ' ', result)
             return result
         except:
             print("очитска трека упала")
             return nameband
+
+    def cleaningMusicClear(nameband):
+        try:
+            cur.execute("SELECT musicbandid, clearnameband, levenshtein('"+str(nameband)+"', clearnameband) as sml FROM musicband WHERE levenshtein('"+str(nameband)+"', clearnameband) = 1 ORDER BY  sml, clearnameband")
+            results = cur.fetchall()
+            print(results)
+            if results == []:
+                print('ПУСТО')
+            else:
+                for j in results:
+                    print(j[0], j[1], j[2])
+                    cur.execute("UPDATE musicband SET clear = '" + str(j[1]) + "' WHERE musicbandid ='"+str(j[0])+"'")
+                    conn.commit()
+        except:
+            print("очитска трека упала")
+
+
     # --------------------------------------------------СТАРТ ПРОГРАММЫ ----------------------------------------------------
 
     try:
@@ -466,29 +495,51 @@ def program(audios):
         print("ЧТО то пошло не так")
     """
 
+    # try:
+    #     cur.execute("SELECT musicbandid, nameband FROM musicband")
+    #     # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
+    #     results = cur.fetchall()
+    #     print(results)
+    #     for j in results:
+    #         print(j[0], j[1])
+    #         clearnameband = cleaningMusicBand(j[1])
+    #         print(clearnameband)
+    #         cur.execute("UPDATE musicband SET clearnameband = '" + str(clearnameband) + "' WHERE musicbandid ='"+str(j[0])+"'")
+    #         conn.commit()
+    #         print("положил---------------------")
+    #         # cur.execute("SELECT word_similarity('"+j[0]+"', 'Алексей посет гусей Илья')")
+    #         # res = cur.fetchone()
+    #         # if res[0] > 0.5:
+    #         #     print(j[0])
+    #         #     print(res[0], "<<<<<<<")
+    #
+    # except psycopg2.DatabaseError as e:
+    #     if conn:
+    #         conn.rollback()
+    #     print('Error %s' % e)
+    #     print("ЧТО то пошло не так")
+
+
+
     try:
-        cur.execute("SELECT musicbandid, nameband FROM musicband")
-        # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
+        cur.execute("SELECT musicbandid, clearnameband FROM musicband")
         results = cur.fetchall()
         print(results)
         for j in results:
             print(j[0], j[1])
-            clearnameband = cleaningMusicBand(j[1])
+            clearnameband = cleaningMusicClear(j[1])
             print(clearnameband)
-            cur.execute("UPDATE musicband SET clearnameband = '" + str(clearnameband) + "' WHERE musicbandid ='"+str(j[0])+"'")
-            conn.commit()
-            print("положил---------------------")
-            # cur.execute("SELECT word_similarity('"+j[0]+"', 'Алексей посет гусей Илья')")
-            # res = cur.fetchone()
-            # if res[0] > 0.5:
-            #     print(j[0])
-            #     print(res[0], "<<<<<<<")
 
     except psycopg2.DatabaseError as e:
         if conn:
             conn.rollback()
         print('Error %s' % e)
         print("ЧТО то пошло не так")
+
+
+
+
+
 
     print("ПАУЗА 10")
     time.sleep(10)
