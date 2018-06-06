@@ -16,6 +16,8 @@ import os
 установка для постргес библиотек CREATE EXTENSION fuzzystrmatch;
 CREATE EXTENSION pg_trgm;
 
+create index tsv_gin on musicband using gin(clear);
+
 SELECT * FROM vkuser WHERE levenshtein(fname, 'ЮЛИЯ') <= 3
 
 session = vk.Session(access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
@@ -384,7 +386,7 @@ def program(audios):
         try:
             result = re.sub(r'[^a-zA-Zа-яА-Я0-9( )ёЁ]','', nameband)
             result = re.sub(r'OST', '', result)
-            result = re.sub(r'[()]', ' ', result)
+            result = re.sub(r'[()_]', ' ', result)
             result = re.sub(r'\s+', ' ', result)
             resFind = result.find('FEAT')
             if resFind != -1:
@@ -445,9 +447,12 @@ def program(audios):
             result = re.sub(r'EUROVISION', '', result)
             result = re.sub(r'FDM', '', result)
             result = re.sub(r'BPANMUSIC', '', result)
+            result = re.sub(r'MUZMORU', '', result)
 
+
+            result = re.sub(r'[\d]', '', result)
             result = re.sub(r'\s+', ' ', result)
-            result = re.sub(r'\d+', ' ', result)
+
             return result
         except:
             print("очитска трека упала")
@@ -495,46 +500,46 @@ def program(audios):
         print("ЧТО то пошло не так")
     """
 
-    # try:
-    #     cur.execute("SELECT musicbandid, nameband FROM musicband")
-    #     # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
-    #     results = cur.fetchall()
-    #     print(results)
-    #     for j in results:
-    #         print(j[0], j[1])
-    #         clearnameband = cleaningMusicBand(j[1])
-    #         print(clearnameband)
-    #         cur.execute("UPDATE musicband SET clearnameband = '" + str(clearnameband) + "' WHERE musicbandid ='"+str(j[0])+"'")
-    #         conn.commit()
-    #         print("положил---------------------")
-    #         # cur.execute("SELECT word_similarity('"+j[0]+"', 'Алексей посет гусей Илья')")
-    #         # res = cur.fetchone()
-    #         # if res[0] > 0.5:
-    #         #     print(j[0])
-    #         #     print(res[0], "<<<<<<<")
-    #
-    # except psycopg2.DatabaseError as e:
-    #     if conn:
-    #         conn.rollback()
-    #     print('Error %s' % e)
-    #     print("ЧТО то пошло не так")
-
-
-
     try:
-        cur.execute("SELECT musicbandid, clearnameband FROM musicband")
+        cur.execute("SELECT musicbandid, nameband FROM musicband")
+        # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
         results = cur.fetchall()
         print(results)
         for j in results:
             print(j[0], j[1])
-            clearnameband = cleaningMusicClear(j[1])
+            clearnameband = cleaningMusicBand(j[1])
             print(clearnameband)
+            cur.execute("UPDATE musicband SET clearnameband = '" + str(clearnameband) + "' WHERE musicbandid ='"+str(j[0])+"'")
+            conn.commit()
+            print("положил---------------------")
+            # cur.execute("SELECT word_similarity('"+j[0]+"', 'Алексей посет гусей Илья')")
+            # res = cur.fetchone()
+            # if res[0] > 0.5:
+            #     print(j[0])
+            #     print(res[0], "<<<<<<<")
 
     except psycopg2.DatabaseError as e:
         if conn:
             conn.rollback()
         print('Error %s' % e)
         print("ЧТО то пошло не так")
+
+
+
+    # try:
+    #     cur.execute("SELECT musicbandid, clearnameband FROM musicband")
+    #     results = cur.fetchall()
+    #     print(results)
+    #     for j in results:
+    #         print(j[0], j[1])
+    #         clearnameband = cleaningMusicClear(j[1])
+    #         print(clearnameband)
+    #
+    # except psycopg2.DatabaseError as e:
+    #     if conn:
+    #         conn.rollback()
+    #     print('Error %s' % e)
+    #     print("ЧТО то пошло не так")
 
 
 
