@@ -11,6 +11,7 @@ import vk
 import re
 from vk.exceptions import VkAPIError
 from concurrent.futures import ThreadPoolExecutor
+import time
 import os
 """
 установка для постргес библиотек CREATE EXTENSION fuzzystrmatch;
@@ -384,7 +385,7 @@ def program(audios):
 
     def cleaningMusicBand(nameband):
         try:
-            result = re.sub(r'[^a-zA-Zа-яА-Я0-9( )ёЁ]','', nameband)
+            result = re.sub(r'[^a-zA-Zа-яА-Я0-9( )ёЁ]', ' ', nameband)
             result = re.sub(r'OST', '', result)
             result = re.sub(r'[()_]', ' ', result)
             result = re.sub(r'\s+', ' ', result)
@@ -407,8 +408,7 @@ def program(audios):
                 else:
                     result = result[0:resFind:1]
                     print(resFind, "-----------FT")
-            if len(result) > 25:
-                result = result[0:25:1]
+
             resFind = result.find('HZ ')
             if resFind != -1:
                 result = result[resFind+3:len(result):1]
@@ -429,31 +429,38 @@ def program(audios):
             if resFind != -1:
                 result = result[resFind + 8:len(result):1]
                 print(resFind, "<========145MUSIC")
-            result = re.sub(r'VKCOMSADINSTR', '', result)
-            result = re.sub(r'VKHPNET', '', result)
-            result = re.sub(r'МУЗЫКА', '', result)
-            result = re.sub(r'НОВИНКА', '', result)
-            result = re.sub(r'НОВИНКИ', '', result)
-            result = re.sub(r'РИНГТОН', '', result)
-            result = re.sub(r'ХИТ', '', result)
-            result = re.sub(r'ХИТЫ', '', result)
-            result = re.sub(r'EUROPA PLUS', '', result)
-            result = re.sub(r'МЕСТО', '', result)
-            result = re.sub(r'RADIO RECORD', '', result)
-            result = re.sub(r'BOMBAFM', '', result)
-            result = re.sub(r'CLUB', '', result)
-            result = re.sub(r'DEEP HOUSE', '', result)
-            result = re.sub(r'DFM', '', result)
-            result = re.sub(r'EUROVISION', '', result)
-            result = re.sub(r'FDM', '', result)
-            result = re.sub(r'BPANMUSIC', '', result)
-            result = re.sub(r'MUZMORU', '', result)
+            result = re.sub(r'VKCOMSADINSTR', ' ', result)
+            result = re.sub(r'VKHPNET', ' ', result)
+            result = re.sub(r'МУЗЫКА', ' ', result)
+            result = re.sub(r'НОВИНКА', ' ', result)
+            result = re.sub(r'НОВИНКИ', ' ', result)
+            result = re.sub(r'РИНГТОН', ' ', result)
+            result = re.sub(r'ХИТ', ' ', result)
+            result = re.sub(r'ХИТЫ', ' ', result)
+            result = re.sub(r'EUROPA PLUS', ' ', result)
+            result = re.sub(r'МЕСТО', ' ', result)
+            result = re.sub(r'RADIO RECORD', ' ', result)
+            result = re.sub(r'BOMBAFM', ' ', result)
+            result = re.sub(r'CLUB', ' ', result)
+            result = re.sub(r'DEEP HOUSE', ' ', result)
+            result = re.sub(r'DFM', ' ', result)
+            result = re.sub(r'EUROVISION', ' ', result)
+            result = re.sub(r'FDM', ' ', result)
+            result = re.sub(r'BPANMUSIC', ' ', result)
+            result = re.sub(r'MUZMORU', ' ', result)
+            result = re.sub(r'MS', ' ', result)
+            result = re.sub(r'MUSIC', ' ', result)
 
 
             result = re.sub(r'[\d]', '', result)
             result = re.sub(r'\s+', ' ', result)
+            if len(result) > 25:
+                result = result[0:25:1]
 
-            return result
+            if len(result) < 2:
+                result = ''
+            else:
+                return result
         except:
             print("очитска трека упала")
             return nameband
@@ -475,7 +482,7 @@ def program(audios):
 
 
     # --------------------------------------------------СТАРТ ПРОГРАММЫ ----------------------------------------------------
-
+    start_time = time.time()
     try:
         conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
         print("connect OK")
@@ -499,41 +506,20 @@ def program(audios):
         print('Error %s' % e)
         print("ЧТО то пошло не так")
     """
-
-    try:
-        cur.execute("SELECT musicbandid, nameband FROM musicband")
-        # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
-        results = cur.fetchall()
-        print(results)
-        for j in results:
-            print(j[0], j[1])
-            clearnameband = cleaningMusicBand(j[1])
-            print(clearnameband)
-            cur.execute("UPDATE musicband SET clearnameband = '" + str(clearnameband) + "' WHERE musicbandid ='"+str(j[0])+"'")
-            conn.commit()
-            print("положил---------------------")
-            # cur.execute("SELECT word_similarity('"+j[0]+"', 'Алексей посет гусей Илья')")
-            # res = cur.fetchone()
-            # if res[0] > 0.5:
-            #     print(j[0])
-            #     print(res[0], "<<<<<<<")
-
-    except psycopg2.DatabaseError as e:
-        if conn:
-            conn.rollback()
-        print('Error %s' % e)
-        print("ЧТО то пошло не так")
-
-
-
+#ОЧИИСТКА ПЕРВОНАЧАЛЬНАЯ ОТ МУСОРА РЕГУЛЯРКА--------------------------------------
     # try:
-    #     cur.execute("SELECT musicbandid, clearnameband FROM musicband")
+    #     cur.execute("SELECT musicbandid, nameband FROM musicband")
+    #     # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
     #     results = cur.fetchall()
     #     print(results)
     #     for j in results:
     #         print(j[0], j[1])
-    #         clearnameband = cleaningMusicClear(j[1])
+    #         clearnameband = cleaningMusicBand(j[1])
     #         print(clearnameband)
+    #         cur.execute("UPDATE musicband SET clearnameband = ltrim('" + str(clearnameband) + "') WHERE musicbandid ='"+str(j[0])+"'")
+    #         conn.commit()
+    #         print("положил---------------------")
+    #
     #
     # except psycopg2.DatabaseError as e:
     #     if conn:
@@ -543,9 +529,24 @@ def program(audios):
 
 
 
+    try:
+        cur.execute("SELECT musicbandid, clearnameband FROM musicband WHERE clearnameband != '' ORDER BY clearnameband")
+        results = cur.fetchall()
+        print(results)
+        for index, j in enumerate(results):
+            print(index, '<<<<<<<<<<<<<<  ', j[0], j[1])
+            if j[1] != str('None'):
+                cleaningMusicClear(j[1])
+                print(">>>>>>>>>>>>>>>>>>>>>>ДАНННЫЕ ПОСЛЕ ОЧИСТКИ")
+            else:
+                print('Встретился none')
+    except psycopg2.DatabaseError as e:
+        if conn:
+            conn.rollback()
+        print('Error %s' % e)
+        print("ЧТО то пошло не так")
 
-
-
+    print("--- %s seconds ---" % (time.time() - start_time))
     print("ПАУЗА 10")
     time.sleep(10)
 

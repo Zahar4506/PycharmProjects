@@ -14,8 +14,8 @@
       <file leaf-file-name="vk" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vk">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            <state relative-caret-position="117">
+              <caret line="467" column="8" lean-forward="false" selection-start-line="467" selection-start-column="8" selection-end-line="467" selection-end-column="8" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -34,10 +34,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>287157608</find>
-      <find>153236</find>
-      <find>1144732</find>
-      <find>y': 0</find>
       <find>по звез</find>
       <find>vkuser</find>
       <find>0.</find>
@@ -64,6 +60,10 @@
       <find>hz</find>
       <find>&lt;========hz</find>
       <find>31hz</find>
+      <find>upp</find>
+      <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</find>
+      <find>none</find>
+      <find>встретился</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -464,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vk">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        <state relative-caret-position="117">
+          <caret line="467" column="8" lean-forward="false" selection-start-line="467" selection-start-column="8" selection-end-line="467" selection-end-column="8" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
