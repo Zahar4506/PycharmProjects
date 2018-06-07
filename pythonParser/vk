@@ -480,6 +480,38 @@ def program(audios):
         except:
             print("очитска трека упала")
 
+    def categoryFaculty(faculty):
+        try:
+            cur.execute("SELECT facultyid, name FROM faculty ORDER BY name")
+            results = cur.fetchall()
+            print(results)
+            for j in results:
+                print(j[0], j[1])
+                if j[1].find('журна')|j[1].find('язык')|j[1].find('педаго')|j[1].find('физической')|j[1].find('русск')|j[1].find('литерат') != -1:
+                    print(j[1], "<========Гуманитарный")
+                    cur.execute("UPDATE faculty SET category = '1' WHERE facultyid ='"+str(j[0])+"'")
+                    conn.commit()
+                elif j[1].find('менедж') | j[1].find('финан') | j[1].find('эконом') != -1:
+                    print(j[1], "<========Менеджмента и экономики")
+                    cur.execute("UPDATE faculty SET category = '2' WHERE facultyid ='" + str(j[0]) + "'")
+                    conn.commit()
+                elif j[1].find('право') | j[1].find('права') | j[1].find('арбит') | j[1].find('адвока') | j[1].find('уголов') | j[1].find('филос')| j[1].find('истор') != -1:
+                    print(j[1], "<========Юридический")
+                    cur.execute("UPDATE faculty SET category = '3' WHERE facultyid ='" + str(j[0]) + "'")
+                    conn.commit()
+                elif j[1].find('биол') | j[1].find('геол') | j[1].find('хими') | j[1].find('эколо') | j[1].find('природо') | j[1].find('энерге') | j[1].find('нефте') != -1:
+                    print(j[1], "<========Природопользование")
+                    cur.execute("UPDATE faculty SET category = '4' WHERE facultyid ='" + str(j[0]) + "'")
+                    conn.commit()
+                elif j[1].find('матем') | j[1].find('информ') | j[1].find('модели') | j[1].find('строит') | j[1].find('физик') | j[1].find('технич') | j[1].find('технолог') != -1:
+                    print(j[1], "<========ИТСИТ")
+                    cur.execute("UPDATE faculty SET category = '5' WHERE facultyid ='" + str(j[0]) + "'")
+                    conn.commit()
+                else:
+                    print('Неизвестное сочетание')
+        except:
+            print("очитска трека упала")
+
 
     # --------------------------------------------------СТАРТ ПРОГРАММЫ ----------------------------------------------------
     start_time = time.time()
