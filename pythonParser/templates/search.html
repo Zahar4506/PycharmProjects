@@ -1,0 +1,42 @@
+
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }} ">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <title>ПОИСК</title>
+    </head>
+
+    <body>
+
+      <header>
+        <div class="header"><p>Поиск абитуриентов</p></div>
+        <nav>
+          <div class="topnav" id="myTopnav">
+            <a href="#">О сайте</a>
+            <a href="#" id="menu" class="icon">&#9776;</a>
+
+          </div>
+        </nav>
+
+        <script type="text/javascript">
+        menu.onclick = function myFunction() {
+          var x = document.getElementById('myTopnav');
+          if (x.className === "topnav") {
+            x.className +=" responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+      </header>
+      <main>
+        <div class="welcome">
+          <h1>{{massage}}</h1>
+
+        </div>
+
+      </main>
+
+    </body>
+</html>

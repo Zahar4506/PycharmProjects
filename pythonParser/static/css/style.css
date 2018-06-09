@@ -1,0 +1,91 @@
+body {
+    font-family: 'Amatic SC', cursive;
+    background-color: #01284B;
+    color: #E1E6FA;
+}
+header{
+  width: 100%;
+  background: #043F73;
+  display: flex;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+/*Заголовок домашняя старница*/
+.header{
+  text-transform: uppercase;
+  color: #FFF;
+  font-weight: 800;
+  font-size: 40px;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-left: 5%
+}
+a{
+    none;
+}
+nav{
+  margin-top: 25px;
+  margin-left: 30%
+}
+
+.topnav a{
+  color: #FFF;
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 30px;
+}
+.topnav a:hover{
+  border-bottom: 3px solid #B23700;
+}
+.topnav .icon{
+  display: none;
+}
+
+
+main .welcomeMif{
+  float: left;
+  width: 20%;
+  background: #01284B;
+  text-align: left;
+  padding: 30px 40px 400px 40px;
+}
+
+.welcomeMif a{
+  color: #FFF;
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 30px;
+}
+.welcomeMif a:hover{
+  border-bottom: 3px solid #B23700;
+}
+main .info{
+  float: left;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .welcome{
+  background: #01284B;
+  text-align: center;
+  padding: 150px 20px 400px 20px;
+}
+main .welcomeAbout{
+  background: #01284B;
+  text-align: center;
+  padding: 150px 20px 400px 20px;
+}
+main span{
+  color: #B23700;
+}
+main p{
+   font-size: 40px;
+}
+main h1{
+   font-size: 60px;
+}
