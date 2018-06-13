@@ -1,0 +1,48 @@
+
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }} ">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700&amp;subset=cyrillic" rel="stylesheet">
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+        <title>ПОИСК</title>
+    </head>
+
+    <body>
+
+      <header>
+        <div class="header" >
+            <p>
+                <a href="/index">Поиск абитуриентов</a>
+            </p>
+        </div>
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="#">Обновить</a>
+                <a href="/about">О сайте</a>
+            </div>
+        </nav>
+
+          <script type="text/javascript">
+            function changeLink()
+            {
+                document.getElementById('mass').innerHTML="Начался процесс вычисления, ждите.";
+                document.getElementById('circle').style.display="block";
+                document.getElementById('circle1').style.display="block";
+                document.getElementById('text').style.display="block";
+            }
+          </script>
+      </header>
+      <main>
+          {% block content %}{% endblock %}
+
+
+
+
+      </main>
+
+    </body>
+</html>

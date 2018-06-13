@@ -7,6 +7,7 @@ import time
 import psycopg2
 import psycopg2.extras
 
+
 import vk
 import re
 from vk.exceptions import VkAPIError
@@ -605,8 +606,8 @@ def program(audios):
     arrClean.clear()
     print(arrClean)
     print("--- %s seconds ---" % (time.time() - start_time))
-    print("ПАУЗА 10")
-    time.sleep(10)
+   # print("ПАУЗА 10")
+   # time.sleep(10)
 
 
     baseurl = "https://vk.com/"
@@ -667,7 +668,7 @@ def program(audios):
     # Закрываем соединение с БД
     cur.close()
     conn.close()
-
+    print("FINISH")
 
 def main():
     with ThreadPoolExecutor(max_workers=3) as executor:

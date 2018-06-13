@@ -1,45 +1,26 @@
-
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }} ">
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=cyrillic" rel="stylesheet">
-        <title>ПОИСК</title>
-    </head>
-
-    <body>
-
-      <header>
-        <div class="header"><p>Поиск абитуриентов</p></div>
-        <nav>
-          <div class="topnav" id="myTopnav">
-            <a href="#">О сайте</a>
-            <a href="#" id="menu" class="icon">&#9776;</a>
-
-          </div>
-        </nav>
-        <script type="text/javascript">
-        menu.onclick = function myFunction() {
-          var x = document.getElementById('myTopnav');
-          if (x.className === "topnav") {
-            x.className +=" responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-        </script>
-      </header>
-      <main>
+{% extends "base.html" %}
+{% block content %}
         <div class="welcome">
-          <h1>{{massage}}</h1>
+          <h1 id="mass">{{massage}}</h1>
              <form enctype="multipart/form-data" action="/uploadfile/" method="post">
-                  <p>Загрузите файл: <input type="file" name="filename" /></p>
                  <br>
-                 <p><input type="submit" value="Запустить" /></p>
+                  <p>Загрузите файл: <input type="file" id="uploadFile" class="hidden" name="filename" /></p><br>
+                 <div class="button" id="uploadTrigger">Обзор...</div>
+                 <br>
+                 <p><input onclick="changeLink()" type="submit" class="button" value="Запустить" /></p>
              </form>
+            <br>
+            <div id="circle" style='display:none;' class="circle"></div>
+            <div id="circle1" style='display:none;' class="circle1"></div>
+            <br>
+            <div id="text" style='display:none; font-size: 32px'>Длительность выполнения зависит от количества проверяемых пользователей</div>
+            <script>
+                $("#uploadTrigger").click(function(){
+                   $("#uploadFile").click();
+                });
+            </script>
+            <img src="{{ url_for('static', filename='ink.png') }}" width="200" height="200">
         </div>
+{% endblock %}
 
-      </main>
 
-    </body>
-</html>

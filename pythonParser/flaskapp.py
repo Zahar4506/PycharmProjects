@@ -1,5 +1,9 @@
 import os
+import subprocess
+from concurrent.futures import ThreadPoolExecutor
+
 from flask import Flask, render_template, request
+from multiprocessing import Process
 from werkzeug.utils import secure_filename
 import json
 import vksearch
@@ -9,7 +13,11 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def hello():
-    return render_template("home.html", massage = 'Добро пожаловать!')
+    return render_template("home.html", massage = 'Добро пожаловать!')\
+
+@app.route("/about")
+def about():
+    return render_template("about.html", massage = 'Добро пожаловать!')
 
 UPLOAD_FOLDER = r'D:\uploadfile'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -20,6 +28,12 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
+@app.route("/search")
+def search():
+    return render_template("search.html", massage='asdasd')
+
+def pup(audio):
+    subprocess.Popen(vksearch.program(audio))
 
 @app.route("/uploadfile/", methods=['POST'])
 def upload_file():
@@ -45,9 +59,20 @@ def upload_file():
                     print(audio)
                     f.close()
                 print('START')
-                vksearch.program(audio)
+
+                #pup(audio)
+
+                with ThreadPoolExecutor(max_workers=2) as executor:
+                    executor.submit(vksearch.program(audio), ())
+
+                # p = Process(target=vksearch.program(audio))
+                # p.start()
+                # p.join()
+
+                return render_template("search.html", massage='Расчеты произведены!')
+
             except Exception as e:
-                print(e)
+                print(e, ' <<<<<error')
                 print('Загрузка файла не удалась')
                 f.close()
                 return render_template("home.html", massage='Загрузка файла провалилась')
@@ -57,12 +82,18 @@ def upload_file():
         return render_template("home.html", massage = 'Загрузка файла провалилась')
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html', massage = "Ошибка 404, страница не найдена"), 404
 
-
+@app.errorhandler(500)
+def internal_error(e):
+    return render_template('500.html', massage = "Непредвиденная ошибка на сервере"), 500
 
 
 
 
 
 if __name__ == "__main__":
+    app.debug = True
     app.run()
