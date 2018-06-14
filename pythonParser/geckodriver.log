@@ -2360,3 +2360,48 @@ Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrp
 1528708353172	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.YjqluKIqrmSj"
 Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1528913831839	geckodriver	INFO	geckodriver 0.19.1
+1528913831899	geckodriver	INFO	Listening on 127.0.0.1:10587
+1528913832848	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.es5rVCLjDxjU"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 15764, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6836, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6836, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1528955708439	geckodriver	INFO	geckodriver 0.19.1
+1528955708456	geckodriver	INFO	Listening on 127.0.0.1:18059
+1528955709184	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.67w5uRfTvbXS"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1528956496031	geckodriver	INFO	geckodriver 0.19.1
+1528956496053	geckodriver	INFO	Listening on 127.0.0.1:20318
+1528956496580	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.KH1j5s7LvsfP"
+1528960927137	geckodriver	INFO	geckodriver 0.19.1
+1528960927147	geckodriver	INFO	Listening on 127.0.0.1:33039
+1528960927631	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.pNBqgGRDXm6z"
+1528960974678	geckodriver	INFO	geckodriver 0.19.1
+1528960974686	geckodriver	INFO	Listening on 127.0.0.1:33186
+1528960975228	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.8QmLIMbRxqm9"
+1528963620339	geckodriver	INFO	geckodriver 0.19.1
+1528963620346	geckodriver	INFO	Listening on 127.0.0.1:40797
+1528963620870	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.ibpDOrPXQWCG"
+1528963717890	geckodriver	INFO	geckodriver 0.19.1
+1528963717896	geckodriver	INFO	Listening on 127.0.0.1:41089
+1528963718537	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.LSFO6B7auge9"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1528963831151	geckodriver	INFO	geckodriver 0.19.1
+1528963831158	geckodriver	INFO	Listening on 127.0.0.1:41427
+1528963831702	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.y3AfnkdIPlmC"
+1528985803001	geckodriver	INFO	geckodriver 0.19.1
+1528985803001	geckodriver	INFO	Listening on 127.0.0.1:2887
+1528985803485	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.qkxkUS9AJlBg"
+1528985941895	geckodriver	INFO	geckodriver 0.19.1
+1528985941911	geckodriver	INFO	Listening on 127.0.0.1:2904
+1528985942442	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.AiSy4G75CO9i"
+1528986320092	geckodriver	INFO	geckodriver 0.19.1
+1528986320092	geckodriver	INFO	Listening on 127.0.0.1:2926
+1528986320670	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.uUynDGhY2iSa"
+1528986346450	geckodriver	INFO	geckodriver 0.19.1
+1528986346465	geckodriver	INFO	Listening on 127.0.0.1:2935
+1528986347012	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.tsEmYfYi8XCZ"

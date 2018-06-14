@@ -602,6 +602,138 @@ def program(audios):
     #     print('Error %s' % e)
     #     print("ЧТО то пошло не так")
 
+    def copyMusic():
+        try:
+            cur.execute("SELECT musicbandid, clearnameband FROM musicband  WHERE musicbandid=5588 ORDER BY clearnameband")
+            results = cur.fetchall()
+            print(results)
+            for j in results:
+                print(j[0], j[1])
+                try:
+                    cur.execute("INSERT INTO newmusicband(idmusicbandnew, namemusicbandnew)	VALUES (" + str(j[0]) + ",'"
+                                + str(j[1]) + "')")
+                    conn.commit()
+                    print(" копи пользователя ")
+                    copyUser(str(j[0]))
+                except psycopg2.DatabaseError as e:
+                    if conn:
+                        conn.rollback()
+                    print("Ошибка = ", e)
+                    print(" копи пользователя ")
+                    copyUser(str(j[0]))
+        except (psycopg2.DatabaseError) as e:
+            if conn:
+                conn.rollback()
+            print(e.pgcode, " КОД ОШИБКИ")
+            print('Error %s' % e)
+            print("Запрос INSERT copyMusic упал")
+
+    def copyUser(musicid):
+        try:
+            cur.execute("SELECT vkuserid, musicbandid FROM vkuser_musicband WHERE musicbandid = "+str(musicid)+"")
+            conn.commit()
+            resul = cur.fetchall()
+            print(resul)
+            for i in resul:
+                try:
+                    cur.execute(
+                        "INSERT INTO vkuser_clearmusicbandnew(idvkuser, idclear) VALUES (" + str(i[0]) + ",'"
+                        + str(i[1]) + "')")
+                    conn.commit()
+                except psycopg2.DatabaseError as e:
+                    if conn:
+                        conn.rollback()
+                        print(e.pgcode, " <<<<<<<<<<????КОД ОШИБКИ")
+                        print('Error %s' % e)
+        except:
+            if conn:
+                conn.rollback()
+            print("ошибочка")
+        pass
+
+    copyMusic()
+    # try:
+    #     cur.execute("SELECT clearnameband, musicbandid FROM musicband ORDER BY clearnameband")
+    #     results = cur.fetchall()
+    #     print(results)
+    #     for j in results:
+    #         print("вход в обработчик")
+    #         try:
+    #             print(j[0], j[1])
+    #             cur.execute("INSERT INTO newmusicband(idmusicbandnew, namemusicbandnew)	VALUES (" + str(j[1]) + ",'" + str(j[0]) + "')")
+    #             print("Запрос пошел")
+    #             conn.commit()
+    #             print("commit")
+    #             try:
+    #                 print("зашли в апдейт пользователя")
+    #                 cur.execute("SELECT vkuserid, musicbandid FROM vkuser_musicband WHERE musicbandid = "+str(j[1])+"")
+    #                 conn.commit()
+    #                 resul = cur.fetchall()
+    #                 print(resul)
+    #                 for i in resul:
+    #                     print("вход в обработчик")
+    #                     try:
+    #                         print("==================")
+    #                         cur.execute(
+    #                             "INSERT INTO vkuser_clearmusicbandnew(idvkuser, idclear) VALUES (" + str(i[0]) + ",'" + str(i[1]) + "')")
+    #                         conn.commit()
+    #                     except psycopg2.DatabaseError as e:
+    #                         if conn:
+    #                             conn.rollback()
+    #                         print(e.pgcode, " <<<<<<<<<<????КОД ОШИБКИ")
+    #                         print('Error %s' % e)
+    #             except:
+    #                 print("ошибочка")
+    #         except psycopg2.DatabaseError as er:
+    #             if conn:
+    #                 conn.rollback()
+    #             print(er.pgcode, " <<<<<<<<<<КОД ОШИБКИ")
+    #             print('Error %s' % er)
+    #             print("Запрос INSERT музыканта не удался")
+    #             if er.pgcode == "23505":
+    #                 print("ОШИБКАААААААААА++++++++++++++++++++++++++++++++++")
+    #                 cur.execute("SELECT musicbandid, clearnameband FROM musicband WHERE clearnameband = '"+str(j[0])
+    #                               +"' ORDER BY clearnameband LIMIT 1")
+    #                 conn.commit()
+    #                 result = cur.fetchall()
+    #                 print(result, '////////////////////////')
+    #                 print(result[0][0], '////////////////////////',result[0][1])
+    #                 try:
+    #                     print("зашли в апдейт пользователя")
+    #                     cur.execute(
+    #                         "SELECT vkuserid, musicbandid FROM vkuser_musicband WHERE musicbandid = " + str(result[0][0]) + "")
+    #                     conn.commit()
+    #                     resul = cur.fetchall()
+    #                     print(resul)
+    #                     for i in resul:
+    #                         print("вход в обработчик")
+    #                         try:
+    #                             print("==================")
+    #                             cur.execute(
+    #                                 "INSERT INTO vkuser_clearmusicbandnew(idvkuser, idclear) VALUES (" + str(
+    #                                     i[0]) + ",'" + str(i[1]) + "')")
+    #                             conn.commit()
+    #                             print("удачно")
+    #                         except psycopg2.DatabaseError as e:
+    #                             if conn:
+    #                                 conn.rollback()
+    #                             print(e.pgcode, " <<<<<<<<<<????КОД ОШИБКИ")
+    #                             print('Error %s' % e)
+    #                 except:
+    #                     print("ошибочка")
+    #
+    # except (psycopg2.DatabaseError) as e:
+    #     if conn:
+    #         conn.rollback()
+    #     print(e.pgcode, " КОД ОШИБКИ")
+    #     print('Error %s' % e)
+    #     print("Запрос INSERT факультета не удался")
+    #     if e.pgcode == "23505":
+    #         print("ОШИБКАААААААААА")
+
+
+
+
 
     arrClean.clear()
     print(arrClean)
