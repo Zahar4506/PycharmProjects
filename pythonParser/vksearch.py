@@ -604,7 +604,7 @@ def program(audios):
 
     def copyMusic():
         try:
-            cur.execute("SELECT musicbandid, clearnameband FROM musicband  WHERE musicbandid=5588 ORDER BY clearnameband")
+            cur.execute("SELECT musicbandid, clearnameband FROM musicband   ORDER BY clearnameband")
             results = cur.fetchall()
             print(results)
             for j in results:
@@ -614,13 +614,13 @@ def program(audios):
                                 + str(j[1]) + "')")
                     conn.commit()
                     print(" копи пользователя ")
-                    copyUser(str(j[0]))
+                    copyUser(str(j[0]), str(j[1]), True)
                 except psycopg2.DatabaseError as e:
                     if conn:
                         conn.rollback()
                     print("Ошибка = ", e)
-                    print(" копи пользователя ")
-                    copyUser(str(j[0]))
+                    print(" копи пользователя! ")
+                    copyUser(str(j[0]), str(j[1]), False)
         except (psycopg2.DatabaseError) as e:
             if conn:
                 conn.rollback()
@@ -628,27 +628,56 @@ def program(audios):
             print('Error %s' % e)
             print("Запрос INSERT copyMusic упал")
 
-    def copyUser(musicid):
-        try:
-            cur.execute("SELECT vkuserid, musicbandid FROM vkuser_musicband WHERE musicbandid = "+str(musicid)+"")
-            conn.commit()
-            resul = cur.fetchall()
-            print(resul)
-            for i in resul:
-                try:
-                    cur.execute(
-                        "INSERT INTO vkuser_clearmusicbandnew(idvkuser, idclear) VALUES (" + str(i[0]) + ",'"
-                        + str(i[1]) + "')")
-                    conn.commit()
-                except psycopg2.DatabaseError as e:
-                    if conn:
-                        conn.rollback()
+    def copyUser(musicid, musicname, a):
+        if a==True:
+            try:
+                cur.execute("SELECT vkuserid, musicbandid FROM vkuser_musicband WHERE musicbandid = "+str(musicid)+"")
+                conn.commit()
+                resul = cur.fetchall()
+                print(resul)
+                for i in resul:
+                    try:
+                        cur.execute(
+                            "INSERT INTO vkuser_clearmusicbandnew(idvkuser, idclear) VALUES (" + str(i[0]) + ",'"
+                            + str(i[1]) + "')")
+                        conn.commit()
+                    except psycopg2.DatabaseError as e:
+                        if conn:
+                            conn.rollback()
                         print(e.pgcode, " <<<<<<<<<<????КОД ОШИБКИ")
                         print('Error %s' % e)
-        except:
-            if conn:
-                conn.rollback()
-            print("ошибочка")
+            except:
+                if conn:
+                    conn.rollback()
+                print("ошибочка")
+        else:
+            print("Копия копии")
+            try:
+                cur.execute("SELECT idmusicbandnew FROM newmusicband WHERE namemusicbandnew = '"+str(musicname)+"'")
+                conn.commit()
+                idmnim = cur.fetchall()
+                print(idmnim)
+                print(idmnim[0][0])
+                cur.execute(
+                    "SELECT vkuserid, musicbandid FROM vkuser_musicband WHERE musicbandid = " + str(musicid) + "")
+                conn.commit()
+                resul = cur.fetchall()
+                print(resul)
+                for i in resul:
+                    try:
+                        cur.execute(
+                            "INSERT INTO vkuser_clearmusicbandnew(idvkuser, idclear) VALUES (" + str(i[0]) + ",'"
+                            + str(idmnim[0][0]) + "')")
+                        conn.commit()
+                    except psycopg2.DatabaseError as e:
+                        if conn:
+                            conn.rollback()
+                        print(e.pgcode, " <<<<<<<<<<????КОД ОШИБКИ")
+                        print('Error %s' % e)
+            except:
+                if conn:
+                    conn.rollback()
+                print("ошибочка")
         pass
 
     copyMusic()
