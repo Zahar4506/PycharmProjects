@@ -1,5 +1,10 @@
-body {
+/*body {
     font-family: 'Amatic SC', cursive;
+    background-color: #01284B;
+    color: #E1E6FA;
+}*/
+body {
+    font-family: 'Ubuntu Condensed', sans-serif;
     background-color: #01284B;
     color: #E1E6FA;
 }
@@ -165,9 +170,10 @@ main h1{
     margin:0 auto;
     background: #043f73;
     color: #fff;
-    width: 100px;
+    width: 150px;
     font-size: 25px;
-    font-family: 'Amatic SC', cursive;
+    /*font-family: 'Amatic SC', cursive;*/
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 .button:hover {
     background: #B23700;
