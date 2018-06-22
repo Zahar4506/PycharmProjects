@@ -17,6 +17,12 @@ from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV, cross_val_score
 
+# 1-Гуманитарный
+# 2-Менеджмент и экономика
+# 3-Юридический
+# 4-Природопользования
+# 5-ИТСИТ
+
 try:
     conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
     print("connect OK")
@@ -25,10 +31,10 @@ except:
 # Создаем курсор для работы
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 try:
-    cur.execute("SELECT uservkid FROM vkuser order by uservkid LIMIT 50")
+    cur.execute("SELECT uservkid FROM vkuser order by uservkid")
     users = cur.fetchall()
     print(users)
-    cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew LIMIT 30")
+    cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew")
     musicband = cur.fetchall()
     print(musicband)
 except:
@@ -45,7 +51,7 @@ for indexU, j in enumerate(users):
     except:
         print("запрос списка связи упал")
     try:
-        cur.execute("SELECT category FROM vkuser WHERE uservkid = "+str(j[0])+"")
+        cur.execute("SELECT f.category FROM vkuser as v INNER JOIN faculty as f ON f.facultyid = v.faculty WHERE uservkid = "+str(j[0])+"")
         category = cur.fetchall()
 
     except:
@@ -63,8 +69,8 @@ for indexU, j in enumerate(users):
                 break
             except ValueError as e:
                 print("ERROR > ",e,"\n")
-    # dfa[indexU][len(musicband)] = category[0][0]
-    dfa[indexU][len(musicband)] = 5
+    dfa[indexU][len(musicband)] = category[0][0]
+    #dfa[indexU][len(musicband)] = 5
 
 print("ТАБЛИЦА\n",dfa)
 dfaa = pd.DataFrame(dfa)
