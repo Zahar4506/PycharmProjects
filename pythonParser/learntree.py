@@ -28,20 +28,28 @@ try:
     cur.execute("SELECT uservkid FROM vkuser order by uservkid LIMIT 50")
     users = cur.fetchall()
     print(users)
-    cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew LIMIT 50")
+    cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew LIMIT 30")
     musicband = cur.fetchall()
     print(musicband)
 except:
     print('Сломалася')
 svaz = [[5587], [5588]]
 print("START")
-dfa = numpy.zeros((len(musicband),len(users)),dtype=numpy.int)
+# +1 для замены последнего значения на выбранную специальность
+dfa = numpy.zeros((len(users), len(musicband)+1),dtype=numpy.int)
 for indexU, j in enumerate(users):
+    try:
+        cur.execute("SELECT idclear FROM vkuser_clearmusicbandnew WHERE idvkuser = "+str(j[0])+" order by idclear")
+        svaz = cur.fetchall()
+        print(svaz)
+    except:
+        print("запрос списка связи упал")
+    try:
+        cur.execute("SELECT category FROM vkuser WHERE uservkid = "+str(j[0])+"")
+        category = cur.fetchall()
 
-    cur.execute("SELECT idclear FROM vkuser_clearmusicbandnew WHERE idvkuser = "+str(j[0])+" order by idclear")
-    svaz = cur.fetchall()
-    print(svaz)
-
+    except:
+        print("запрос списка связи упал")
     for indexM, i in enumerate(musicband):
         for indexS, k in enumerate(svaz):
             try:
@@ -55,6 +63,8 @@ for indexU, j in enumerate(users):
                 break
             except ValueError as e:
                 print("ERROR > ",e,"\n")
+    # dfa[indexU][len(musicband)] = category[0][0]
+    dfa[indexU][len(musicband)] = 5
 
 print("ТАБЛИЦА\n",dfa)
 dfaa = pd.DataFrame(dfa)
