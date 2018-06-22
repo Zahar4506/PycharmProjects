@@ -25,10 +25,10 @@ except:
 # Создаем курсор для работы
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 try:
-    cur.execute("SELECT uservkid FROM vkuser order by uservkid LIMIT 5")
+    cur.execute("SELECT uservkid FROM vkuser order by uservkid LIMIT 50")
     users = cur.fetchall()
     print(users)
-    cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew LIMIT 5")
+    cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew LIMIT 50")
     musicband = cur.fetchall()
     print(musicband)
 except:
@@ -37,6 +37,11 @@ svaz = [[5587], [5588]]
 print("START")
 dfa = numpy.zeros((len(musicband),len(users)),dtype=numpy.int)
 for indexU, j in enumerate(users):
+
+    cur.execute("SELECT idclear FROM vkuser_clearmusicbandnew WHERE idvkuser = "+str(j[0])+" order by idclear")
+    svaz = cur.fetchall()
+    print(svaz)
+
     for indexM, i in enumerate(musicband):
         for indexS, k in enumerate(svaz):
             try:
@@ -52,7 +57,9 @@ for indexU, j in enumerate(users):
                 print("ERROR > ",e,"\n")
 
 print("ТАБЛИЦА\n",dfa)
-
+dfaa = pd.DataFrame(dfa)
+print(dfaa)
+dfaa.to_csv('files/output.csv')
 
 
 df = pd.read_csv('iris_df.csv')
