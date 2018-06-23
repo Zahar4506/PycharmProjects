@@ -30,7 +30,7 @@ def allowed_file(filename):
 
 @app.route("/search")
 def search():
-    return render_template("search.html", massage='asdasd')
+    return render_template("search.html", massage='Ранее собранные данные', id=5)
 
 def pup(audio):
     subprocess.Popen(vksearch.program(audio))

@@ -50,6 +50,7 @@ def tableLearn(categ):
     print("START")
     # +1 для замены последнего значения на выбранную специальность
     dfaALL = numpy.zeros((len(musicband)+1), dtype=numpy.uint8)
+    dfaUser = numpy.zeros((len(users)), dtype=numpy.uint32)
     for indexU, j in enumerate(users):
         dfa = numpy.zeros((len(musicband) + 1), dtype=numpy.uint8)
         try:
@@ -80,9 +81,14 @@ def tableLearn(categ):
                 except ValueError as e:
                     print("ERROR > ",e)
         dfa[len(musicband)] = category[0][0]
+        print(j[0])
+        dfaUser[indexU] = j[0]
+        print(dfaUser)
         #dfa[indexU][len(musicband)] = 5
 
         print("ТАБЛИЦА\n", dfaALL)
+        dfaau = pd.DataFrame(dfaUser)
+        print(dfaau)
         dfaALL = numpy.vstack((dfaALL, dfa))
         dfaa = pd.DataFrame(dfaALL)
         print(dfaa)
@@ -90,9 +96,11 @@ def tableLearn(categ):
         try:
             print("ЗАПИСЬ")
             if categ == 0:
+                dfaau.to_csv('files/outputUser.csv')
                 dfaa.to_csv('files/output.csv')
                 print("ЗАПИСАНО")
             else:
+                dfaau.to_csv('files/output1User.csv')
                 dfaa.to_csv('files/output1.csv')
                 print("ЗАПИСАНО 1")
         except:
@@ -143,24 +151,29 @@ def treeLearn(param, trees):
         except:
             print("рисование дерево не получилось")
 
-#tableLearn(0)
+tableLearn(0)
 
-trees = tree.DecisionTreeClassifier(max_depth=10, random_state=17)
-treeLearn(True, trees)
+# trees = tree.DecisionTreeClassifier(max_depth=10, random_state=17)
+# treeLearn(True, trees)
+#
+# with open('files/treesdump.pkl', 'rb') as output_file:
+#     trees1 = pickle.load(output_file)
+# df = pd.read_csv('files/output2.csv')
+# q = len(df.columns) - 1
+# print(q)
+# df = df.astype(int)
+# print("РОБИТ?\n", df)
+# X = df.values[:, 1:q]
+# Y = df.values[:, q]
+# print(X, "<<<<<<<<<<<<<<X")
+# print(Y, "<<<<<<<<<<<<<<Y")
+# trees1.predict(X)
+# print(trees1.predict(X),"------------------ пробуем")
 
-with open('files/treesdump.pkl', 'rb') as output_file:
-    trees1 = pickle.load(output_file)
-df = pd.read_csv('files/output2.csv')
-q = len(df.columns) - 1
-print(q)
-df = df.astype(int)
-print("РОБИТ?\n", df)
-X = df.values[:, 1:q]
-Y = df.values[:, q]
-print(X, "<<<<<<<<<<<<<<X")
-print(Y, "<<<<<<<<<<<<<<Y")
-trees1.predict(X)
-print(trees1.predict(X),"------------------ пробуем")
+
+
+
+
 
 #
 # df = pd.read_csv('iris_df.csv')
