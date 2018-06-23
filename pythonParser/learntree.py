@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import psycopg2
 import psycopg2.extras
 import pydotplus
+import time
 
 warnings.filterwarnings("ignore")
 
@@ -42,8 +43,9 @@ except:
 svaz = [[5587], [5588]]
 print("START")
 # +1 для замены последнего значения на выбранную специальность
-dfa = numpy.zeros((len(users), len(musicband)+1), dtype=numpy.uint8)
+dfaALL = numpy.zeros((len(musicband)+1), dtype=numpy.uint8)
 for indexU, j in enumerate(users):
+    dfa = numpy.zeros((len(musicband) + 1), dtype=numpy.uint8)
     try:
         cur.execute("SELECT idclear FROM vkuser_clearmusicbandnew WHERE idvkuser = "+str(j[0])+" order by idclear")
         svaz = cur.fetchall()
@@ -56,25 +58,33 @@ for indexU, j in enumerate(users):
 
     except:
         print("запрос списка связи упал")
+    print(indexU, "< USER")
     for indexM, i in enumerate(musicband):
         for indexS, k in enumerate(svaz):
             try:
-                print(k[0], " < k")
-                print(i, " < i")
-                print(i.index(k[0]))
-                print(indexU," ",indexM, " ", indexS)
+
+                # print(k[0], " < k")
+                # print(i, " < i")
+                # print(i.index(k[0]))
+                # print(indexU," ",indexM, " ", indexS)
                 if i.index(k[0])==0:
                     print("----------------------------------")
-                    dfa[indexU][indexM] = 1
+                    dfa[indexM] = 1
                 break
             except ValueError as e:
-                print("ERROR > ",e,"\n")
-    dfa[indexU][len(musicband)] = category[0][0]
+                print("ERROR > ",e)
+    dfa[len(musicband)] = category[0][0]
     #dfa[indexU][len(musicband)] = 5
-    print("ТАБЛИЦА\n", dfa)
-    dfaa = pd.DataFrame(dfa)
+
+    print("ТАБЛИЦА\n", dfaALL)
+    dfaALL = numpy.vstack((dfaALL, dfa))
+    dfaa = pd.DataFrame(dfaALL)
     print(dfaa)
+    time.sleep(1)
+    print("ЗАПИСЬ")
     dfaa.to_csv('files/output.csv')
+    print("ЗАПИСАНО")
+    time.sleep(1)
 
 
 
