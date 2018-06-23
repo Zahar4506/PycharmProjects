@@ -2,6 +2,9 @@ import os
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
+import pandas as pd
+import psycopg2
+from IPython.core.display import HTML
 from flask import Flask, render_template, request
 from multiprocessing import Process
 from werkzeug.utils import secure_filename
@@ -30,7 +33,40 @@ def allowed_file(filename):
 
 @app.route("/search")
 def search():
-    return render_template("search.html", massage='Ранее собранные данные', id=5)
+    try:
+        conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
+        print("connect OK")
+    except:
+        print("Не удалось подключиться к БД")
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+    df = pd.read_csv('files/output3User.csv')
+    df.drop(df.columns[[0]], axis=1, inplace=True)
+    print(df.size)
+    a = []
+    for i in range(df.size):
+        a.append(df.values[i])
+    userL = []
+    userF = []
+    # Создаем курсор для работы
+    for i in a:
+        print(i[0],'<<<<<')
+        try:
+            cur.execute("SELECT fname FROM vkuser WHERE uservkid = "+str(i[0])+"")
+            usersF = cur.fetchone()
+            userF.append(usersF[0])
+            cur.execute("SELECT lname FROM vkuser WHERE uservkid = " + str(i[0]) + "")
+            usersL = cur.fetchone()
+            userL.append(usersL[0])
+        except:
+            print("ошибка")
+    print(userF)
+    print(userL)
+    df.loc[:, 'Fname'] = pd.Series(userF)
+    df.loc[:, 'Lname'] = pd.Series(userL)
+    df.columns = ['ID пользователя',"Имя","Фамилия"]
+    df.head()
+    return render_template("search.html", massage='Ранее собранные данные', id=HTML(df.to_html(max_rows=50)))
 
 def pup(audio):
     subprocess.Popen(vksearch.program(audio))
