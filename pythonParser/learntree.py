@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore")
 from sklearn import tree
 
 import graphviz
-from sklearn.model_selection import train_test_split, StratifiedKFold
+from sklearn.model_selection import train_test_split, StratifiedKFold, KFold
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import GridSearchCV, cross_val_score
 
@@ -25,6 +25,8 @@ from sklearn.model_selection import GridSearchCV, cross_val_score
 # 3-Юридический
 # 4-Природопользования
 # 5-ИТСИТ
+
+dumpfile = None
 
 def tableLearn(categ):
     try:
@@ -109,24 +111,56 @@ def treeLearn(param, trees):
         Y = df.values[:, q]
         print(X, "<<<<<<<<<<<<<<X")
         print(Y, "<<<<<<<<<<<<<<Y")
-        X_train, X_holdout, Y_train, Y_holdout = train_test_split(df.values, Y, test_size=0.3, random_state=17)
+        kf = KFold(n_splits=2)
+        kf.get_n_splits(X)
+        print(kf.get_n_splits(X))
+        for train_index, test_index in kf.split(X):
+            print("TRAIN:", train_index, "TEST:", test_index)
+            X_train, X_test = X[train_index], X[test_index]
+            Y_train, Y_test = Y[train_index], Y[test_index]
         trees.fit(X_train, Y_train)
-        tree_pred = trees.predict(X_holdout)
-        accuracy_score(Y_holdout, tree_pred)
-        print(accuracy_score(Y_holdout, tree_pred))
+        trees.score(X_test,Y_test)
+        print(trees.score(X_test,Y_test)," <<<<<<<<<<<< точность совпадений")
+
+        tree_pred = trees.predict(X_test)
+        accuracy_score(Y_test, tree_pred)
+        print(accuracy_score(Y_test, tree_pred), ">>>>>>>>>>>>>>> точность")
+
+        with open('files/treesdump.pkl', 'wb') as output_file:
+            pickle.dump(trees, output_file)
+        # X_train, X_holdout, Y_train, Y_holdout = train_test_split(df.values, Y, test_size=0.3, random_state=17)
+        # trees.fit(X_train, Y_train)
+        # tree_pred = trees.predict(X_holdout)
+        # accuracy_score(Y_holdout, tree_pred)
+        # print(accuracy_score(Y_holdout, tree_pred))
         print("------------------------------------------------------------------------")
-        dot_data = tree.export_graphviz(trees, out_file=None, rounded=True, filled=True)
-        graph = pydotplus.graph_from_dot_data(dot_data)
-        graph = graphviz.Source(dot_data)
-        graph.render("files/iris")
+        #рисование дерева
+        try:
+            dot_data = tree.export_graphviz(trees, out_file=None, rounded=True, filled=True)
+            graph = pydotplus.graph_from_dot_data(dot_data)
+            graph = graphviz.Source(dot_data)
+            graph.render("files/iris")
+        except:
+            print("рисование дерево не получилось")
 
-
+#tableLearn(0)
 
 trees = tree.DecisionTreeClassifier(max_depth=10, random_state=17)
 treeLearn(True, trees)
 
-
-
+with open('files/treesdump.pkl', 'rb') as output_file:
+    trees1 = pickle.load(output_file)
+df = pd.read_csv('files/output2.csv')
+q = len(df.columns) - 1
+print(q)
+df = df.astype(int)
+print("РОБИТ?\n", df)
+X = df.values[:, 1:q]
+Y = df.values[:, q]
+print(X, "<<<<<<<<<<<<<<X")
+print(Y, "<<<<<<<<<<<<<<Y")
+trees1.predict(X)
+print(trees1.predict(X),"------------------ пробуем")
 
 #
 # df = pd.read_csv('iris_df.csv')
