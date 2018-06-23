@@ -35,7 +35,8 @@ def tableLearn(categ):
     # Создаем курсор для работы
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     try:
-        cur.execute("SELECT uservkid FROM vkuser WHERE category = "+str(categ)+" order by uservkid")
+        #cur.execute("SELECT uservkid FROM vkuser WHERE category = "+str(categ)+" order by uservkid")
+        cur.execute("SELECT uservkid, f.category FROM vkuser as v INNER JOIN faculty as f ON f.facultyid = v.faculty WHERE v.category = "+str(categ)+" and f.category != 0 order by uservkid")
         users = cur.fetchall()
         print(users)
         cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew")
@@ -97,26 +98,32 @@ def tableLearn(categ):
         time.sleep(1)
 
 
-def treeLearn(param, tree):
+def treeLearn(param, trees):
     if param == True:
-        df = pd.read_csv('output.csv')
+        df = pd.read_csv('files/output2.csv')
         q = len(df.columns) - 1
         print(q)
         df = df.astype(int)
         print("РОБИТ?\n", df)
-        X = df.values[:, 0:q]
+        X = df.values[:, 1:q]
         Y = df.values[:, q]
         print(X, "<<<<<<<<<<<<<<X")
         print(Y, "<<<<<<<<<<<<<<Y")
         X_train, X_holdout, Y_train, Y_holdout = train_test_split(df.values, Y, test_size=0.3, random_state=17)
-        tree.fit(X_train, Y_train)
-        tree_pred = tree.predict(X_holdout)
+        trees.fit(X_train, Y_train)
+        tree_pred = trees.predict(X_holdout)
         accuracy_score(Y_holdout, tree_pred)
         print(accuracy_score(Y_holdout, tree_pred))
         print("------------------------------------------------------------------------")
+        dot_data = tree.export_graphviz(trees, out_file=None, rounded=True, filled=True)
+        graph = pydotplus.graph_from_dot_data(dot_data)
+        graph = graphviz.Source(dot_data)
+        graph.render("files/iris")
 
-tree = tree.DecisionTreeClassifier(max_depth=10, random_state=17)
-treeLearn(True,tree)
+
+
+trees = tree.DecisionTreeClassifier(max_depth=10, random_state=17)
+treeLearn(True, trees)
 
 
 
