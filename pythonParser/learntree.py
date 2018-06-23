@@ -42,7 +42,7 @@ except:
 svaz = [[5587], [5588]]
 print("START")
 # +1 для замены последнего значения на выбранную специальность
-dfa = numpy.zeros((len(users), len(musicband)+1),dtype=numpy.int)
+dfa = numpy.zeros((len(users), len(musicband)+1), dtype=numpy.uint8)
 for indexU, j in enumerate(users):
     try:
         cur.execute("SELECT idclear FROM vkuser_clearmusicbandnew WHERE idvkuser = "+str(j[0])+" order by idclear")
@@ -71,11 +71,12 @@ for indexU, j in enumerate(users):
                 print("ERROR > ",e,"\n")
     dfa[indexU][len(musicband)] = category[0][0]
     #dfa[indexU][len(musicband)] = 5
+    print("ТАБЛИЦА\n", dfa)
+    dfaa = pd.DataFrame(dfa)
+    print(dfaa)
+    dfaa.to_csv('files/output.csv')
 
-print("ТАБЛИЦА\n",dfa)
-dfaa = pd.DataFrame(dfa)
-print(dfaa)
-dfaa.to_csv('files/output.csv')
+
 
 
 df = pd.read_csv('iris_df.csv')
