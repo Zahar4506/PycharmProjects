@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="653bd926-2dc1-413f-b2b0-56471bf4e3f5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/files/iris" afterPath="$PROJECT_DIR$/files/iris" />
+      <change beforePath="$PROJECT_DIR$/files/iris.pdf" afterPath="$PROJECT_DIR$/files/iris.pdf" />
       <change beforePath="$PROJECT_DIR$/files/output.csv" afterPath="$PROJECT_DIR$/files/output.csv" />
-      <change beforePath="$PROJECT_DIR$/flaskapp.py" afterPath="$PROJECT_DIR$/flaskapp.py" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/templates/search.html" afterPath="$PROJECT_DIR$/templates/search.html" />
+      <change beforePath="$PROJECT_DIR$/files/treesdump.pkl" afterPath="$PROJECT_DIR$/files/treesdump.pkl" />
+      <change beforePath="$PROJECT_DIR$/learntree.py" afterPath="$PROJECT_DIR$/learntree.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="flaskapp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flaskapp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flaskapp.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="365">
@@ -44,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="learntree.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="learntree.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learntree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="41" column="30" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="41" selection-end-column="30" />
+            <state relative-caret-position="1190">
+              <caret line="128" column="35" lean-forward="false" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -153,10 +154,10 @@
         <option value="$PROJECT_DIR$/vksearch.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/iris_df.csv" />
-        <option value="$PROJECT_DIR$/learntree.py" />
         <option value="$PROJECT_DIR$/templates/search.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/flaskapp.py" />
+        <option value="$PROJECT_DIR$/learntree.py" />
       </list>
     </option>
   </component>
@@ -251,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.flaskapp">
+  <component name="RunManager" selected="Python.learntree">
     <configuration name="flask" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -351,8 +352,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.flaskapp" />
-        <item index="1" class="java.lang.String" itemvalue="Python.learntree" />
+        <item index="0" class="java.lang.String" itemvalue="Python.learntree" />
+        <item index="1" class="java.lang.String" itemvalue="Python.flaskapp" />
         <item index="2" class="java.lang.String" itemvalue="Python.vksearch" />
         <item index="3" class="java.lang.String" itemvalue="Python.flask" />
       </list>
@@ -385,7 +386,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15405117" sideWeight="0.58441556" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -394,7 +394,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40724477" sideWeight="0.52407" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.47592998" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.47592998" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3536184" sideWeight="0.48335856" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19822006" sideWeight="0.41558442" order="2" side_tool="true" content_ui="tabs" />
@@ -782,12 +782,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learntree.py">
+    <entry file="file://$PROJECT_DIR$/flaskapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="41" column="30" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="365">
+          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
           <folding>
-            <element signature="e#1#20#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -800,12 +800,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flaskapp.py">
+    <entry file="file://$PROJECT_DIR$/learntree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+        <state relative-caret-position="1190">
+          <caret line="128" column="35" lean-forward="false" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1#20#0" expanded="true" />
           </folding>
         </state>
       </provider>

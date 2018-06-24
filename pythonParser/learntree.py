@@ -151,24 +151,24 @@ def treeLearn(param, trees):
         except:
             print("рисование дерево не получилось")
 
-tableLearn(0)
+#tableLearn(0)
 
-# trees = tree.DecisionTreeClassifier(max_depth=10, random_state=17)
-# treeLearn(True, trees)
-#
-# with open('files/treesdump.pkl', 'rb') as output_file:
-#     trees1 = pickle.load(output_file)
-# df = pd.read_csv('files/output2.csv')
-# q = len(df.columns) - 1
-# print(q)
-# df = df.astype(int)
-# print("РОБИТ?\n", df)
-# X = df.values[:, 1:q]
-# Y = df.values[:, q]
-# print(X, "<<<<<<<<<<<<<<X")
-# print(Y, "<<<<<<<<<<<<<<Y")
-# trees1.predict(X)
-# print(trees1.predict(X),"------------------ пробуем")
+trees = tree.DecisionTreeClassifier(max_depth=10, random_state=17)
+treeLearn(True, trees)
+
+with open('files/treesdump.pkl', 'rb') as output_file:
+    trees1 = pickle.load(output_file)
+df = pd.read_csv('files/output2.csv')
+q = len(df.columns) - 1
+print(q)
+df = df.astype(int)
+print("РОБИТ?\n", df)
+X = df.values[:, 1:q]
+Y = df.values[:, q]
+print(X, "<<<<<<<<<<<<<<X")
+print(Y, "<<<<<<<<<<<<<<Y")
+trees1.predict(X)
+print(trees1.predict(X),"------------------ пробуем")
 
 
 
