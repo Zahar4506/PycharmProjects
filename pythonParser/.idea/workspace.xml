@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="653bd926-2dc1-413f-b2b0-56471bf4e3f5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/files/iris" afterPath="$PROJECT_DIR$/files/iris" />
-      <change beforePath="$PROJECT_DIR$/files/iris.pdf" afterPath="$PROJECT_DIR$/files/iris.pdf" />
       <change beforePath="$PROJECT_DIR$/files/output.csv" afterPath="$PROJECT_DIR$/files/output.csv" />
-      <change beforePath="$PROJECT_DIR$/files/output2.csv" afterPath="$PROJECT_DIR$/files/output2.csv" />
-      <change beforePath="$PROJECT_DIR$/files/treesdump.pkl" afterPath="$PROJECT_DIR$/files/treesdump.pkl" />
       <change beforePath="$PROJECT_DIR$/learntree.py" afterPath="$PROJECT_DIR$/learntree.py" />
+      <change beforePath="$PROJECT_DIR$/vksearch.py" afterPath="$PROJECT_DIR$/vksearch.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,10 +46,11 @@
       <file leaf-file-name="learntree.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learntree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1598">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="125" column="27" lean-forward="false" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
+                <element signature="e#7150#9421#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,10 +79,12 @@
       <file leaf-file-name="vksearch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vksearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="800" column="4" lean-forward="false" selection-start-line="800" selection-start-column="4" selection-end-line="800" selection-end-column="17" />
+            <state relative-caret-position="118">
+              <caret line="830" column="28" lean-forward="false" selection-start-line="830" selection-start-column="28" selection-end-line="830" selection-end-column="28" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
+                <marker date="1529829356390" expanded="false" signature="230:2728" ph="..." />
+                <marker date="1529829356390" expanded="false" signature="2729:3420" ph="..." />
               </folding>
             </state>
           </provider>
@@ -101,9 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>встретился</find>
-      <find>жур</find>
-      <find>мен</find>
       <find>менедж</find>
       <find>&lt;========</find>
       <find>журна</find>
@@ -131,6 +128,9 @@
       <find>iris</find>
       <find>prog</find>
       <find>color</find>
+      <find>arrClean</find>
+      <find>vkuser_clearmusicbandnew</find>
+      <find>copyUser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,12 +152,12 @@
         <option value="$PROJECT_DIR$/vk" />
         <option value="$PROJECT_DIR$/templates/about.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/vksearch.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/iris_df.csv" />
         <option value="$PROJECT_DIR$/templates/search.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/flaskapp.py" />
+        <option value="$PROJECT_DIR$/vksearch.py" />
         <option value="$PROJECT_DIR$/learntree.py" />
       </list>
     </option>
@@ -398,7 +398,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.47592998" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3536184" sideWeight="0.48335856" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35326087" sideWeight="0.48335856" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19822006" sideWeight="0.41558442" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29130435" sideWeight="0.4941435" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -766,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vksearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="800" column="4" lean-forward="false" selection-start-line="800" selection-start-column="4" selection-end-line="800" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -802,12 +792,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vksearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="830" column="28" lean-forward="false" selection-start-line="830" selection-start-column="28" selection-end-line="830" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1529829356390" expanded="false" signature="230:2728" ph="..." />
+            <marker date="1529829356390" expanded="false" signature="2729:3420" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/learntree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1598">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        <state relative-caret-position="306">
+          <caret line="125" column="27" lean-forward="false" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
+            <element signature="e#7150#9421#0" expanded="false" />
           </folding>
         </state>
       </provider>

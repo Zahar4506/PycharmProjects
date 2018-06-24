@@ -7,13 +7,13 @@ import time
 import psycopg2
 import psycopg2.extras
 
-
 import vk
 import re
 from vk.exceptions import VkAPIError
 from concurrent.futures import ThreadPoolExecutor
 import time
 import os
+
 """
 установка для постргес библиотек CREATE EXTENSION fuzzystrmatch;
 CREATE EXTENSION pg_trgm;
@@ -141,11 +141,12 @@ audios3 = (
     "6210635"
 )
 arrClean = []
-def hello():
-    print("РОБИТ")
 
+
+# Функция для запуска парсинга данных пользвателя
 def program(audios):
-    # Функции ---------------------------------------------------------------------------------------------------------
+    # -----------------------------------------ФУНКЦИИ------------------------------------------------------------------
+    # Установить факультет
     def setFaculty(university, facultyid, faculty_name):
         print("старт факультета")
         try:
@@ -165,7 +166,6 @@ def program(audios):
                     print(facultyRes, " результат запроса к апи УНИВЕР")
                     for i in facultyRes['items']:
                         try:
-                            # исправить!!!!! что то не так с массивом TODO исправлять
                             print(str(i['id']) == str(facultyid), " проверка ид факультета")
                             print(str(i['id']), " ===== ", facultyid, " ----- ", i['title'])
                             if str(i['id']) == str(facultyid):
@@ -191,11 +191,12 @@ def program(audios):
             # Код для вставки
             # Обновление БД из вк
             print("ФАКУЛЬТЕТ = ", facultyid, " НАЗВАНИЕ = ", faculty_name)
-            cur.execute("INSERT INTO public.faculty (facultyid, name) VALUES ('" + str(facultyid) + "', '" + str(faculty_name) + "')")
-            #cur.execute("UPDATE public.faculty SET facultyid = '" + str(facultyid) + "', name = '" + str(faculty_name) + "' WHERE ""facultyid"" = " + str(facultyid) + "")
+            cur.execute("INSERT INTO public.faculty (facultyid, name) VALUES ('" + str(facultyid) + "', '" + str(
+                faculty_name) + "')")
+            # cur.execute("UPDATE public.faculty SET facultyid = '" + str(facultyid) + "', name = '" + str(faculty_name) + "' WHERE ""facultyid"" = " + str(facultyid) + "")
             conn.commit()
-            print("Положил данные факультета (название)-> ", facultyid, " ",faculty_name)
-            facultyRes = ""
+            print("Положил данные факультета (название)-> ", facultyid, " ", faculty_name)
+            facultyRes = None
         except (psycopg2.DatabaseError, VkAPIError) as e:
             if conn:
                 conn.rollback()
@@ -212,7 +213,6 @@ def program(audios):
                     if conn:
                         conn.rollback()
                     print("Запрос UPDATE факультета не удался")
-
         print("факультет финиш")
 
     def setCity(cityid):
@@ -238,12 +238,12 @@ def program(audios):
             # Попожить город
             # Код для вставки
             print("ГОРОД = ", cityid, "НАЗВАНИЕ =", title)
-            #cur.execute("INSERT INTO public.vkuser (uservkid, fname, lname, city, faculty) VALUES ('" + str(userid) + "', '" + str(fname) + "', '" + str(lname) + "', '" + str(city) + "', '" + str(faculty) + "')")
+            # cur.execute("INSERT INTO public.vkuser (uservkid, fname, lname, city, faculty) VALUES ('" + str(userid) + "', '" + str(fname) + "', '" + str(lname) + "', '" + str(city) + "', '" + str(faculty) + "')")
             cur.execute("INSERT INTO public.city (id, name) VALUES ('" + str(cityid) + "', '" + str(title) + "')")
-            #cur.execute("UPDATE public.city SET id='" + str(cityid) + "', name='" + str(title) + "' WHERE id = '"+str(cityid)+"'")
+            # cur.execute("UPDATE public.city SET id='" + str(cityid) + "', name='" + str(title) + "' WHERE id = '"+str(cityid)+"'")
             conn.commit()
-            print("Положил данные города (название) -> ", cityid," ", title)
-            profiles = ""
+            print("Положил данные города (название) -> ", cityid, " ", title)
+            profiles = None
             time.sleep(0.33)
         except psycopg2.DatabaseError as e:
             if conn:
@@ -259,9 +259,10 @@ def program(audios):
                 access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
             vk_api = vk.API(session, v='5.71')
             try:
-                profiles = vk_api.users.get(user_id=userid, fields='city,connections,education,interests,sex,universities')
+                profiles = vk_api.users.get(user_id=userid,
+                                            fields='city,connections,education,interests,sex,universities')
             except VkAPIError as e:
-                print("================VK================",e)
+                print("================VK================", e)
             print(profiles)
             for i in profiles:
                 try:
@@ -313,13 +314,13 @@ def program(audios):
             setCity(str(city))
             print(university, "универ для функции вставки и факультет", faculty, faculty_name)
             setFaculty(str(university), str(faculty), str(faculty_name))
-            cur.execute("INSERT INTO public.vkuser (uservkid, fname, lname, city, faculty) VALUES ('" + str(userid) + "', '" + str(fname) + "', '" + str(lname) + "', '" + str(city) + "', '" + str(faculty) + "')")
+            cur.execute("INSERT INTO public.vkuser (uservkid, fname, lname, city, faculty) VALUES ('" + str(
+                userid) + "', '" + str(fname) + "', '" + str(lname) + "', '" + str(city) + "', '" + str(faculty) + "')")
             # Обновление БД из вк
-            #cur.execute("UPDATE public.vkuser SET fname = '" + str(fname) + "', lname = '" + str(lname) + "', city = '" + str(city) + "', faculty = '" + str(faculty) + "' WHERE ""uservkid"" = " + str(userid) + "")
+            # cur.execute("UPDATE public.vkuser SET fname = '" + str(fname) + "', lname = '" + str(lname) + "', city = '" + str(city) + "', faculty = '" + str(faculty) + "' WHERE ""uservkid"" = " + str(userid) + "")
             conn.commit()
             print("Положил данные пользователя(имя, город, факультет) setInfoUser")
             profiles = ""
-
         except (psycopg2.DatabaseError, psycopg2.Error) as e:
             if conn:
                 conn.rollback()
@@ -328,7 +329,9 @@ def program(audios):
             if e.pgcode == "23505":
                 try:
                     print("ПРОБУЕМ ОБНОВИТЬ")
-                    cur.execute("UPDATE public.vkuser SET fname = '" + str(fname) + "', lname = '" + str(lname) + "', city = '" + str(city) + "', faculty = '" + str(faculty) + "' WHERE ""uservkid"" = " + str(userid) + "")
+                    cur.execute("UPDATE public.vkuser SET fname = '" + str(fname) + "', lname = '" + str(
+                        lname) + "', city = '" + str(city) + "', faculty = '" + str(
+                        faculty) + "' WHERE ""uservkid"" = " + str(userid) + "")
                     conn.commit()
                 except psycopg2.DatabaseError as e:
                     if conn:
@@ -386,6 +389,7 @@ def program(audios):
             print(i, array[i].text)
             setUserMusic(audio, array[i].text)
 
+    # Функция очистки музыкальных исполнителей
     def cleaningMusicBand(nameband):
         try:
             result = re.sub(r'[^a-zA-Zа-яА-Я0-9( )ёЁ]', ' ', nameband)
@@ -398,7 +402,7 @@ def program(audios):
                 print(resFind, "-----------FEAT")
             resFind = result.find('GLOBAL TUNING')
             if resFind != -1:
-                result = result[resFind+13:len(result):1]
+                result = result[resFind + 13:len(result):1]
                 print(resFind, "-----------GLOBAL TUNING")
             resFind = result.find('FT')
             if resFind != -1:
@@ -411,10 +415,9 @@ def program(audios):
                 else:
                     result = result[0:resFind:1]
                     print(resFind, "-----------FT")
-
             resFind = result.find('HZ ')
             if resFind != -1:
-                result = result[resFind+3:len(result):1]
+                result = result[resFind + 3:len(result):1]
                 print(resFind, "<========hz")
                 resFind = result.find('HZ ')
                 if resFind != -1:
@@ -422,7 +425,7 @@ def program(audios):
                     print(resFind, "<========hz2")
             resFind = result.find('CARMUSICKZ')
             if resFind != -1:
-                result = result[resFind+10:len(result):1]
+                result = result[resFind + 10:len(result):1]
                 print(resFind, "<========carmuzic")
             resFind = result.find('CLUB RAЙ')
             if resFind != -1:
@@ -453,13 +456,10 @@ def program(audios):
             result = re.sub(r'MUZMORU', ' ', result)
             result = re.sub(r'MS', ' ', result)
             result = re.sub(r'MUSIC', ' ', result)
-
-
             result = re.sub(r'[\d]', '', result)
             result = re.sub(r'\s+', ' ', result)
             if len(result) > 25:
                 result = result[0:25:1]
-
             if len(result) < 2:
                 result = ''
             else:
@@ -468,9 +468,12 @@ def program(audios):
             print("очитска трека упала")
             return nameband
 
+    # Функция очистки через Левенштейна
     def cleaningMusicClear(nameband):
         try:
-            cur.execute("SELECT musicbandid, clearnameband, levenshtein('"+str(nameband)+"', clearnameband) as sml FROM musicband WHERE levenshtein('"+str(nameband)+"', clearnameband) = 1 ORDER BY  sml, clearnameband")
+            cur.execute("SELECT musicbandid, clearnameband, levenshtein('" + str(
+                nameband) + "', clearnameband) as sml FROM musicband WHERE levenshtein('" + str(
+                nameband) + "', clearnameband) = 1 ORDER BY  sml, clearnameband")
             results = cur.fetchall()
             print(results)
             if results == []:
@@ -479,37 +482,46 @@ def program(audios):
                 for j in results:
                     print(j[0], j[1], j[2])
                     arrClean.append(j[0])
-                    cur.execute("UPDATE musicband SET clear = '" + str(j[1]) + "' WHERE musicbandid ='"+str(j[0])+"'")
+                    cur.execute(
+                        "UPDATE musicband SET clear = '" + str(j[1]) + "' WHERE musicbandid ='" + str(j[0]) + "'")
                     conn.commit()
         except:
             print("очитска трека упала")
 
+    # Функция разбиения факультетов на категории
     def categoryFaculty(faculty):
         try:
             print(faculty)
             for j in faculty:
                 j[1] = j[1].upper()
                 print(j[0], j[1])
-                if j[1].find('ЖУРНА')>-1 or j[1].find('УПРАВ')>-1 or j[1].find('СОЦ')>-1 or j[1].find('ФИЛОЛ')>-1 or j[1].find('ЯЗЫК')>-1 or j[1].find('СПОРТ')>-1 or j[1].find('ТУРИЗ')>-1 or j[1].find('ДИЗАЙ')>-1 or j[1].find('МУНИЦ')>-1 or j[1].find('ГУМАН')>-1 or j[1].find('ВОКАЛ')>-1 or j[1].find('ПСИХО')>-1 or j[1].find('ПЕДАГ')>-1 or j[1].find('ФИЗИЧЕСКОЙ')>-1 or j[1].find('РУССК')>-1 or j[1].find('ЛИТЕРАТ')>-1:
+                if j[1].find('ЖУРНА') > -1 or j[1].find('УПРАВ') > -1 or j[1].find('СОЦ') > -1 or j[1].find(
+                        'ФИЛОЛ') > -1 or j[1].find('ЯЗЫК') > -1 or j[1].find('СПОРТ') > -1 or j[1].find('ТУРИЗ') > -1 or \
+                        j[1].find('ДИЗАЙ') > -1 or j[1].find('МУНИЦ') > -1 or j[1].find('ГУМАН') > -1 or j[1].find(
+                    'ВОКАЛ') > -1 or j[1].find('ПСИХО') > -1 or j[1].find('ПЕДАГ') > -1 or j[1].find(
+                    'ФИЗИЧЕСКОЙ') > -1 or j[1].find('РУССК') > -1 or j[1].find('ЛИТЕРАТ') > -1:
                     print(j[1], "<========Гуманитарный")
-                    cur.execute("UPDATE faculty SET category = '1' WHERE facultyid ='"+str(j[0])+"'")
-
-                elif j[1].find('МЕНЕДЖ')>-1 or j[1].find('ФИНАН')>-1 or j[1].find('ЭКОНОМ')>-1:
+                    cur.execute("UPDATE faculty SET category = '1' WHERE facultyid ='" + str(j[0]) + "'")
+                elif j[1].find('МЕНЕДЖ') > -1 or j[1].find('ФИНАН') > -1 or j[1].find('ЭКОНОМ') > -1:
                     print(j[1], "<========Менеджмента и экономики")
                     cur.execute("UPDATE faculty SET category = '2' WHERE facultyid ='" + str(j[0]) + "'")
-
-                elif j[1].find('ПРАВО')>-1 or j[1].find('ЮРИД')>-1or j[1].find('ПРАВА')>-1 or j[1].find('АРБИТ')>-1 or j[1].find('АДВОКА')>-1 or j[1].find('УГОЛОВ')>-1 or j[1].find('ФИЛОС')>-1 or j[1].find('ИСТОР')>-1 or j[1].find('ЮРИС')>-1:
-                        print(j[1], "<========Юридический")
-                        cur.execute("UPDATE faculty SET category = '3' WHERE facultyid ='" + str(j[0]) + "'")
-
-                elif j[1].find('БИОЛ')>-1 or j[1].find('ЕСТЕСТ')>-1 or j[1].find('ГЕОЛ')>-1 or j[1].find('НЕФТ')>-1 or j[1].find('ГАЗА')>-1 or j[1].find('БУРЕ')>-1 or j[1].find('АВТОМ')>-1 or j[1].find('ХИМИ')>-1 or j[1].find('ЭКОЛО')>-1 or j[1].find('ПРИРОДО')>-1 or j[1].find('ЭНЕРГЕ')>-1 or j[1].find('НЕФТЕ')>-1:
+                elif j[1].find('ПРАВО') > -1 or j[1].find('ЮРИД') > -1 or j[1].find('ПРАВА') > -1 or j[1].find(
+                        'АРБИТ') > -1 or j[1].find('АДВОКА') > -1 or j[1].find('УГОЛОВ') > -1 or j[1].find(
+                    'ФИЛОС') > -1 or j[1].find('ИСТОР') > -1 or j[1].find('ЮРИС') > -1:
+                    print(j[1], "<========Юридический")
+                    cur.execute("UPDATE faculty SET category = '3' WHERE facultyid ='" + str(j[0]) + "'")
+                elif j[1].find('БИОЛ') > -1 or j[1].find('ЕСТЕСТ') > -1 or j[1].find('ГЕОЛ') > -1 or j[1].find(
+                        'НЕФТ') > -1 or j[1].find('ГАЗА') > -1 or j[1].find('БУРЕ') > -1 or j[1].find('АВТОМ') > -1 or \
+                        j[1].find('ХИМИ') > -1 or j[1].find('ЭКОЛО') > -1 or j[1].find('ПРИРОДО') > -1 or j[1].find(
+                    'ЭНЕРГЕ') > -1 or j[1].find('НЕФТЕ') > -1:
                     print(j[1], "<========Природопользование")
                     cur.execute("UPDATE faculty SET category = '4' WHERE facultyid ='" + str(j[0]) + "'")
-
-                elif j[1].find('МАТЕМ')>-1 or j[1].find('ТЕХН')>-1 or j[1].find('ЭЛЕКТ')>-1 or j[1].find('СИСТЕМ')>-1 or j[1].find('ВЫЧИСЛИ')>-1 or j[1].find('ИНЖЕН')>-1 or j[1].find('ИНФОРМ')>-1 or j[1].find('МОДЕЛИ')>-1 or j[1].find('СТРОИТ')>-1 or j[1].find('ФИЗИК')>-1 or j[1].find('ТЕХНИЧ')>-1 or j[1].find('ТЕХНОЛОГ')>-1:
+                elif j[1].find('МАТЕМ') > -1 or j[1].find('ТЕХН') > -1 or j[1].find('ЭЛЕКТ') > -1 or j[1].find(
+                        'СИСТЕМ') > -1 or j[1].find('ВЫЧИСЛИ') > -1 or j[1].find('ИНЖЕН') > -1 or j[1].find(
+                    'ИНФОРМ') > -1 or j[1].find('МОДЕЛИ') > -1 or j[1].find('СТРОИТ') > -1 or j[1].find(
+                    'ФИЗИК') > -1 or j[1].find('ТЕХНИЧ') > -1 or j[1].find('ТЕХНОЛОГ') > -1:
                     print(j[1], "<========ИТСИТ")
                     cur.execute("UPDATE faculty SET category = '5' WHERE facultyid ='" + str(j[0]) + "'")
-
                 else:
                     print('Неизвестное сочетание')
                     cur.execute("UPDATE faculty SET category = '0' WHERE facultyid ='" + str(j[0]) + "'")
@@ -517,8 +529,7 @@ def program(audios):
         except:
             print("факультет упал")
 
-
-    # --------------------------------------------------СТАРТ ПРОГРАММЫ ----------------------------------------------------
+    # --------------------------------------------------СТАРТ ПРОГРАММЫ ------------------------------------------------
 
     start_time = time.time()
     try:
@@ -544,52 +555,32 @@ def program(audios):
         print('Error %s' % e)
         print("ЧТО то пошло не так")
     """
-#ОЧИИСТКА ПЕРВОНАЧАЛЬНАЯ ОТ МУСОРА РЕГУЛЯРКА--------------------------------------
-    # try:
-    #     cur.execute("SELECT musicbandid, nameband FROM musicband")
-    #     # cur.execute("SELECT city FROM public.vkuser WHERE city IS NOT NULL GROUP BY city ORDER BY city DESC")
-    #     results = cur.fetchall()
-    #     print(results)
-    #     for j in results:
-    #         print(j[0], j[1])
-    #         clearnameband = cleaningMusicBand(j[1])
-    #         print(clearnameband)
-    #         cur.execute("UPDATE musicband SET clearnameband = ltrim('" + str(clearnameband) + "') WHERE musicbandid ='"+str(j[0])+"'")
-    #         conn.commit()
-    #         print("положил---------------------")
-    #
-    #
-    # except psycopg2.DatabaseError as e:
-    #     if conn:
-    #         conn.rollback()
-    #     print('Error %s' % e)
-    #     print("ЧТО то пошло не так")
 
 
-# запрос на апдейт музыки через левенштейна
-#     try:
-#         cur.execute("SELECT musicbandid, clearnameband FROM musicband WHERE clearnameband != '' ORDER BY clearnameband")
-#         results = cur.fetchall()
-#         print(results)
-#         for index, j in enumerate(results):
-#             print(index, '<<<<<<<<<<<<<<  ', j[0], j[1])
-#             print(arrClean)
-#             print(arrClean.count(j[0]) != 0, ' = = = = = =  = = = = =  = =')
-#             if arrClean.count(j[0]) != 0:
-#                 continue
-#             if j[1] != str('None'):
-#                 cleaningMusicClear(j[1])
-#                 print(">>>>>>>>>>>>>>>>>>>>>>ДАНННЫЕ ПОСЛЕ ОЧИСТКИ")
-#             else:
-#                 print('Встретился none')
-#     except psycopg2.DatabaseError as e:
-#         if conn:
-#             conn.rollback()
-#         print('Error %s' % e)
-#         print("ЧТО то пошло не так")
 
+    # запрос на апдейт музыки через левенштейна
+    #     try:
+    #         cur.execute("SELECT musicbandid, clearnameband FROM musicband WHERE clearnameband != '' ORDER BY clearnameband")
+    #         results = cur.fetchall()
+    #         print(results)
+    #         for index, j in enumerate(results):
+    #             print(index, '<<<<<<<<<<<<<<  ', j[0], j[1])
+    #             print(arrClean)
+    #             print(arrClean.count(j[0]) != 0, ' = = = = = =  = = = = =  = =')
+    #             if arrClean.count(j[0]) != 0:
+    #                 continue
+    #             if j[1] != str('None'):
+    #                 cleaningMusicClear(j[1])
+    #                 print(">>>>>>>>>>>>>>>>>>>>>>ДАНННЫЕ ПОСЛЕ ОЧИСТКИ")
+    #             else:
+    #                 print('Встретился none')
+    #     except psycopg2.DatabaseError as e:
+    #         if conn:
+    #             conn.rollback()
+    #         print('Error %s' % e)
+    #         print("ЧТО то пошло не так")
 
-#запрос на апдейт факультетеов
+    # запрос на апдейт факультетеов
     # try:
     #     cur.execute("SELECT facultyid, name FROM faculty ORDER BY name")
     #     results = cur.fetchall()
@@ -602,6 +593,7 @@ def program(audios):
     #     print('Error %s' % e)
     #     print("ЧТО то пошло не так")
 
+    # Функция копирования музыки чистой в чистую таблицу
     def copyMusic():
         try:
             cur.execute("SELECT musicbandid, clearnameband FROM musicband   ORDER BY clearnameband")
@@ -610,8 +602,9 @@ def program(audios):
             for j in results:
                 print(j[0], j[1])
                 try:
-                    cur.execute("INSERT INTO newmusicband(idmusicbandnew, namemusicbandnew)	VALUES (" + str(j[0]) + ",'"
-                                + str(j[1]) + "')")
+                    cur.execute(
+                        "INSERT INTO newmusicband(idmusicbandnew, namemusicbandnew)	VALUES (" + str(j[0]) + ",'"
+                        + str(j[1]) + "')")
                     conn.commit()
                     print(" копи пользователя ")
                     copyUser(str(j[0]), str(j[1]), True)
@@ -628,10 +621,12 @@ def program(audios):
             print('Error %s' % e)
             print("Запрос INSERT copyMusic упал")
 
+    # Функция копии пользователя в новую таблицу
     def copyUser(musicid, musicname, a):
-        if a==True:
+        if a == True:
             try:
-                cur.execute("SELECT vkuserid, musicbandid FROM vkuser_musicband WHERE musicbandid = "+str(musicid)+"")
+                cur.execute(
+                    "SELECT vkuserid, musicbandid FROM vkuser_musicband WHERE musicbandid = " + str(musicid) + "")
                 conn.commit()
                 resul = cur.fetchall()
                 print(resul)
@@ -653,7 +648,7 @@ def program(audios):
         else:
             print("Копия копии")
             try:
-                cur.execute("SELECT idmusicbandnew FROM newmusicband WHERE namemusicbandnew = '"+str(musicname)+"'")
+                cur.execute("SELECT idmusicbandnew FROM newmusicband WHERE namemusicbandnew = '" + str(musicname) + "'")
                 conn.commit()
                 idmnim = cur.fetchall()
                 print(idmnim)
@@ -760,21 +755,14 @@ def program(audios):
     #     if e.pgcode == "23505":
     #         print("ОШИБКАААААААААА")
 
-
-
-
-
     arrClean.clear()
     print(arrClean)
     print("--- %s seconds ---" % (time.time() - start_time))
-   # print("ПАУЗА 10")
-   # time.sleep(10)
-
+    # print("ПАУЗА 10")
+    # time.sleep(10)
 
     baseurl = "https://vk.com/"
-    # username = "89821469162"
     username = "89505375037"
-    # password = "Zx1#qwerty1906ugjoij"
     password = "Zx1$qwerty1906"
 
     xpaths = {
@@ -783,13 +771,13 @@ def program(audios):
         'submitButton': "//*[@id='index_login_button']"
     }
 
-    #mydriver = webdriver.Firefox(executable_path=r'D:\parser\geckodriver.exe')
-   # os.environ['MOZ_HEADLESS'] = '1'
+    # mydriver = webdriver.Firefox(executable_path=r'D:\parser\geckodriver.exe')
+    # os.environ['MOZ_HEADLESS'] = '1'
     mydriver = webdriver.Firefox(executable_path=r'D:\parser\geckodriver.exe')
-   # mydriver = webdriver.PhantomJS(executable_path=r'C:\Users\Zleha\PycharmProjects\pythonParser')
+    # mydriver = webdriver.PhantomJS(executable_path=r'C:\Users\Zleha\PycharmProjects\pythonParser')
     mydriver.get(baseurl)
-   # time.sleep(5)
-   # mydriver.maximize_window()
+    # time.sleep(5)
+    # mydriver.maximize_window()
 
     mydriver.find_element_by_xpath(xpaths['usernameTxtBox']).clear()
     mydriver.find_element_by_xpath(xpaths['usernameTxtBox']).send_keys(username)
@@ -826,10 +814,33 @@ def program(audios):
             continue
         print("REFRESH страницы")
         mydriver.refresh()
+
+    # ---------------------------------ОЧИИСТКА ПЕРВОНАЧАЛЬНАЯ ОТ МУСОРА РЕГУЛЯРКА--------------------------------------
+    try:
+        cur.execute("SELECT musicbandid, nameband FROM musicband")
+        results = cur.fetchall()
+        print(results)
+        for j in results:
+            print(j[0], j[1])
+            clearnameband = cleaningMusicBand(j[1])
+            print(clearnameband)
+            try:
+                cur.execute("UPDATE musicband SET clearnameband = ltrim('" + str(clearnameband) + "') WHERE musicbandid ='"+str(j[0])+"'")
+                conn.commit()
+            except:
+                print("error")
+            print("положил---------------------")
+    except psycopg2.DatabaseError as e:
+        if conn:
+            conn.rollback()
+        print('Error %s' % e)
+        print("ЧТО то пошло не так")
+
     # Закрываем соединение с БД
     cur.close()
     conn.close()
     print("FINISH")
+
 
 def main():
     with ThreadPoolExecutor(max_workers=3) as executor:
