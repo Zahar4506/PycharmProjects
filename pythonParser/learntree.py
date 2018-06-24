@@ -37,8 +37,10 @@ def tableLearn(categ):
     # Создаем курсор для работы
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     try:
-        #cur.execute("SELECT uservkid FROM vkuser WHERE category = "+str(categ)+" order by uservkid")
-        cur.execute("SELECT uservkid, f.category FROM vkuser as v INNER JOIN faculty as f ON f.facultyid = v.faculty WHERE v.category = "+str(categ)+" and f.category != 0 order by uservkid")
+        if categ == 0:
+            cur.execute("SELECT uservkid, f.category FROM vkuser as v INNER JOIN faculty as f ON f.facultyid = v.faculty WHERE v.category = "+str(categ)+" and f.category != 0 order by uservkid")
+        else:
+            cur.execute("SELECT uservkid, f.category FROM vkuser as v INNER JOIN faculty as f ON f.facultyid = v.faculty WHERE v.category = " + str(categ) + " and f.category != 1 order by uservkid")
         users = cur.fetchall()
         print(users)
         cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew")
@@ -69,11 +71,6 @@ def tableLearn(categ):
         for indexM, i in enumerate(musicband):
             for indexS, k in enumerate(svaz):
                 try:
-
-                    # print(k[0], " < k")
-                    # print(i, " < i")
-                    # print(i.index(k[0]))
-                    # print(indexU," ",indexM, " ", indexS)
                     if i.index(k[0])==0:
                         print("----------------------------------")
                         dfa[indexM] = 1
@@ -84,8 +81,6 @@ def tableLearn(categ):
         print(j[0])
         dfaUser[indexU] = j[0]
         print(dfaUser)
-        #dfa[indexU][len(musicband)] = 5
-
         print("ТАБЛИЦА\n", dfaALL)
         dfaau = pd.DataFrame(dfaUser)
         print(dfaau)
@@ -150,10 +145,24 @@ def treeLearn(param, trees):
             graph.render("files/iris")
         except:
             print("рисование дерево не получилось")
+    else:
+        with open('files/treesdump.pkl', 'rb') as output_file:
+            trees1 = pickle.load(output_file)
+        df = pd.read_csv('files/output2.csv')
+        q = len(df.columns) - 1
+        print(q)
+        df = df.astype(int)
+        print("РОБИТ?\n", df)
+        X = df.values[:, 1:q]
+        Y = df.values[:, q]
+        print(X, "<<<<<<<<<<<<<<X")
+        print(Y, "<<<<<<<<<<<<<<Y")
+        trees1.predict(X)
+        print(trees1.predict(X), "------------------ пробуем")
 
 #tableLearn(0)
 
-trees = tree.DecisionTreeClassifier(max_depth=10, random_state=17)
+trees = tree.DecisionTreeClassifier(max_depth=15, random_state=17)
 treeLearn(True, trees)
 
 with open('files/treesdump.pkl', 'rb') as output_file:
