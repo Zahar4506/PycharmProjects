@@ -1,3 +1,5 @@
+import csv
+from contextlib import contextmanager
 
 import pandas as pd
 import numpy
@@ -118,9 +120,15 @@ def tableLearn(categ):
             cur.execute("SELECT uservkid, f.category FROM vkuser as v INNER JOIN faculty as f ON f.facultyid = v.faculty WHERE v.category = " + str(categ) + " and f.category != 1 order by uservkid")
         users = cur.fetchall()
         print(users)
-        cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew")
-        musicband = cur.fetchall()
-        print(musicband)
+        if categ == 0:
+            cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew")
+            musicband = cur.fetchall()
+            print(musicband)
+            with open('files/musicbanddump.pkl', 'wb') as output_file:
+                pickle.dump(musicband, output_file)
+        else:
+            with open('files/musicbanddump.pkl', 'rb') as output_file:
+                musicband = pickle.load(output_file)
     except:
         print('Сломалася')
     svaz = [[5587], [5588]]
@@ -152,38 +160,41 @@ def tableLearn(categ):
             except ValueError as e:
                 print("ERROR > ", e)
 
-
-        # for indexM, i in enumerate(musicband):
-        #     for indexS, k in enumerate(svaz):
-        #         try:
-        #             print(musicband.index(k[0]))
-        #             if musicband.index(k[0])!=0:
-        #                 print("----------------------------------")
-        #                 dfa[indexM] = 1
-        #             break
-        #         except ValueError as e:
-        #             print("ERROR > ",e)
-
         dfa[len(musicband)] = category[0][0]
         print(j[0])
         dfaUser[indexU] = j[0]
-        print(dfaUser)
-        print("ТАБЛИЦА\n", dfaALL)
+        # print(dfaUser)
+        # print("ТАБЛИЦА\n", dfaALL)
         dfaau = pd.DataFrame(dfaUser)
-        print(dfaau)
-        dfaALL = numpy.vstack((dfaALL, dfa))
-        dfaa = pd.DataFrame(dfaALL)
-        print(dfaa)
-        time.sleep(1)
+        # print(dfaau)
+        # dfaALL = numpy.vstack((dfaALL, dfa))
+        # dfaa = pd.DataFrame(dfaALL)
+        # print(dfaa)
+
+        dfaO = numpy.zeros((len(musicband) + 1), dtype=numpy.uint8)
+        dfaO = numpy.vstack((dfaO, dfa))
+
+        dfaOut = pd.DataFrame(dfaO)
+        print(dfaOut)
+
+        @contextmanager
+        def open_file(path, mode):
+            file_to = open(path, mode)
+            yield file_to
+            file_to.close()
+
         try:
-            print("ЗАПИСЬ")
+            print("ЗАПИСЬ", indexU)
             if categ == 0:
-                dfaau.to_csv('files/output5User.csv')
-                dfaa.to_csv('files/output5.csv')
+                with open_file('files/output6.csv', 'r') as infile:
+                    dfaOut.to_csv('files/output6.csv', mode='a', header=False)
+
+                dfaau.to_csv('files/output6User.csv')
                 print("ЗАПИСАНО")
+                # f.close()
             else:
                 dfaau.to_csv('files/output1User.csv')
-                dfaa.to_csv('files/output1.csv')
+                dfaOut.to_csv('files/output1.csv', mode='a')
                 print("ЗАПИСАНО 1")
         except:
             print("Упала запись в файл")
@@ -193,7 +204,7 @@ def tableLearn(categ):
 
 def treeLearn(param, trees):
     if param == True:
-        df = pd.read_csv('files/output2.csv')
+        df = pd.read_csv('files/output5.csv', dtype='uint32', low_memory=False)
         q = len(df.columns) - 1
         print(q)
         df = df.astype(int)
@@ -236,7 +247,7 @@ def treeLearn(param, trees):
     else:
         with open('files/treesdump.pkl', 'rb') as output_file:
             trees1 = pickle.load(output_file)
-        df = pd.read_csv('files/output2.csv')
+        df = pd.read_csv('files/output2.csv', dtype='uint32', low_memory=False)
         q = len(df.columns) - 1
         print(q)
         df = df.astype(int)
@@ -252,7 +263,7 @@ tableLearn(0)
 
 # trees = tree.DecisionTreeClassifier(max_depth=15, random_state=17)
 # treeLearn(True, trees)
-#
+
 # with open('files/treesdump.pkl', 'rb') as output_file:
 #     trees1 = pickle.load(output_file)
 # df = pd.read_csv('files/output2.csv')
