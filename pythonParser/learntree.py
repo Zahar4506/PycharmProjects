@@ -2,7 +2,7 @@ import csv
 from contextlib import contextmanager
 
 import pandas as pd
-import numpy
+import numpy as np
 import warnings
 
 import matplotlib.pyplot as plt
@@ -134,10 +134,10 @@ def tableLearn(categ):
     svaz = [[5587], [5588]]
     print("START")
     # +1 для замены последнего значения на выбранную специальность
-    dfaALL = numpy.zeros((len(musicband)+1), dtype=numpy.uint8)
-    dfaUser = numpy.zeros((len(users)), dtype=numpy.uint32)
+    dfaALL = np.zeros((len(musicband)+1,), dtype=np.uint8)
+    dfaUser = np.zeros((len(users)), dtype=np.uint32)
     for indexU, j in enumerate(users):
-        dfa = numpy.zeros((len(musicband) + 1), dtype=numpy.uint8)
+        dfa = np.zeros((len(musicband) + 1), dtype=np.uint8)
         try:
             cur.execute("SELECT idclear FROM vkuser_clearmusicbandnew WHERE idvkuser = "+str(j[0])+" order by idclear")
             svaz = cur.fetchall()
@@ -171,11 +171,17 @@ def tableLearn(categ):
         # dfaa = pd.DataFrame(dfaALL)
         # print(dfaa)
 
-        dfaO = numpy.zeros((len(musicband) + 1), dtype=numpy.uint8)
-        dfaO = numpy.vstack((dfaO, dfa))
+        # dfaO = np.zeros((len(musicband) + 1), dtype=np.uint8)
+        # dfaO = np.vstack((dfaO, dfa))
+        #
+        # dfaOut = pd.DataFrame(dfaO)
+        # #print(dfaOut)
 
-        dfaOut = pd.DataFrame(dfaO)
-        print(dfaOut)
+        print(dfa)
+        dfa = np.expand_dims(dfa, axis=0)
+        print(dfa.shape, "=======",len(dfa))
+        # np.savetxt('files/output6.txt', dfa, delimiter=',')
+        dfaOut = pd.DataFrame(dfa)
 
         @contextmanager
         def open_file(path, mode):
@@ -186,6 +192,7 @@ def tableLearn(categ):
         try:
             print("ЗАПИСЬ", indexU)
             if categ == 0:
+
                 with open_file('files/output6.csv', 'r') as infile:
                     dfaOut.to_csv('files/output6.csv', mode='a', header=False)
 
@@ -204,7 +211,19 @@ def tableLearn(categ):
 
 def treeLearn(param, trees):
     if param == True:
-        df = pd.read_csv('files/output5.csv', dtype='uint32', low_memory=False)
+        #df = pd.read_csv('files/output6.csv', dtype='uint32', low_memory=False)
+
+        mylist = []
+        for chunk in pd.read_csv('files/output6.csv', chunksize=10, dtype='uint32', low_memory=False):
+            mylist.append(chunk)
+        big_data = pd.concat(mylist, axis=0)
+        del mylist
+        print(big_data)
+
+
+        df = df[df!=0]
+        print(df)
+
         q = len(df.columns) - 1
         print(q)
         df = df.astype(int)
@@ -261,6 +280,20 @@ def treeLearn(param, trees):
 
 tableLearn(0)
 
+# print("Чиатаем")
+# mylist = []
+# for chunk in pd.read_csv('files/output6.csv', chunksize=70, dtype='uint32', low_memory=False):
+#     mylist.append(chunk)
+#     print(mylist)
+#     big_data = pd.concat(mylist, axis=0)
+#     mylist.clear
+#     big_data = big_data[big_data!=0]
+#
+# del mylist
+# print(big_data.shape[1], big_data.shape[0])
+
+
+#
 # trees = tree.DecisionTreeClassifier(max_depth=15, random_state=17)
 # treeLearn(True, trees)
 
