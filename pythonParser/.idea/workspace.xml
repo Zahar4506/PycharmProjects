@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="653bd926-2dc1-413f-b2b0-56471bf4e3f5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/PythonParser.iml" afterPath="$PROJECT_DIR$/.idea/PythonParser.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/files/iris" afterPath="$PROJECT_DIR$/files/iris" />
+      <change beforePath="$PROJECT_DIR$/files/iris.pdf" afterPath="$PROJECT_DIR$/files/iris.pdf" />
+      <change beforePath="$PROJECT_DIR$/files/musicbanddump.pkl" afterPath="$PROJECT_DIR$/files/musicbanddump.pkl" />
       <change beforePath="$PROJECT_DIR$/files/output6.csv" afterPath="$PROJECT_DIR$/files/output6.csv" />
       <change beforePath="$PROJECT_DIR$/files/output6User.csv" afterPath="$PROJECT_DIR$/files/output6User.csv" />
+      <change beforePath="$PROJECT_DIR$/files/treesdump.pkl" afterPath="$PROJECT_DIR$/files/treesdump.pkl" />
       <change beforePath="$PROJECT_DIR$/learntree.py" afterPath="$PROJECT_DIR$/learntree.py" />
+      <change beforePath="$PROJECT_DIR$/vksearch.py" afterPath="$PROJECT_DIR$/vksearch.py" />
+      <change beforePath="$PROJECT_DIR$/Заметки.docx" afterPath="$PROJECT_DIR$/Заметки.docx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +33,9 @@
       <file leaf-file-name="flaskapp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flaskapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,8 +53,8 @@
       <file leaf-file-name="learntree.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learntree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="176" column="37" lean-forward="false" selection-start-line="176" selection-start-column="37" selection-end-line="176" selection-end-column="37" />
+            <state relative-caret-position="176">
+              <caret line="117" column="146" lean-forward="false" selection-start-line="117" selection-start-column="146" selection-end-line="117" selection-end-column="146" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -78,12 +85,12 @@
       <file leaf-file-name="vksearch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vksearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="830" column="28" lean-forward="false" selection-start-line="830" selection-start-column="28" selection-end-line="830" selection-end-column="28" />
+            <state relative-caret-position="238">
+              <caret line="553" column="0" lean-forward="false" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1529829356390" expanded="false" signature="230:2728" ph="..." />
-                <marker date="1529829356390" expanded="false" signature="2729:3420" ph="..." />
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1530011030828" expanded="false" signature="301:2799" ph="..." />
+                <marker date="1530011030828" expanded="false" signature="2800:3491" ph="..." />
               </folding>
             </state>
           </provider>
@@ -100,14 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;========</find>
-      <find>журна</find>
-      <find>психо</find>
-      <find>педаг</find>
-      <find>юри</find>
-      <find>юрис</find>
-      <find>ЮРИС</find>
-      <find>init</find>
       <find>418103</find>
       <find>hel</find>
       <find>паух</find>
@@ -130,6 +129,14 @@
       <find>vkuser_clearmusicbandnew</find>
       <find>copyUser</find>
       <find>dfaALL</find>
+      <find>гуман</find>
+      <find>гума</find>
+      <find>np.append</find>
+      <find>categoryFaculty</find>
+      <find>error</find>
+      <find>get_top</find>
+      <find>json</find>
+      <find>upda</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,10 +169,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1872" />
-    <option name="y" value="-15" />
-    <option name="width" value="974" />
-    <option name="height" value="515" />
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -224,20 +231,21 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser" />
-      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\templates" />
-      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\static" />
-      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\venv\teamplates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\static\css" />
       <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\static" />
       <recent name="C:\Users\Zleha\PycharmProjects\pythonParser" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\files" />
+      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser" />
+      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\templates" />
+      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\static" />
+      <recent name="C:\Users\Zleha\PycharmProjects\pythonParser\venv\teamplates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -353,8 +361,8 @@
     <recent_temporary>
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.learntree" />
-        <item index="1" class="java.lang.String" itemvalue="Python.flaskapp" />
-        <item index="2" class="java.lang.String" itemvalue="Python.vksearch" />
+        <item index="1" class="java.lang.String" itemvalue="Python.vksearch" />
+        <item index="2" class="java.lang.String" itemvalue="Python.flaskapp" />
         <item index="3" class="java.lang.String" itemvalue="Python.flask" />
       </list>
     </recent_temporary>
@@ -385,21 +393,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23381877" sideWeight="0.58441556" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15938166" sideWeight="0.58441556" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40724477" sideWeight="0.52407" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35069445" sideWeight="0.5275081" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35069445" sideWeight="0.47592998" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35543478" sideWeight="0.47249192" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35326087" sideWeight="0.48335856" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35300925" sideWeight="0.48335856" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19822006" sideWeight="0.41558442" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29130435" sideWeight="0.4941435" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29050925" sideWeight="0.4941435" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -447,30 +454,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flaskapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vksearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk/exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vksearch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -745,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,15 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/output.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="390159" lean-forward="false" selection-start-line="1" selection-start-column="390159" selection-end-line="1" selection-end-column="390159" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -769,17 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flaskapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,22 +753,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flaskapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv1/Lib/site-packages/sklearn/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/output.csv">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="390159" lean-forward="false" selection-start-line="1" selection-start-column="390159" selection-end-line="1" selection-end-column="390159" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-17">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/output7.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="323">
+          <caret line="0" column="2687" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="109517" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv1/Lib/site-packages/pylast/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="1349" column="15" lean-forward="false" selection-start-line="1349" selection-start-column="8" selection-end-line="1349" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vksearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="830" column="28" lean-forward="false" selection-start-line="830" selection-start-column="28" selection-end-line="830" selection-end-column="28" />
+        <state relative-caret-position="238">
+          <caret line="553" column="0" lean-forward="false" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1529829356390" expanded="false" signature="230:2728" ph="..." />
-            <marker date="1529829356390" expanded="false" signature="2729:3420" ph="..." />
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1530011030828" expanded="false" signature="301:2799" ph="..." />
+            <marker date="1530011030828" expanded="false" signature="2800:3491" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learntree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="176" column="37" lean-forward="false" selection-start-line="176" selection-start-column="37" selection-end-line="176" selection-end-column="37" />
+        <state relative-caret-position="176">
+          <caret line="117" column="146" lean-forward="false" selection-start-line="117" selection-start-column="146" selection-end-line="117" selection-end-column="146" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

@@ -19,7 +19,7 @@ from sklearn import tree
 
 import graphviz
 from sklearn.model_selection import train_test_split, StratifiedKFold, KFold
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score, average_precision_score, recall_score, precision_score
 from sklearn.model_selection import GridSearchCV, cross_val_score
 
 # 1-Гуманитарный
@@ -121,7 +121,61 @@ def tableLearn(categ):
         users = cur.fetchall()
         print(users)
         if categ == 0:
-            cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew")
+            # cur.execute("SELECT idmusicbandnew FROM newmusicband order by idmusicbandnew")
+            # cur.execute("SELECT idclear FROM vkuser_clearmusicbandnew GROUP BY idclear HAVING count(*)> 10 and count(*)<1000 ORDER BY count(*) DESC")
+            cur.execute("""SELECT musicbandid FROM public.musicband WHERE nameband LIKE ANY(array['ЛЕНИНГРАД','КИНО','СПЛИН','IMAGINE DRAGONS','ЗЕМФИРА','ДДТ','ПИКНИК','QUEEN','АГАТА КРИСТИ',
+	'ОКЕАН ЕЛЬЗИ','NAUTILIUS POMPILIUS','МУМИЙ ТРОЛЛЬ','МЕЛЬНИЦА','КУКРЫНИКСЫ','ЗВЕРИ','ЛЯПИС ТРУБЕЦКОЙ','THE BEATLES','НОЧНЫЕ СНАЙПЕРЫ',
+	'RED HOT CHILI PEPPERS','PANIC AT THE DISCO','AC DC','SCORPIONS','NICKELBACK','АЛИСА','THREE DAYS GRACE','ЧАЙФ',
+	'АКВАРИУМ','DEPECHE MODE','МАШИНА ВРЕМЕНИ','БРАВО','КНЯZZ','SKILLET','СМЫСЛОВЫЕ ГАЛЮЦИНАЦИИ','COLDPLAY','ТАНЦЫ МИНУС',
+	'ПИЛОТ','Б','БУМБОКС','УРЕМАТОРИЙ','АНИМАЦИЯ','НЕРВЫ','LED ZIPPELIEN','EVANESCENCE','BON JOVI','PLACEBO','МУРАКАМИ','THE ROLLING STONES',
+	'DEEP PURPLE','ELVIS PRESLEY','PINK FLOYD','ONE REPUBLIC','U','THE DOORS','AEROSMITH','НОГУ СВЕЛО','MAROON','СЕРЬГА',
+	'LOBODA','РУКИ ВВЕРХ','ЕГОР КРИД','МАКС БАРСКИХ','ПОЛИНА ГАГАРИНА','SIA','ДИМА БИЛАН','ЕЛЕНА ТЕМНИКОВА','АНИ ЛОРАК',
+	'BURITO','BEBE REXHA','SEREBRO','SHAKIRA','ЁЛКА','МАРИ КРАЙМБЕРИ','ED SHERAN','LANA DEL REY','ВРЕМЯ И СТЕКЛО','МАКСИМ','DUA LIPA',
+	'MONATIC','MICHAEL JACKSON','ARIANA GRANDE','ХАННА','СЛАВА','НАРГИЗ','ГРАДУСЫ','BTS','НЮША','CRISTINA AGUILERA','SMASH',
+	'CALVIN HARRIS','STING','LX','ПИЦЦА','ADELE','ALEKSEEV','ROBBIE WILLIAMS','ENRIQUE IGLASIAS','МАКС ФАДЕЕВ','IOWA',
+	'KATY PARRY','JASTIN TIMBERLAKE','GRIVINA','ROXETTE','HURTS','ОЛЬГА БУЗОВА','ПОТАП И НАСТЯ','MALUMA','АРТЕМ ПИВОВАРОВ',
+	'ТИМАТИ','МОНЕТОЧКА','GORILLAZ','TWENTY ONE PILOTS','RAGNBONE MAN','ALICE MERTON','THE XX','PORTUGAL THE MAN','ВАЛЕНТИН СТРЫКАЛО',
+	'ДЕЛЬФИН','RADIOHED','МЫ','МАЛЬБЭК','TOM WALKER','FLORENCE','ГРЕЧКА','KALEO','ARCTIC MONKEYS','AJR','FLЁUR','DAMON ALBARN','ВАСЯ ОБЛОМОВ',
+	'THE NEIGHBOURHOOD','ALTJ','ЛИНДА','KODALINE','THE KILLERS','MILKY CHANCE','HOZIER','АЛОЭВЕРА','ДАЙТЕ ТАНК','FOALS',
+	'WOODKID','OH WINDER','SAINT MOTEL','LONDON GRAMMAR','PRAVADA','АИГЕЛ','СВИДАНИЕ','ZELLA DAY','THE KOOKS','GIN WIGMORE',
+	'АРИЯ','LOUNA','METALLICA','SABATON','КИПЕЛОВ','NIGHTWISH','ЭПИДЕМИЯ','SLIPKNOT','POWERWOLF','WITHIN TEMPTATION','KORN',
+	'OZZY OSBOURNE','BULLET FOR MY VALENTINE','IRON MAIDEN','APOCALYPTICA','GODSMACK','SYSTEM OF A DOWN','MANOWAR',
+	'KORPIKLAANI','IN FLAMES','JUDAS PRIEST','STATIC X','ELEUVEITIE','EPICA','STONE SOUR','AMARANTHE','OOMPH','ROB ZOMBIE',
+	'TRACKTOE BOWLING','FIVE FINGER DEATH PUNCH','KISS','BLACK SABBATH','STIGMATA','MEGADETH','ACCEPT','BLACK VEIL BRIDES',
+	'AMATORY','EISBRECHER','LIMP BIZKIT','DROWNING POOL','HELLOWEEN','DEAD BY APRIL','VOLBEAT','SALIVA','LACUNA CIL','IN EXTREMO',
+	'NINE INCH NAILS','PAIN','CHILDREN OF BODOM','NEMESEA','SLAYER','TRIVIUM','DOPE','POD','GHOST','PANTERA','DELAIN','DIO',
+	'RAINBOW','LINKIN PARK','SYSTEM OF A DOWN','LUMEN','MUSE','NIRVANA','THIRTY SECONDS TO MARS','СЛОТ','FALL OUT BOY','MARLIN MANSON','THE WHITE STRIPES',
+	'ANIMAL ДЖАZ','MIKE SHINODA','THOUSAND FOOT KRUTCH','THE RASMUS','DISTURBED','THE SCORE','KALEO','GREEN DAY','SUM',
+	'GUANO APES','AWOLNATION','AVRIL LAVIGNE','LASCALA','KONGOS','GRANDSON','PAPA ROACH','HOLLYWOOD UNDEAD','THE PRETTY RECKLESS',
+	'BRING ME THE HORIZON','REM','NOTHING BUT THEIVES','BREAKING BENJAMIN','MY CHEMICAL ROMANCE','KINGS OF LEON','M',
+	'LIMP BIZKIT','PAME ON FIRE','PARAMORE','PARAMORE','ASKING ALEXANDIA','PIXIES','CRAZY TOWN','THE PRODIGY','MODY','DAFT PUK',
+	'KYGO','PAROV STELAR','ATB','PENDULUM','SCOOTER','MARSHMELLO','MAJOR LAZER','MISSIO','THE AVENER','LINDSEY STIRLING',
+	'MIA','MORCHEEBA','MASSIVE ATTACK','DANCE WITH THE DEAD','SKRILLEX','NERO','HIPPIE SABOTAGE','STROMAE','TONY IGY',
+	'DIE ANTWOORD','ESCALE','THE CHEMICAL BROTHERS','DUKE DUMONT','MURA MASA','CLOZEE','THE GLITCH MOB','KAVINSKY','STEPHEN',
+	'YELLO','PORTISHEAD','MUJUICE','JUNGLE','OFENBACH','BONZAI','DEEP HOUSE','MADONNA','DAVID GUETTA','CLEAN BANDIT',
+	'GIGIDAGOSTINO','ARMIN VAN BUUREN','ARASH','НЕЙРОМОНАХ ФЕОФАН','MARTIN GARRIX','ROBIN SCHULZ','CALVIN HARRIS','SHOWTEK',
+	'VANOTEK','ENELI','CBOOL','RUDIMENTAL','SHANGUY','AVICII','GIANG PHAM','PITBULL','DNCE','ALAN WALKER','INA WROLDSEN',
+	'MAX OAZO','JAX JONSES','SIGALA','CAMI','ELDERBROOK','LP','SEAN PAUL','CAMELPHAT','TIMMY TRUMPET','THE CHAINSMOKERS',
+	'SAM FELDT','MARI FERRARI','JAH KHALIB','БАСТА','NOIZE MC','MATRANGE','XXXTENTACION','МАКС КОРЖ','FEDUK','МОТ','LONE',
+	'КРАЦ','КАСТА','ЛСП','ATL','ЗОМБ','MIAGI ЭНДШПИЛЬ','ГРОТ','РЕМ ДИГГА','TERRY','TFEST','СМОКИ МО','THOMAS MRAZ','NF',
+	'OXXXYMIRON','PLC','PHARAOH','СКРИПТОНИТ','НОГГАНО','АНАСТАСИЯ АЛЕКСАНДРИНА','ЭЛДЖЕЙ','ДЖИГАН','MARKUL','МНОГОТОЧИЕ',
+	'TKILLAH','FLO RIDA','ST','ГАНСЭЛЛО','СКРУДЖИ','ЧЕСТНЫЙ','AUBREY GRAHM','ГРИБЫ','KAMAZZ','ТРИАДА','TECH NNE','ХЛЕБ',
+	'НИГАТИВ','КАРАНДАШ','IVAN VALEEV','NEFFEX','LEILA','SLIM','EMINEM','TARAS','ONYX','CENT','JUDAH','LOGIC','DOPE DOD',
+	'SHAHMEN','KANYE WEST','WILEY','FORT MINOR','THE WEEKEND','RAY CHARLES','DENNIS LIOYD','SADE','THE BLACK EYED PEAS',
+	'AMY WINEHOUSE','ALLAN RAYMAN','KWABS','NEYO','JACOB BANKS','WHITHEY HOUSTON','MANIA','KHALID','RIHANNA','FRANK OCEAN',
+	'KIIARA','USHER','PRINCE','IMANY','FRANK SINATRA','RAY CHARLES','LOUIS ARMSTRONG','LOUNGE CAFE','NEW YORK JAZZ LOUNGE',
+	'NORAH JONES','ELLA FITZGERALD','FAUSTO PAPETTI','NINA SIMONE','JAZZ LOUNGE','DAVE BRUBECK','KENNY G','PAUL DESMOND',
+	'KAREN SOUZA','SMOOTH JAZZ','CHET BAKER','MILES DAVIS','CLARK TERRY','MICHEL BUBLE','PAPIK','STAN GETZ','MELODY GARDOT',
+	'CHRIS REA','BUDDY GUY','ERIC CLAPTON','JOE BONAMASSA','NINA SIMONE','BETH HART','TOM WAITS','BILLYS BAND','HUGH LAUIRE',
+	'BB KING','CREAM','SHAWN JAMES','FANTASTIC NEGRITO','ETTA JAMES','DUKE ROBILLARD','AL BASILE','ALANNH MYLES','JEFF BECK',
+	'OTIS TAYLOR','FATS DOMINO','GARY MOORE','NIZZA','BOB MARLEY','THE WILERS','SHAGGY','ALAI OLI','STICK FIGURE','HADDAWAY',
+	'МАРЛИНЫ','DUB FX','ALBOROSIE','INNER CIRCLE','BECKY G','MATISYAHU','REBELUTION','RASKAR','DAMIEN MARLEY','SHENSEEA',
+	'FPG','NUMA CREW','TUFF STEPPAS','COMEDOZ','DON OMAR','THE HATTERS','DISTEMPER','ЛАМПАСЫ','TALCO','SKAP','RUSSKAJA',
+	'ДОЗА РАДОСТИ','MALE FACTORS','КОРОЛЬ И ШУТ','ПОРНОФИЛЬМЫ','THE OFFSPRING','СЕКТОР ГАЗА','ТАРАКАНЫ','ГРАЖДАНСКАЯ ОБОРОНА',
+	'ЭЛИЗИУМ','RISE AGAINST','GREEN DAY','НАИВ','SUM','BLINK','ПЛАН ЛОМОНОСОВА','ЙОРШ','КРАСНАЯ ПЛЕСЕНЬ','ЕГОР ЛЕТОВ',
+	'NOFX','THE CLASH','VANILLA SKY','SLAVES','THE REAL MCKENZIES','ROMANES','LUSTRA','МИХАИЛ КРУГ','ИРИНА КРУГ',
+	'СЕРГЕЙ ТРОФИМОВ','БУТЫРКА','АЛЕКСАНДР БРЯНЦЕВ','ЖЕКА','СЕРГЕЙ НАГОВИЦИН','ВИКТОР КОРОЛЕВ','ДЮМИН','АЛЕКСАНДР НОВИКОВ','ПЕТЛЮРА',
+	'ГОЛУБЫЕ БЕРЕТЫ','МАФИК','АНТИРЕСПЕКТ','АНДРЕЙ БАНДЕРА','ПЯТИЛЕТКА','ЛЕСОПОВАЛ',''])""")
             musicband = cur.fetchall()
             print(musicband)
             with open('files/musicbanddump.pkl', 'wb') as output_file:
@@ -193,8 +247,8 @@ def tableLearn(categ):
             print("ЗАПИСЬ", indexU)
             if categ == 0:
 
-                with open_file('files/output6.csv', 'r') as infile:
-                    dfaOut.to_csv('files/output6.csv', mode='a', header=False)
+                with open_file('files/output10.csv', 'r') as infile:
+                    dfaOut.to_csv('files/output10.csv', mode='a', header=False)
 
                 dfaau.to_csv('files/output6User.csv')
                 print("ЗАПИСАНО")
@@ -211,18 +265,55 @@ def tableLearn(categ):
 
 def treeLearn(param, trees):
     if param == True:
-        #df = pd.read_csv('files/output6.csv', dtype='uint32', low_memory=False)
+        # df = pd.read_csv('files/output6.csv', dtype='uint32', low_memory=False)
+
+        # dfaUser = np.zeros((195000, 2500), dtype=np.uint32)
+        # print(dfaUser)
+        # df = np.memmap('files/output6.csv', dtype='uint32', mode='r')
+        # print(df)
+        # c1=0
+        # c2=0
+        # c3=0
+        # c4=0
+        # c5=0
+        # mylist = []
+        # with open("files/output9.csv", "r") as f:
+        #     reader = csv.reader(f)
+        #     for i, line in enumerate(reader):
+        #        # print('line[{}] = {}'.format(i, line))
+        #         print(line[len(line)-1])
+        #         print(c1, c2, c3, c4, c5)
+        #         if line[len(line)-1]=='1':
+        #             if c1 != 240:
+        #                 c1+=1
+        #                 mylist = np.append(mylist, line,axis=0)
+        #         elif line[len(line)-1]=='2':
+        #             if c2 != 240:
+        #                 c2+=1
+        #                 mylist = np.append(mylist, line,axis=0)
+        #         elif line[len(line)-1] == '3':
+        #             if c3 != 240:
+        #                 c3+=1
+        #                 mylist = np.append(mylist, line,axis=0)
+        #         elif line[len(line)-1] == '4':
+        #             if c4 != 240:
+        #                 c4+=1
+        #                 mylist = np.append(mylist, line,axis=0)
+        #         elif line[len(line)-1] == '5':
+        #             if c5 != 240:
+        #                 c5+=1
+        #                 mylist = np.append(mylist, line,axis=0)
+        #         print(mylist)
 
         mylist = []
-        for chunk in pd.read_csv('files/output6.csv', chunksize=10, dtype='uint32', low_memory=False):
+        for chunk in pd.read_csv('files/output9.csv', chunksize=100, dtype='uint32', low_memory=False):
             mylist.append(chunk)
-        big_data = pd.concat(mylist, axis=0)
-        del mylist
-        print(big_data)
+            print(mylist)
 
 
-        df = df[df!=0]
+        df = pd.concat(mylist, axis=0)
         print(df)
+        del mylist
 
         q = len(df.columns) - 1
         print(q)
@@ -232,20 +323,46 @@ def treeLearn(param, trees):
         Y = df.values[:, q]
         print(X, "<<<<<<<<<<<<<<X")
         print(Y, "<<<<<<<<<<<<<<Y")
-        kf = KFold(n_splits=2)
-        kf.get_n_splits(X)
+
+
+
+
+        tree_params = {'max_depth': range(2, 31),'max_features': range(4, 30), 'min_samples_leaf': range(1, 40)}
+        tree_grid = GridSearchCV(trees, tree_params,cv=4, n_jobs=5)
+
+
+        kf = KFold(n_splits=5, shuffle=True)
         print(kf.get_n_splits(X))
         for train_index, test_index in kf.split(X):
             print("TRAIN:", train_index, "TEST:", test_index)
             X_train, X_test = X[train_index], X[test_index]
             Y_train, Y_test = Y[train_index], Y[test_index]
+
+        # tree_grid.fit(X_train, Y_train)
+        # print(tree_grid.best_params_, '<<параметры ', tree_grid.best_score_, " <<лучшее значение")
+
         trees.fit(X_train, Y_train)
-        trees.score(X_test,Y_test)
         print(trees.score(X_test,Y_test)," <<<<<<<<<<<< точность совпадений")
 
+        # trees_pred = tree_grid.predict(X_test)
+        #
+        # print(accuracy_score(Y_test, trees_pred), ">>>>>>>>>>>>>>> точность")
+        # print(f1_score(Y_test, trees_pred, average='weighted'), ">>>>>>>>>>>>>>> точность weighted")
+        # print(f1_score(Y_test, trees_pred, average=None), ">>>>>>>>>>>>>>> точность weighted")
+        # print(recall_score(Y_test, trees_pred, average='weighted'), ">>>>>>>>>>>>>>> точность recall_score")
+        # print(recall_score(Y_test, trees_pred, average=None), ">>>>>>>>>>>>>>> точность recall_score")
+        # print(precision_score(Y_test, trees_pred, average='weighted'), ">>>>>>>>>>>>>>> точность precision_score")
+        # print(precision_score(Y_test, trees_pred, average=None), ">>>>>>>>>>>>>>> точность precision_score")
+        # print()
+
         tree_pred = trees.predict(X_test)
-        accuracy_score(Y_test, tree_pred)
         print(accuracy_score(Y_test, tree_pred), ">>>>>>>>>>>>>>> точность")
+        print(f1_score(Y_test, tree_pred, average='weighted'), ">>>>>>>>>>>>>>> точность weighted")
+        print(f1_score(Y_test, tree_pred, average=None), ">>>>>>>>>>>>>>> точность weighted")
+        print(recall_score(Y_test, tree_pred, average='weighted'), ">>>>>>>>>>>>>>> точность recall_score")
+        print(recall_score(Y_test, tree_pred, average=None), ">>>>>>>>>>>>>>> точность recall_score")
+        print(precision_score(Y_test, tree_pred, average='weighted'), ">>>>>>>>>>>>>>> точность precision_score")
+        print(precision_score(Y_test, tree_pred, average=None), ">>>>>>>>>>>>>>> точность precision_score")
 
         with open('files/treesdump.pkl', 'wb') as output_file:
             pickle.dump(trees, output_file)
@@ -263,6 +380,10 @@ def treeLearn(param, trees):
             graph.render("files/iris")
         except:
             print("рисование дерево не получилось")
+
+
+
+
     else:
         with open('files/treesdump.pkl', 'rb') as output_file:
             trees1 = pickle.load(output_file)
@@ -278,24 +399,14 @@ def treeLearn(param, trees):
         trees1.predict(X)
         print(trees1.predict(X), "------------------ пробуем")
 
-tableLearn(0)
-
-# print("Чиатаем")
-# mylist = []
-# for chunk in pd.read_csv('files/output6.csv', chunksize=70, dtype='uint32', low_memory=False):
-#     mylist.append(chunk)
-#     print(mylist)
-#     big_data = pd.concat(mylist, axis=0)
-#     mylist.clear
-#     big_data = big_data[big_data!=0]
-#
-# del mylist
-# print(big_data.shape[1], big_data.shape[0])
+# tableLearn(0)
 
 
-#
-# trees = tree.DecisionTreeClassifier(max_depth=15, random_state=17)
-# treeLearn(True, trees)
+
+def main():
+    tableLearn(0)
+    trees = tree.DecisionTreeClassifier(max_depth=30, min_samples_leaf=3)
+    treeLearn(True, trees)
 
 # with open('files/treesdump.pkl', 'rb') as output_file:
 #     trees1 = pickle.load(output_file)
@@ -367,3 +478,6 @@ tableLearn(0)
 # # plt.subplot(1,1,1)
 # # plt.axis("tight")
 # # plt.show()
+
+if __name__ == '__main__':
+    main()

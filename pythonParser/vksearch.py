@@ -1,5 +1,8 @@
+import json
 import string
 
+import requests
+from requests import request
 from selenium import webdriver
 
 import time
@@ -13,6 +16,7 @@ from vk.exceptions import VkAPIError
 from concurrent.futures import ThreadPoolExecutor
 import time
 import os
+import pylast
 
 """
 установка для постргес библиотек CREATE EXTENSION fuzzystrmatch;
@@ -495,7 +499,7 @@ def program(audios):
             for j in faculty:
                 j[1] = j[1].upper()
                 print(j[0], j[1])
-                if j[1].find('ЖУРНА') > -1 or j[1].find('УПРАВ') > -1 or j[1].find('СОЦ') > -1 or j[1].find(
+                if j[1].find('ЖУРНА') > -1 or j[1].find('УПРАВЕНИЕ') > -1 or j[1].find('СОЦ') > -1 or j[1].find(
                         'ФИЛОЛ') > -1 or j[1].find('ЯЗЫК') > -1 or j[1].find('СПОРТ') > -1 or j[1].find('ТУРИЗ') > -1 or \
                         j[1].find('ДИЗАЙ') > -1 or j[1].find('МУНИЦ') > -1 or j[1].find('ГУМАН') > -1 or j[1].find(
                     'ВОКАЛ') > -1 or j[1].find('ПСИХО') > -1 or j[1].find('ПЕДАГ') > -1 or j[1].find(
@@ -519,7 +523,7 @@ def program(audios):
                 elif j[1].find('МАТЕМ') > -1 or j[1].find('ТЕХН') > -1 or j[1].find('ЭЛЕКТ') > -1 or j[1].find(
                         'СИСТЕМ') > -1 or j[1].find('ВЫЧИСЛИ') > -1 or j[1].find('ИНЖЕН') > -1 or j[1].find(
                     'ИНФОРМ') > -1 or j[1].find('МОДЕЛИ') > -1 or j[1].find('СТРОИТ') > -1 or j[1].find(
-                    'ФИЗИК') > -1 or j[1].find('ТЕХНИЧ') > -1 or j[1].find('ТЕХНОЛОГ') > -1:
+                    'ФИЗИК') > -1 or j[1].find('ТЕХНИЧ') > -1 or j[1].find('ТЕХНОЛОГ') > -1 or j[1].find('ТРАНСПОРТ') > -1:
                     print(j[1], "<========ИТСИТ")
                     cur.execute("UPDATE faculty SET category = '5' WHERE facultyid ='" + str(j[0]) + "'")
                 else:
@@ -529,9 +533,40 @@ def program(audios):
         except:
             print("факультет упал")
 
+    def getTegLast():
+        try:
+            cur.execute("SELECT idmusicbandnew,namemusicbandnew FROM newmusicband order by namemusicbandnew")
+            results = cur.fetchall()
+            print(results)
+        except psycopg2.DatabaseError as e:
+            if conn:
+                conn.rollback()
+            print('Error %s' % e)
+            print("ЧТО то пошло не так")
+        try:
+            for index,artist in enumerate(results):
+                print(index, '#')
+                try:
+                    s = requests.get('http://ws.audioscrobbler.com/2.0/?method=artist.getTopTags&artist=' + str(
+                        artist[1]) + '&user=RJ&api_key=2136682266013c069f6907b81f140ec8&format=json')
+                    json_date = json.loads(s.text)
+                    print(json_date["toptags"]["tag"][0]["name"])
+                    try:
+                        cur.execute("UPDATE newmusicband SET tag = ('" + str(json_date["toptags"]["tag"][0]["name"]) + "') WHERE idmusicbandnew ='" + str(artist[0]) + "'")
+                        conn.commit()
+                    except psycopg2.DatabaseError as e:
+                        print("error", e)
+                        if conn:
+                            conn.rollback()
+                except Exception as e:
+                    print("Пусто",e)
+        except Exception as e:
+            print("ошибка", e)
     # --------------------------------------------------СТАРТ ПРОГРАММЫ ------------------------------------------------
 
     start_time = time.time()
+    print("cnfht")
+
     try:
         conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
         print("connect OK")
@@ -675,6 +710,8 @@ def program(audios):
                 print("ошибочка")
         pass
 
+    getTegLast()
+    time.sleep(10)
     copyMusic()
     # try:
     #     cur.execute("SELECT clearnameband, musicbandid FROM musicband ORDER BY clearnameband")
