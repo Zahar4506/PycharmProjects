@@ -176,6 +176,21 @@ def tableLearn(categ):
 	# 'NOFX','THE CLASH','VANILLA SKY','SLAVES','THE REAL MCKENZIES','ROMANES','LUSTRA','МИХАИЛ КРУГ','ИРИНА КРУГ',
 	# 'СЕРГЕЙ ТРОФИМОВ','БУТЫРКА','АЛЕКСАНДР БРЯНЦЕВ','ЖЕКА','СЕРГЕЙ НАГОВИЦИН','ВИКТОР КОРОЛЕВ','ДЮМИН','АЛЕКСАНДР НОВИКОВ','ПЕТЛЮРА',
 	# 'ГОЛУБЫЕ БЕРЕТЫ','МАФИК','АНТИРЕСПЕКТ','АНДРЕЙ БАНДЕРА','ПЯТИЛЕТКА','ЛЕСОПОВАЛ',''])""")
+
+            # cur.execute("""SELECT musicbandid FROM public.musicband WHERE nameband LIKE ANY(array['ЛЕНИНГРАД','СПЛИН','IMAGINE DRAGONS','ЗЕМФИРА','QUEEN','AEROSMITH',
+            #                                                                                      'LOBODA','ЕГОР КРИД','ПОЛИНА ГАГАРИНА','SIA','ED SHERAN','LANA DEL REY',
+            #                                                                                      'МОНЕТОЧКА','GORILLAZ','TWENTY ONE PILOTS','RAGNBONE MAN','ALICE MERTON','THE XX',
+            #                                                                                      'АЛОЭВЕРА','ДАЙТЕ ТАНК','FOALS','WOODKID','OH WINDER','SAINT MOTEL',
+            #                                                                                      'SLIPKNOT','POWERWOLF','WITHIN TEMPTATION','KORN','OZZY OSBOURNE','BULLET FOR MY VALENTINE',
+            #                                                                                      'RAINBOW','LINKIN PARK','SYSTEM OF A DOWN','LUMEN','MUSE','NIRVANA',
+            #                                                                                      'REM','NOTHING BUT THEIVES','BREAKING BENJAMIN','MY CHEMICAL ROMANCE','KINGS OF LEON','M',
+            #                                                                                      'LIMP BIZKIT','PAME ON FIRE','PARAMORE','PIXIES','THE PRODIGY','DIE ANTWOORD',
+            #                                                                                      'TONY IGY','DEEP HOUSE','MADONNA','DAVID GUETTA','ARASH','НЕЙРОМОНАХ ФЕОФАН',
+            #                                                                                      'JAH KHALIB','БАСТА','NOIZE MC','MATRANGE','FEDUK','МОТ',
+            #                                                                                      'RIHANNA','KIIARA','USHER','FRANK SINATRA','RAY CHARLES','LOUIS ARMSTRONG',
+            #                                                                                      'THE HATTERS','DISTEMPER','ЛАМПАСЫ','TALCO','SKAP','RUSSKAJA',
+            #                                                                                      'GREEN DAY','SUM','BLINK','ПЛАН ЛОМОНОСОВА','ЙОРШ','КРАСНАЯ ПЛЕСЕНЬ',
+            #                                                                                      'МИХАИЛ КРУГ','ИРИНА КРУГ','СЕРГЕЙ ТРОФИМОВ','БУТЫРКА','АЛЕКСАНДР БРЯНЦЕВ','ЖЕКА'])""")
             musicband = cur.fetchall()
             print(musicband)
             with open('files/musicbanddump.pkl', 'wb') as output_file:
@@ -253,8 +268,8 @@ def tableLearn(categ):
             print("ЗАПИСЬ", indexU)
             if categ == 0:
 
-                with open_file('files/output9.csv', 'r') as infile:
-                    dfaOut.to_csv('files/output9.csv', mode='a', header=False)
+                with open_file('files/output12.csv', 'r') as infile:
+                    dfaOut.to_csv('files/output12.csv', mode='a', header=False)
 
                 dfaau.to_csv('files/output6User.csv')
                 print("ЗАПИСАНО")
@@ -277,42 +292,29 @@ def treeLearn(param, trees):
         # print(dfaUser)
         # df = np.memmap('files/output6.csv', dtype='uint32', mode='r')
         # print(df)
-        # c1=0
-        # c2=0
+        c1=0
+        c2=0
         # c3=0
         # c4=0
         # c5=0
-        # mylist = []
-        # with open("files/output9.csv", "r") as f:
+        # mylist = np.array([])
+        # with open("files/output12.csv", "r") as f:
         #     reader = csv.reader(f)
         #     for i, line in enumerate(reader):
-        #        # print('line[{}] = {}'.format(i, line))
         #         print(line[len(line)-1])
-        #         print(c1, c2, c3, c4, c5)
+        #         print(c1, c2)
         #         if line[len(line)-1]=='1':
-        #             if c1 != 240:
+        #             if c1 != 500:
         #                 c1+=1
-        #                 mylist = np.append(mylist, line,axis=0)
+        #                 mylist = np.vstack((mylist, line))
         #         elif line[len(line)-1]=='2':
-        #             if c2 != 240:
+        #             if c2 != 500:
         #                 c2+=1
-        #                 mylist = np.append(mylist, line,axis=0)
-        #         elif line[len(line)-1] == '3':
-        #             if c3 != 240:
-        #                 c3+=1
-        #                 mylist = np.append(mylist, line,axis=0)
-        #         elif line[len(line)-1] == '4':
-        #             if c4 != 240:
-        #                 c4+=1
-        #                 mylist = np.append(mylist, line,axis=0)
-        #         elif line[len(line)-1] == '5':
-        #             if c5 != 240:
-        #                 c5+=1
-        #                 mylist = np.append(mylist, line,axis=0)
-        #         print(mylist)
+        #                 mylist = np.vstack((mylist, line))
+        #         print(mylist,'my list===================================')
 
         mylist = []
-        for chunk in pd.read_csv('files/output9.csv', chunksize=100, dtype='uint32', low_memory=False):
+        for chunk in pd.read_csv('files/output12.csv', chunksize=100, dtype='uint32', low_memory=False):
             mylist.append(chunk)
             print(mylist)
 
@@ -320,11 +322,53 @@ def treeLearn(param, trees):
         df = pd.concat(mylist, axis=0)
         print(df)
         del mylist
+        # print(df.sum(axis=1))
 
-        print(df.shape,'shape')
-        print(df.iloc[0], 'iloc')
-        print(df.iloc[1], 'iloc')
-        print(df.index[0],'index')
+        ndf = df.as_matrix()
+        print(ndf)
+        n = np.sum(ndf[:,:-1],axis=1)
+        print(np.sum(ndf[:,:-1],axis=1))
+        deletSum = []
+        for index, o in enumerate(n):
+            if o < 10:
+                print(o)
+                deletSum.append(index)
+        print(deletSum,'delsum')
+        ndf = np.delete(ndf, deletSum, axis=0)
+        print(ndf, ndf.shape)
+        deletSum.clear()
+        c1 = 0
+        c2 = 0
+        c11 = 0
+        c22 = 0
+        np.random.shuffle(ndf)
+        print(ndf)
+        catdf = ndf[:, ndf.shape[1] - 1]
+        print(catdf)
+        for index, o in enumerate(catdf):
+            if o == 1:
+                if c11 != 442:
+                    c1+=1
+                    c11+=1
+                else:
+                    deletSum.append(index)
+            else:
+                if c22 != 442:
+                    c2+=1
+                    c22+=1
+                else:
+                    deletSum.append(index)
+        print(deletSum)
+        ndf = np.delete(ndf, deletSum, axis=0)
+        print(ndf, ndf.shape)
+        print(c1,c2)
+
+        dfa = pd.DataFrame(ndf)
+
+        # print(df.shape,'shape')
+        # print(df.iloc[0], 'iloc')
+        # print(df.iloc[1], 'iloc')
+        # print(df.index[0],'index')
 
         q = len(df.columns) - 1
         print(q)
@@ -338,7 +382,7 @@ def treeLearn(param, trees):
 
 
 
-        tree_params = {'max_depth': range(2, 31),'max_features': range(4, 30), 'min_samples_leaf': range(1, 40)}
+        tree_params = {'max_depth': range(2, 31),'max_features': range(4, 30), 'min_samples_leaf': range(1, 30)}
         tree_grid = GridSearchCV(trees, tree_params,cv=4, n_jobs=5)
 
 
@@ -412,10 +456,61 @@ def treeLearn(param, trees):
 
 # tableLearn(0)
 
+def categoryFaculty(faculty):
+    try:
+        print(faculty)
+        for j in faculty:
+            j[1] = j[1].upper()
+            print(j[0], j[1])
+            if j[1].find('ЖУРНА') > -1 or j[1].find('УПРАВЕНИЕ') > -1 or j[1].find('СОЦ') > -1 or j[1].find(
+                    'ФИЛОЛ') > -1 or j[1].find('ЯЗЫК') > -1 or j[1].find('СПОРТ') > -1 or j[1].find('ТУРИЗ') > -1 or \
+                    j[1].find('ДИЗАЙ') > -1 or j[1].find('МУНИЦ') > -1 or j[1].find('ГУМАН') > -1 or j[1].find(
+                'ВОКАЛ') > -1 or j[1].find('ПСИХО') > -1 or j[1].find('ПЕДАГ') > -1 or j[1].find(
+                'ФИЗИЧЕСКОЙ') > -1 or j[1].find('РУССК') > -1 or j[1].find('ЛИТЕРАТ') > -1 or j[1].find('МЕНЕДЖ') > -1 or j[1].find('ФИНАН') > -1 or j[1].find('ЭКОНОМ') > -1 or j[1].find('ПРАВО') > -1 or j[1].find('ЮРИД') > -1 or j[1].find('ПРАВА') > -1 or j[1].find(
+                    'АРБИТ') > -1 or j[1].find('АДВОКА') > -1 or j[1].find('УГОЛОВ') > -1 or j[1].find(
+                'ФИЛОС') > -1 or j[1].find('ИСТОР') > -1 or j[1].find('ЮРИС') > -1:
+                print(j[1], "<========Гуманитарный")
+                cur.execute("UPDATE faculty SET category = '1' WHERE facultyid ='" + str(j[0]) + "'")
 
+
+            elif j[1].find('БИОЛ') > -1 or j[1].find('ЕСТЕСТ') > -1 or j[1].find('ГЕОЛ') > -1 or j[1].find(
+                    'НЕФТ') > -1 or j[1].find('ГАЗА') > -1 or j[1].find('БУРЕ') > -1 or j[1].find('АВТОМ') > -1 or \
+                    j[1].find('ХИМИ') > -1 or j[1].find('ЭКОЛО') > -1 or j[1].find('ПРИРОДО') > -1 or j[1].find(
+                'ЭНЕРГЕ') > -1 or j[1].find('НЕФТЕ') > -1 or j[1].find('МАТЕМ') > -1 or j[1].find('ТЕХН') > -1 or j[1].find('ЭЛЕКТ') > -1 or j[1].find(
+                    'СИСТЕМ') > -1 or j[1].find('ВЫЧИСЛИ') > -1 or j[1].find('ИНЖЕН') > -1 or j[1].find(
+                'ИНФОРМ') > -1 or j[1].find('МОДЕЛИ') > -1 or j[1].find('СТРОИТ') > -1 or j[1].find(
+                'ФИЗИК') > -1 or j[1].find('ТЕХНИЧ') > -1 or j[1].find('ТЕХНОЛОГ') > -1 or j[1].find('ТРАНСПОРТ') > -1:
+                print(j[1], "<========Техники")
+                cur.execute("UPDATE faculty SET category = '2' WHERE facultyid ='" + str(j[0]) + "'")
+            else:
+                print('Неизвестное сочетание')
+                cur.execute("UPDATE faculty SET category = '0' WHERE facultyid ='" + str(j[0]) + "'")
+        conn.commit()
+    except:
+        print("факультет упал")
+
+try:
+    conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
+    print("connect OK")
+except:
+    print("Не удалось подключиться к БД")
+# Создаем курсор для работы
+cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 def main():
-    tableLearn(0)
+    # запрос на апдейт факультетеов
+    try:
+        cur.execute("SELECT facultyid, name FROM faculty ORDER BY name")
+        results = cur.fetchall()
+        print(results)
+        categoryFaculty(results)
+    except psycopg2.DatabaseError as e:
+        if conn:
+            conn.rollback()
+        print('Error %s' % e)
+        print("ЧТО то пошло не так")
+
+    # tableLearn(0)
     trees = tree.DecisionTreeClassifier(max_depth=30)
     treeLearn(True, trees)
 

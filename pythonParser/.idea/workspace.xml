@@ -12,6 +12,8 @@
       <change beforePath="$PROJECT_DIR$/files/output6User.csv" afterPath="$PROJECT_DIR$/files/output6User.csv" />
       <change beforePath="$PROJECT_DIR$/files/treesdump.pkl" afterPath="$PROJECT_DIR$/files/treesdump.pkl" />
       <change beforePath="$PROJECT_DIR$/learntree.py" afterPath="$PROJECT_DIR$/learntree.py" />
+      <change beforePath="$PROJECT_DIR$/vksearch.py" afterPath="$PROJECT_DIR$/vksearch.py" />
+      <change beforePath="$PROJECT_DIR$/Заметки.docx" afterPath="$PROJECT_DIR$/Заметки.docx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +50,8 @@
       <file leaf-file-name="learntree.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learntree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="417" column="17" lean-forward="false" selection-start-line="417" selection-start-column="17" selection-end-line="417" selection-end-column="17" />
+            <state relative-caret-position="-104">
+              <caret line="381" column="0" lean-forward="true" selection-start-line="381" selection-start-column="0" selection-end-line="381" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -80,12 +82,19 @@
       <file leaf-file-name="vksearch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vksearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="553" column="0" lean-forward="false" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
+            <state relative-caret-position="460">
+              <caret line="631" column="38" lean-forward="false" selection-start-line="620" selection-start-column="4" selection-end-line="631" selection-end-column="38" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1530011030828" expanded="false" signature="301:2799" ph="..." />
-                <marker date="1530011030828" expanded="false" signature="2800:3491" ph="..." />
+                <element signature="e#301#1113#1" expanded="false" />
+                <element signature="e#1115#1420#1" expanded="false" />
+                <element signature="e#1422#2392#1" expanded="false" />
+                <element signature="e#2394#2799#1" expanded="false" />
+                <element signature="e#2800#2822#0" expanded="false" />
+                <element signature="e#3026#3273#0" expanded="false" />
+                <element signature="e#3315#3489#0" expanded="false" />
+                <marker date="1530074958291" expanded="true" signature="301:2799" ph="..." />
+                <marker date="1530074958291" expanded="true" signature="2800:3491" ph="..." />
               </folding>
             </state>
           </provider>
@@ -102,9 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>418103</find>
-      <find>hel</find>
-      <find>паух</find>
       <find>topnav</find>
       <find>nav</find>
       <find>text</find>
@@ -132,6 +138,9 @@
       <find>get_top</find>
       <find>json</find>
       <find>upda</find>
+      <find>гумани</find>
+      <find>эконом</find>
+      <find>q</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,10 +173,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="260" />
+    <option name="y" value="-27" />
+    <option name="width" value="974" />
+    <option name="height" value="515" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -388,16 +397,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15938166" sideWeight="0.58441556" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22617246" sideWeight="0.58441556" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35069445" sideWeight="0.5275081" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35543478" sideWeight="0.47249192" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20230263" sideWeight="0.47249192" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35300925" sideWeight="0.48335856" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19822006" sideWeight="0.41558442" order="2" side_tool="true" content_ui="tabs" />
@@ -748,14 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flaskapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv1/Lib/site-packages/sklearn/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -791,22 +793,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flaskapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vksearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="553" column="0" lean-forward="false" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
+        <state relative-caret-position="460">
+          <caret line="631" column="38" lean-forward="false" selection-start-line="620" selection-start-column="4" selection-end-line="631" selection-end-column="38" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1530011030828" expanded="false" signature="301:2799" ph="..." />
-            <marker date="1530011030828" expanded="false" signature="2800:3491" ph="..." />
+            <element signature="e#301#1113#1" expanded="false" />
+            <element signature="e#1115#1420#1" expanded="false" />
+            <element signature="e#1422#2392#1" expanded="false" />
+            <element signature="e#2394#2799#1" expanded="false" />
+            <element signature="e#2800#2822#0" expanded="false" />
+            <element signature="e#3026#3273#0" expanded="false" />
+            <element signature="e#3315#3489#0" expanded="false" />
+            <marker date="1530074958291" expanded="true" signature="301:2799" ph="..." />
+            <marker date="1530074958291" expanded="true" signature="2800:3491" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learntree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="417" column="17" lean-forward="false" selection-start-line="417" selection-start-column="17" selection-end-line="417" selection-end-column="17" />
+        <state relative-caret-position="-104">
+          <caret line="381" column="0" lean-forward="true" selection-start-line="381" selection-start-column="0" selection-end-line="381" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

@@ -533,6 +533,9 @@ def program(audios):
         except:
             print("факультет упал")
 
+
+
+
     def getTegLast():
         try:
             cur.execute("SELECT idmusicbandnew,namemusicbandnew FROM newmusicband order by namemusicbandnew")
