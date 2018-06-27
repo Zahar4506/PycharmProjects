@@ -207,7 +207,7 @@ def tableLearn(categ):
     dfaALL = np.zeros((len(musicband)+1,), dtype=np.uint8)
     dfaUser = np.zeros((len(users)), dtype=np.uint32)
     for indexU, j in enumerate(users):
-        dfa = np.zeros((len(musicband) + 1), dtype=np.uint8)
+        dfa = np.zeros((len(musicband) + 2), dtype=np.uint32)
         try:
             cur.execute("SELECT idclear FROM vkuser_clearmusicbandnew WHERE idvkuser = "+str(j[0])+" order by idclear")
             svaz = cur.fetchall()
@@ -235,7 +235,8 @@ def tableLearn(categ):
             print("НУЛИ//////////////////////////////////////////////////////////////////")
             continue
         dfa[len(musicband)] = category[0][0]
-        print(j[0])
+        dfa[len(musicband)+1] = j[0]
+        print(j[0], 'didididididididididididididididididididididididididididdidi')
         dfaUser[indexU] = j[0]
         # print(dfaUser)
         # print("ТАБЛИЦА\n", dfaALL)
@@ -326,8 +327,8 @@ def treeLearn(param, trees):
 
         ndf = df.as_matrix()
         print(ndf)
-        n = np.sum(ndf[:,:-1],axis=1)
-        print(np.sum(ndf[:,:-1],axis=1))
+        n = np.sum(ndf[:,:-2],axis=1)
+        print(np.sum(ndf[:,:-2],axis=1))
         deletSum = []
         for index, o in enumerate(n):
             if o < 10:
@@ -374,13 +375,12 @@ def treeLearn(param, trees):
         print(q)
         df = df.astype(int)
         print("РОБИТ?\n", df)
-        X = df.values[:, 1:q]
-        Y = df.values[:, q]
+        X = df.values[:, 1:q-1]
+        Y = df.values[:, q-1]
+        lastColum = df.values[:, q]
         print(X, "<<<<<<<<<<<<<<X")
         print(Y, "<<<<<<<<<<<<<<Y")
-
-
-
+        print(lastColum, "<<<<<<<")
 
         tree_params = {'max_depth': range(2, 31),'max_features': range(4, 30), 'min_samples_leaf': range(1, 30)}
         tree_grid = GridSearchCV(trees, tree_params,cv=4, n_jobs=5)
@@ -411,13 +411,19 @@ def treeLearn(param, trees):
         # print()
 
         tree_pred = trees.predict(X_test)
-        print(accuracy_score(Y_test, tree_pred), ">>>>>>>>>>>>>>> точность")
         print(f1_score(Y_test, tree_pred, average='weighted'), ">>>>>>>>>>>>>>> точность weighted")
         print(f1_score(Y_test, tree_pred, average=None), ">>>>>>>>>>>>>>> точность weighted")
-        print(recall_score(Y_test, tree_pred, average='weighted'), ">>>>>>>>>>>>>>> точность recall_score")
-        print(recall_score(Y_test, tree_pred, average=None), ">>>>>>>>>>>>>>> точность recall_score")
-        print(precision_score(Y_test, tree_pred, average='weighted'), ">>>>>>>>>>>>>>> точность precision_score")
-        print(precision_score(Y_test, tree_pred, average=None), ">>>>>>>>>>>>>>> точность precision_score")
+
+        tree_predUser = trees.predict(X)
+        print(tree_predUser)
+        print(lastColum)
+        tree_predUser = np.column_stack((lastColum,tree_predUser))
+        dfU = pd.DataFrame(tree_predUser)
+        print(dfU)
+        try:
+            dfU.to_csv('files/outputUser.csv')
+        except:
+            print("Сломалось")
 
         with open('files/treesdump.pkl', 'wb') as output_file:
             pickle.dump(trees, output_file)
@@ -499,18 +505,18 @@ cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 def main():
     # запрос на апдейт факультетеов
-    try:
-        cur.execute("SELECT facultyid, name FROM faculty ORDER BY name")
-        results = cur.fetchall()
-        print(results)
-        categoryFaculty(results)
-    except psycopg2.DatabaseError as e:
-        if conn:
-            conn.rollback()
-        print('Error %s' % e)
-        print("ЧТО то пошло не так")
+    # try:
+    #     cur.execute("SELECT facultyid, name FROM faculty ORDER BY name")
+    #     results = cur.fetchall()
+    #     print(results)
+    #     categoryFaculty(results)
+    # except psycopg2.DatabaseError as e:
+    #     if conn:
+    #         conn.rollback()
+    #     print('Error %s' % e)
+    #     print("ЧТО то пошло не так")
 
-    # tableLearn(0)
+    tableLearn(0)
     trees = tree.DecisionTreeClassifier(max_depth=30)
     treeLearn(True, trees)
 

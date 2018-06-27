@@ -3,6 +3,21 @@
     background-color: #01284B;
     color: #E1E6FA;
 }*/
+
+.myTable{
+text-align: center;
+border: 2px solid white;
+width: 600px;
+border-collapse: collapse;
+background-color: #3b3b3b;
+border-collapse: separate; border-spacing: 10px;
+empty-cells: hide;
+margin: auto;
+}
+
+
+
+.center { text-align: center;}
 body {
     font-family: 'Ubuntu Condensed', sans-serif;
     background-color: #01284B;

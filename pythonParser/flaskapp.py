@@ -44,11 +44,13 @@ def search():
         print("Не удалось подключиться к БД")
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
-    df = pd.read_csv('files/output3User.csv')
+    df = pd.read_csv('files/outputUser.csv')
+    print(df)
     df.drop(df.columns[[0]], axis=1, inplace=True)
-    print(df.size)
+    print(df.shape[0])
+    print(df)
     a = []
-    for i in range(df.size):
+    for i in range(df.shape[0]):
         a.append(df.values[i])
     userL = []
     userF = []
@@ -68,9 +70,9 @@ def search():
     print(userL)
     df.loc[:, 'Fname'] = pd.Series(userF)
     df.loc[:, 'Lname'] = pd.Series(userL)
-    df.columns = ['ID пользователя',"Имя","Фамилия"]
+    df.columns = ['ID пользователя',"Класс","Имя","Фамилия"]
     df.head()
-    return render_template("search.html", massage='Ранее собранные данные', id=HTML(df.to_html(max_rows=50)))
+    return render_template("search.html", massage='Ранее собранные данные', id=HTML(df.to_html(max_rows=None,classes='myTable', justify='center')))
 
 def pup(audio):
     subprocess.Popen(vksearch.program(audio))
