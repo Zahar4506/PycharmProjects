@@ -5,7 +5,7 @@ from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
 import psycopg2
 from IPython.core.display import HTML
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from multiprocessing import Process
 from werkzeug.utils import secure_filename
 import json
@@ -16,7 +16,11 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def hello():
-    return render_template("home.html", massage = 'Добро пожаловать!')\
+    return render_template("home.html", massage = 'Добро пожаловать!')
+
+@app.route("/showTree")
+def showTree():
+    return render_template("search.html", tree='files/iris.pdf')
 
 @app.route("/about")
 def about():

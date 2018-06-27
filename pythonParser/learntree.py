@@ -432,7 +432,7 @@ def treeLearn(param, trees):
             dot_data = tree.export_graphviz(trees, out_file=None, rounded=True, filled=True)
             graph = pydotplus.graph_from_dot_data(dot_data)
             graph = graphviz.Source(dot_data)
-            graph.render("files/iris")
+            graph.render("static/trees")
         except:
             print("рисование дерево не получилось")
 
