@@ -516,7 +516,7 @@ def main():
     #     print('Error %s' % e)
     #     print("ЧТО то пошло не так")
 
-    tableLearn(0)
+    # tableLearn(0)
     trees = tree.DecisionTreeClassifier(max_depth=30)
     treeLearn(True, trees)
 

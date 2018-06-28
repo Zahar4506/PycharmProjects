@@ -5,8 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="653bd926-2dc1-413f-b2b0-56471bf4e3f5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/files/musicbanddump.pkl" afterPath="$PROJECT_DIR$/files/musicbanddump.pkl" />
+      <change beforePath="$PROJECT_DIR$/files/output12.csv" afterPath="$PROJECT_DIR$/files/output12.csv" />
       <change beforePath="$PROJECT_DIR$/files/output6.csv" afterPath="$PROJECT_DIR$/files/output6.csv" />
       <change beforePath="$PROJECT_DIR$/files/output6User.csv" afterPath="$PROJECT_DIR$/files/output6User.csv" />
+      <change beforePath="$PROJECT_DIR$/files/outputUser.csv" afterPath="$PROJECT_DIR$/files/outputUser.csv" />
+      <change beforePath="$PROJECT_DIR$/files/treesdump.pkl" afterPath="$PROJECT_DIR$/files/treesdump.pkl" />
+      <change beforePath="$PROJECT_DIR$/learntree.py" afterPath="$PROJECT_DIR$/learntree.py" />
+      <change beforePath="$PROJECT_DIR$/static/trees" afterPath="$PROJECT_DIR$/static/trees" />
+      <change beforePath="$PROJECT_DIR$/static/trees.pdf" afterPath="$PROJECT_DIR$/static/trees.pdf" />
+      <change beforePath="$PROJECT_DIR$/~WRL0234.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL0235.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL0268.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL0550.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL0964.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL0977.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL1042.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL1113.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL1347.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL1415.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL1600.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL1742.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL2621.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL2967.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL3020.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL3026.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL3137.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL3598.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL3779.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL3830.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL3962.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/~WRL4059.tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Заметки.docx" afterPath="$PROJECT_DIR$/Заметки.docx" />
+      <change beforePath="$PROJECT_DIR$/Рецензия.docx" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="learntree.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="learntree.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learntree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="496" column="0" lean-forward="false" selection-start-line="464" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
+            <state relative-caret-position="387">
+              <caret line="521" column="0" lean-forward="false" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -76,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vksearch.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vksearch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vksearch.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="236">
@@ -136,8 +167,8 @@
       <find>q</find>
       <find>iris</find>
       <find>didididididididididididididididididididididididididididdid</find>
-      <find>эконом</find>
       <find>vs</find>
+      <find>эконом</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,19 +192,19 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/iris_df.csv" />
         <option value="$PROJECT_DIR$/vksearch.py" />
-        <option value="$PROJECT_DIR$/learntree.py" />
         <option value="$PROJECT_DIR$/templates/search.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/flaskapp.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/learntree.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="1715" />
+    <option name="y" value="25" />
+    <option name="width" value="974" />
+    <option name="height" value="515" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -394,16 +425,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1296" height="1000" extended-state="7" />
+    <frame x="1715" y="25" width="974" height="515" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24190938" sideWeight="0.58441556" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32713348" sideWeight="0.58441556" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35069445" sideWeight="0.5275081" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33217594" sideWeight="0.47249192" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7572559" sideWeight="0.47249192" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35300925" sideWeight="0.48335856" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19822006" sideWeight="0.41558442" order="2" side_tool="true" content_ui="tabs" />
@@ -802,16 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learntree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="496" column="0" lean-forward="false" selection-start-line="464" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vksearch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -827,6 +848,16 @@
             <element signature="e#3315#3489#0" expanded="false" />
             <marker date="1530074958291" expanded="true" signature="301:2799" ph="..." />
             <marker date="1530074958291" expanded="true" signature="2800:3491" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learntree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="521" column="0" lean-forward="false" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
