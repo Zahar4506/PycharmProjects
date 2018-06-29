@@ -2444,3 +2444,17 @@ JavaScript error: https://www.facebook.com/rsrc.php/v3iyCH4/y3/l/ru_RU/SwpSAFMax
 [Child 10040, C
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1530290513960	geckodriver	INFO	geckodriver 0.19.1
+1530290513995	geckodriver	INFO	Listening on 127.0.0.1:3603
+1530290514299	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.kC343KmXnOMG"
+1530290552752	geckodriver	INFO	geckodriver 0.19.1
+1530290552760	geckodriver	INFO	Listening on 127.0.0.1:3631
+1530290553306	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.ntjJYzk21fNA"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530290556745	Marionette	INFO	Listening on port 3636
+1530290557543	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]

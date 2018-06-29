@@ -22,10 +22,15 @@ def hello():
 def showTree():
     return render_template("search.html", tree='files/iris.pdf')
 
+@app.route("/update")
+def updateBase():
+    return render_template("update.html", massage = 'Страница обновления')
+
 @app.route("/about")
 def about():
     return render_template("about.html", massage = 'Добро пожаловать!')
 
+#Пусть для скачивания файлов
 UPLOAD_FOLDER = r'D:\uploadfile'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 #допустимые расширения файлов
@@ -43,6 +48,10 @@ def search():
     except:
         print("Не удалось подключиться к БД")
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    dfa = pd.read_csv('files/mera.csv')
+    dfa.drop(dfa.columns[[0]], axis=1, inplace=True)
+    dfa.columns = ['Accuracy', "F-мера(гум.)", "F-мера(тех.)"]
+    dfa.head()
 
     df = pd.read_csv('files/outputUser.csv')
     print(df)
@@ -72,12 +81,10 @@ def search():
     df.loc[:, 'Lname'] = pd.Series(userL)
     df.columns = ['ID пользователя',"Класс","Имя","Фамилия"]
     df.head()
-    return render_template("search.html", massage='Ранее собранные данные', id=HTML(df.to_html(max_rows=None,classes='myTable', justify='center')))
+    return render_template("search.html", massage='Ранее собранные данные', id=HTML(df.to_html(max_rows=None,classes='myTable', justify='center')), mera=HTML(dfa.to_html(max_rows=None,classes='myTable', justify='center')))
 
-def pup(audio):
-    subprocess.Popen(vksearch.program(audio))
 
-@app.route("/uploadfile/", methods=['POST'])
+@app.route("/uploadfile0/", methods=['POST'])
 def upload_file():
     try:
         if request.method == 'POST':
@@ -94,25 +101,17 @@ def upload_file():
             try:
                 with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'r', encoding='utf-8') as f:
                     str = f.read()
+                    print("итерация")
+                    print(str)
                     print(json.dumps(str))
                     print(json.loads(str))
                     audio = json.loads(str)
-                    print(str)
-                    print(audio)
                     f.close()
                 print('START')
-
-                #pup(audio)
-
                 with ThreadPoolExecutor(max_workers=2) as executor:
-                    executor.submit(vksearch.program(audio), ())
-
-                # p = Process(target=vksearch.program(audio))
-                # p.start()
-                # p.join()
+                    executor.submit(vksearch.program(audio, 0), ())
 
                 return render_template("search.html", massage='Расчеты произведены!')
-
             except Exception as e:
                 print(e, ' <<<<<error')
                 print('Загрузка файла не удалась')
@@ -123,6 +122,43 @@ def upload_file():
         print('лажа')
         return render_template("home.html", massage = 'Загрузка файла провалилась')
 
+@app.route("/uploadfile1/", methods=['POST'])
+def upload_file():
+    try:
+        if request.method == 'POST':
+            f = request.files['filename']
+            print(allowed_file(f.filename), '<<<<')
+            print(f and allowed_file(f.filename), '>>>>>')
+            if f and allowed_file(f.filename):
+                filename = secure_filename(f.filename)
+                print('работает')
+                print(filename)
+                f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            else:
+                return render_template("home.html", massage = 'Неверное расширение файла')
+            try:
+                with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'r', encoding='utf-8') as f:
+                    str = f.read()
+                    print("итерация")
+                    print(str)
+                    print(json.dumps(str))
+                    print(json.loads(str))
+                    audio = json.loads(str)
+                    f.close()
+                print('START')
+                with ThreadPoolExecutor(max_workers=2) as executor:
+                    executor.submit(vksearch.program(audio, 1), ())
+
+                return render_template("search.html", massage='Расчеты произведены!')
+            except Exception as e:
+                print(e, ' <<<<<error')
+                print('Загрузка файла не удалась')
+                f.close()
+                return render_template("home.html", massage='Загрузка файла провалилась')
+    except:
+        f = None
+        print('лажа')
+        return render_template("home.html", massage = 'Загрузка файла провалилась')
 
 @app.errorhandler(404)
 def page_not_found(e):

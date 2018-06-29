@@ -2,7 +2,8 @@
 {% extends "base.html" %}
 {% block content %}
         <div class="welcome">
-
+            {{mera}}
+            <br>
             <h1>Дерево принятия решений</h1>
              <iframe src="{{ url_for('static', filename='trees.pdf') }} "
                 style="width: 1000px; height: 600px;" frameborder="0">Ваш браузер не поддерживает фреймы</iframe>

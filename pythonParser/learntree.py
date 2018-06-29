@@ -29,7 +29,7 @@ from sklearn.model_selection import GridSearchCV, cross_val_score
 # 5-ИТСИТ
 
 dumpfile = None
-
+catLern = True
 # def tableLearn(categ):
 #     try:
 #         conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
@@ -234,7 +234,10 @@ def tableLearn(categ):
         if summaDrop == 0:
             print("НУЛИ//////////////////////////////////////////////////////////////////")
             continue
-        dfa[len(musicband)] = category[0][0]
+        if categ == 0:
+            dfa[len(musicband)] = category[0][0]
+        else:
+            dfa[len(musicband)] = 3
         dfa[len(musicband)+1] = j[0]
         print(j[0], 'didididididididididididididididididididididididididididdidi')
         dfaUser[indexU] = j[0]
@@ -325,51 +328,46 @@ def treeLearn(param, trees):
         del mylist
         # print(df.sum(axis=1))
 
-        ndf = df.as_matrix()
-        print(ndf)
-        n = np.sum(ndf[:,:-2],axis=1)
-        print(np.sum(ndf[:,:-2],axis=1))
-        deletSum = []
-        for index, o in enumerate(n):
-            if o < 10:
-                print(o)
-                deletSum.append(index)
-        print(deletSum,'delsum')
-        ndf = np.delete(ndf, deletSum, axis=0)
-        print(ndf, ndf.shape)
-        deletSum.clear()
-        c1 = 0
-        c2 = 0
-        c11 = 0
-        c22 = 0
-        np.random.shuffle(ndf)
-        print(ndf)
-        catdf = ndf[:, ndf.shape[1] - 1]
-        print(catdf)
-        for index, o in enumerate(catdf):
-            if o == 1:
-                if c11 != 442:
-                    c1+=1
-                    c11+=1
-                else:
-                    deletSum.append(index)
-            else:
-                if c22 != 442:
-                    c2+=1
-                    c22+=1
-                else:
-                    deletSum.append(index)
-        print(deletSum)
-        ndf = np.delete(ndf, deletSum, axis=0)
-        print(ndf, ndf.shape)
-        print(c1,c2)
+        # ndf = df.as_matrix()
+        # print(ndf)
+        # n = np.sum(ndf[:,:-2],axis=1)
+        # print(np.sum(ndf[:,:-2],axis=1))
+        # deletSum = []
+        # for index, o in enumerate(n):
+        #     if o < 10:
+        #         print(o)
+        #         deletSum.append(index)
+        # print(deletSum,'delsum')
+        # ndf = np.delete(ndf, deletSum, axis=0)
+        # print(ndf, ndf.shape)
+        # deletSum.clear()
+        # c1 = 0
+        # c2 = 0
+        # c11 = 0
+        # c22 = 0
+        # np.random.shuffle(ndf)
+        # print(ndf)
+        # catdf = ndf[:, ndf.shape[1] - 1]
+        # print(catdf)
+        # for index, o in enumerate(catdf):
+        #     if o == 1:
+        #         if c11 != 442:
+        #             c1+=1
+        #             c11+=1
+        #         else:
+        #             deletSum.append(index)
+        #     else:
+        #         if c22 != 442:
+        #             c2+=1
+        #             c22+=1
+        #         else:
+        #             deletSum.append(index)
+        # print(deletSum)
+        # ndf = np.delete(ndf, deletSum, axis=0)
+        # print(ndf, ndf.shape)
+        # print(c1,c2)
 
-        dfa = pd.DataFrame(ndf)
-
-        # print(df.shape,'shape')
-        # print(df.iloc[0], 'iloc')
-        # print(df.iloc[1], 'iloc')
-        # print(df.index[0],'index')
+        # dfa = pd.DataFrame(ndf)
 
         q = len(df.columns) - 1
         print(q)
@@ -382,8 +380,6 @@ def treeLearn(param, trees):
         print(Y, "<<<<<<<<<<<<<<Y")
         print(lastColum, "<<<<<<<")
 
-        tree_params = {'max_depth': range(2, 31),'max_features': range(4, 30), 'min_samples_leaf': range(1, 30)}
-        tree_grid = GridSearchCV(trees, tree_params,cv=4, n_jobs=5)
 
 
         kf = KFold(n_splits=5,shuffle=True)
@@ -393,26 +389,16 @@ def treeLearn(param, trees):
             X_train, X_test = X[train_index], X[test_index]
             Y_train, Y_test = Y[train_index], Y[test_index]
 
-        # tree_grid.fit(X_train, Y_train)
-        # print(tree_grid.best_params_, '<<параметры ', tree_grid.best_score_, " <<лучшее значение")
+
 
         trees.fit(X_train, Y_train)
         print(trees.score(X_test,Y_test)," <<<<<<<<<<<< точность совпадений")
 
-        # trees_pred = tree_grid.predict(X_test)
-        #
-        # print(accuracy_score(Y_test, trees_pred), ">>>>>>>>>>>>>>> точность")
-        # print(f1_score(Y_test, trees_pred, average='weighted'), ">>>>>>>>>>>>>>> точность weighted")
-        # print(f1_score(Y_test, trees_pred, average=None), ">>>>>>>>>>>>>>> точность weighted")
-        # print(recall_score(Y_test, trees_pred, average='weighted'), ">>>>>>>>>>>>>>> точность recall_score")
-        # print(recall_score(Y_test, trees_pred, average=None), ">>>>>>>>>>>>>>> точность recall_score")
-        # print(precision_score(Y_test, trees_pred, average='weighted'), ">>>>>>>>>>>>>>> точность precision_score")
-        # print(precision_score(Y_test, trees_pred, average=None), ">>>>>>>>>>>>>>> точность precision_score")
-        # print()
-
         tree_pred = trees.predict(X_test)
         print(f1_score(Y_test, tree_pred, average='weighted'), ">>>>>>>>>>>>>>> точность weighted")
         print(f1_score(Y_test, tree_pred, average=None), ">>>>>>>>>>>>>>> точность weighted")
+        f_mera = f1_score(Y_test, tree_pred, average=None)
+        accuracu = trees.score(X_test,Y_test)
 
         tree_predUser = trees.predict(X)
         print(tree_predUser)
@@ -424,6 +410,18 @@ def treeLearn(param, trees):
             dfU.to_csv('files/outputUser.csv')
         except:
             print("Сломалось")
+        #Блок для вывода точности меры
+        a = accuracu
+        b = f_mera[0]
+        c = f_mera[1]
+        out = np.column_stack((a,b))
+        out = np.column_stack((out,c))
+        dfaMera = pd.DataFrame(out)
+        try:
+            dfaMera.to_csv('files/mera.csv')
+        except:
+            print("Сломалось")
+        # конец блока
 
         with open('files/treesdump.pkl', 'wb') as output_file:
             pickle.dump(trees, output_file)
@@ -443,65 +441,55 @@ def treeLearn(param, trees):
             print("рисование дерево не получилось")
 
 
-
-
     else:
         with open('files/treesdump.pkl', 'rb') as output_file:
             trees1 = pickle.load(output_file)
-        df = pd.read_csv('files/output2.csv', dtype='uint32', low_memory=False)
+
+        mylist = []
+        for chunk in pd.read_csv('files/output12.csv', chunksize=100, dtype='uint32', low_memory=False):
+            mylist.append(chunk)
+            print(mylist)
+
+        df = pd.concat(mylist, axis=0)
+        print(df)
+        del mylist
+
         q = len(df.columns) - 1
         print(q)
         df = df.astype(int)
         print("РОБИТ?\n", df)
-        X = df.values[:, 1:q]
-        Y = df.values[:, q]
+        X = df.values[:, 1:q - 1]
+        Y = df.values[:, q - 1]
+        lastColum = df.values[:, q]
         print(X, "<<<<<<<<<<<<<<X")
         print(Y, "<<<<<<<<<<<<<<Y")
+        print(lastColum, "<<<<<<<")
         trees1.predict(X)
         print(trees1.predict(X), "------------------ пробуем")
 
+        tree_predUser = trees1.predict(X)
+        print(tree_predUser)
+        print(lastColum)
+        tree_predUser = np.column_stack((lastColum, tree_predUser))
+        dfU = pd.DataFrame(tree_predUser)
+        print(dfU)
+        try:
+            dfU.to_csv('files/outputUser.csv')
+        except:
+            print("Сломалось")
+
+
 # tableLearn(0)
 
-def categoryFaculty(faculty):
-    try:
-        print(faculty)
-        for j in faculty:
-            j[1] = j[1].upper()
-            print(j[0], j[1])
-            if j[1].find('ЖУРНА') > -1 or j[1].find('УПРАВЕНИЕ') > -1 or j[1].find('СОЦ') > -1 or j[1].find(
-                    'ФИЛОЛ') > -1 or j[1].find('ЯЗЫК') > -1 or j[1].find('СПОРТ') > -1 or j[1].find('ТУРИЗ') > -1 or \
-                    j[1].find('ДИЗАЙ') > -1 or j[1].find('МУНИЦ') > -1 or j[1].find('ГУМАН') > -1 or j[1].find(
-                'ВОКАЛ') > -1 or j[1].find('ПСИХО') > -1 or j[1].find('ПЕДАГ') > -1 or j[1].find(
-                'ФИЗИЧЕСКОЙ') > -1 or j[1].find('РУССК') > -1 or j[1].find('ЛИТЕРАТ') > -1 or j[1].find('МЕНЕДЖ') > -1 or j[1].find('ФИНАН') > -1 or j[1].find('ЭКОНОМ') > -1 or j[1].find('ПРАВО') > -1 or j[1].find('ЮРИД') > -1 or j[1].find('ПРАВА') > -1 or j[1].find(
-                    'АРБИТ') > -1 or j[1].find('АДВОКА') > -1 or j[1].find('УГОЛОВ') > -1 or j[1].find(
-                'ФИЛОС') > -1 or j[1].find('ИСТОР') > -1 or j[1].find('ЮРИС') > -1:
-                print(j[1], "<========Гуманитарный")
-                cur.execute("UPDATE faculty SET category = '1' WHERE facultyid ='" + str(j[0]) + "'")
 
-
-            elif j[1].find('БИОЛ') > -1 or j[1].find('ЕСТЕСТ') > -1 or j[1].find('ГЕОЛ') > -1 or j[1].find(
-                    'НЕФТ') > -1 or j[1].find('ГАЗА') > -1 or j[1].find('БУРЕ') > -1 or j[1].find('АВТОМ') > -1 or \
-                    j[1].find('ХИМИ') > -1 or j[1].find('ЭКОЛО') > -1 or j[1].find('ПРИРОДО') > -1 or j[1].find(
-                'ЭНЕРГЕ') > -1 or j[1].find('НЕФТЕ') > -1 or j[1].find('МАТЕМ') > -1 or j[1].find('ТЕХН') > -1 or j[1].find('ЭЛЕКТ') > -1 or j[1].find(
-                    'СИСТЕМ') > -1 or j[1].find('ВЫЧИСЛИ') > -1 or j[1].find('ИНЖЕН') > -1 or j[1].find(
-                'ИНФОРМ') > -1 or j[1].find('МОДЕЛИ') > -1 or j[1].find('СТРОИТ') > -1 or j[1].find(
-                'ФИЗИК') > -1 or j[1].find('ТЕХНИЧ') > -1 or j[1].find('ТЕХНОЛОГ') > -1 or j[1].find('ТРАНСПОРТ') > -1:
-                print(j[1], "<========Техники")
-                cur.execute("UPDATE faculty SET category = '2' WHERE facultyid ='" + str(j[0]) + "'")
-            else:
-                print('Неизвестное сочетание')
-                cur.execute("UPDATE faculty SET category = '0' WHERE facultyid ='" + str(j[0]) + "'")
-        conn.commit()
-    except:
-        print("факультет упал")
-
-try:
-    conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
-    print("connect OK")
-except:
-    print("Не удалось подключиться к БД")
-# Создаем курсор для работы
-cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+#
+# try:
+#     conn = psycopg2.connect("dbname='vk' user='postgres' host='127.0.0.1' password='1'")
+#     print("connect OK")
+# except:
+#     print("Не удалось подключиться к БД")
+# # Создаем курсор для работы
+# cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 def main():
     # запрос на апдейт факультетеов
@@ -517,8 +505,9 @@ def main():
     #     print("ЧТО то пошло не так")
 
     # tableLearn(0)
+
     trees = tree.DecisionTreeClassifier(max_depth=30)
-    treeLearn(True, trees)
+    # treeLearn(True, trees)
 
 # with open('files/treesdump.pkl', 'rb') as output_file:
 #     trees1 = pickle.load(output_file)
