@@ -85,7 +85,7 @@ def search():
 
 
 @app.route("/uploadfile0/", methods=['POST'])
-def upload_file():
+def upload_file0():
     try:
         if request.method == 'POST':
             f = request.files['filename']
@@ -123,7 +123,7 @@ def upload_file():
         return render_template("home.html", massage = 'Загрузка файла провалилась')
 
 @app.route("/uploadfile1/", methods=['POST'])
-def upload_file():
+def upload_file1():
     try:
         if request.method == 'POST':
             f = request.files['filename']

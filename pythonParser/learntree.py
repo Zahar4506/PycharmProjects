@@ -507,6 +507,7 @@ def main():
     # tableLearn(0)
 
     trees = tree.DecisionTreeClassifier(max_depth=30)
+    print("файл обучения")
     # treeLearn(True, trees)
 
 # with open('files/treesdump.pkl', 'rb') as output_file:

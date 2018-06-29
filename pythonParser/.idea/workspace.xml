@@ -33,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="flaskapp.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="flaskapp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flaskapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="149" column="61" lean-forward="false" selection-start-line="149" selection-start-column="61" selection-end-line="149" selection-end-column="61" />
+            <state relative-caret-position="289">
+              <caret line="125" column="16" lean-forward="false" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -78,8 +78,8 @@
       <file leaf-file-name="learntree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learntree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4053">
-              <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+            <state relative-caret-position="418">
+              <caret line="509" column="24" lean-forward="false" selection-start-line="509" selection-start-column="24" selection-end-line="509" selection-end-column="24" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#16197#16211#0" expanded="false" />
@@ -114,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vksearch.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vksearch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vksearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5979">
-              <caret line="941" column="25" lean-forward="false" selection-start-line="941" selection-start-column="25" selection-end-line="941" selection-end-column="25" />
+            <state relative-caret-position="-4748">
+              <caret line="519" column="120" lean-forward="false" selection-start-line="519" selection-start-column="120" selection-end-line="519" selection-end-column="120" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#348#1160#1" expanded="false" />
@@ -176,8 +176,8 @@
       <find>category</find>
       <find>uploadfile</find>
       <find>upload_File</find>
-      <find>uploadTrigger</find>
       <find>uploadt</find>
+      <find>uploadTrigger</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,10 +202,10 @@
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/search.html" />
-        <option value="$PROJECT_DIR$/learntree.py" />
         <option value="$PROJECT_DIR$/vksearch.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/update.html" />
+        <option value="$PROJECT_DIR$/learntree.py" />
         <option value="$PROJECT_DIR$/flaskapp.py" />
       </list>
     </option>
@@ -302,7 +302,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.learntree">
+  <component name="RunManager" selected="Python.flaskapp">
     <configuration name="flask" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -402,8 +402,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.learntree" />
-        <item index="1" class="java.lang.String" itemvalue="Python.flaskapp" />
+        <item index="0" class="java.lang.String" itemvalue="Python.flaskapp" />
+        <item index="1" class="java.lang.String" itemvalue="Python.learntree" />
         <item index="2" class="java.lang.String" itemvalue="Python.vksearch" />
         <item index="3" class="java.lang.String" itemvalue="Python.flask" />
       </list>
@@ -799,14 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -835,8 +827,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/learntree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4053">
-          <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+        <state relative-caret-position="418">
+          <caret line="509" column="24" lean-forward="false" selection-start-line="509" selection-start-column="24" selection-end-line="509" selection-end-column="24" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#16197#16211#0" expanded="false" />
@@ -848,20 +840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flaskapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="149" column="61" lean-forward="false" selection-start-line="149" selection-start-column="61" selection-end-line="149" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vksearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5979">
-          <caret line="941" column="25" lean-forward="false" selection-start-line="941" selection-start-column="25" selection-end-line="941" selection-end-column="25" />
+        <state relative-caret-position="-4748">
+          <caret line="519" column="120" lean-forward="false" selection-start-line="519" selection-start-column="120" selection-end-line="519" selection-end-column="120" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#348#1160#1" expanded="false" />
@@ -875,6 +857,24 @@
             <element signature="e#31106#31120#0" expanded="false" />
             <marker date="1530293734773" expanded="true" signature="348:2846" ph="..." />
             <marker date="1530293734773" expanded="true" signature="2847:3538" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="125" column="16" lean-forward="false" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
