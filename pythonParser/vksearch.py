@@ -156,8 +156,8 @@ def program(audios, catUser):
     def setFaculty(university, facultyid, faculty_name):
         print("старт факультета")
         try:
-            session = vk.Session(
-                access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
+           # session = vk.Session(access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
+            session = vk.Session(access_token='3f22f6d0446550bd8a06506fe0a87fc5567ac42babceab99ea5fda188f1d0061a66a0924fff42898742e4')
             vk_api = vk.API(session, v='5.71')
             print(university != 6666666, "универ равен 6666666?")
             print(university, "универ")
@@ -224,8 +224,8 @@ def program(audios, catUser):
     def setCity(cityid):
         print("старт сити")
         try:
-            session = vk.Session(
-                access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
+            # session = vk.Session(access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
+            session = vk.Session(access_token='3f22f6d0446550bd8a06506fe0a87fc5567ac42babceab99ea5fda188f1d0061a66a0924fff42898742e4')
             vk_api = vk.API(session, v='5.71')
             try:
                 cityRes = vk_api.database.getCitiesById(city_ids=cityid)
@@ -261,11 +261,11 @@ def program(audios, catUser):
     def setUserInfo(userid):
         print("старт занесения информации о пользователе")
         try:
-            session = vk.Session(
-                access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
+            # session = vk.Session(access_token='fe34dc9f0660284aa0caced7b2dbe57579a378b45f24a99ba490b124f02c90958f7b7f7df802fb7f80650')
+            session = vk.Session(access_token='3f22f6d0446550bd8a06506fe0a87fc5567ac42babceab99ea5fda188f1d0061a66a0924fff42898742e4')
             vk_api = vk.API(session, v='5.71')
             try:
-                profiles = vk_api.users.get(user_id=userid,
+                profiles = vk_api.users.get(user_id=int(userid),
                                             fields='city,connections,education,interests,sex,universities')
             except VkAPIError as e:
                 print("================VK================", e)
@@ -351,7 +351,7 @@ def program(audios, catUser):
     def setMusic(musicbandname):
         try:
             # Попожить найденную группу
-            cur.execute("INSERT INTO public.musicband(nameband) VALUES (upper('" + musicbandname + "'))")
+            cur.execute("INSERT INTO public.musicband(nameband) VALUES (upper('" + str(musicbandname) + "'))")
             conn.commit()
             print("Положил в БД группу")
         except psycopg2.DatabaseError as e:
@@ -365,7 +365,7 @@ def program(audios, catUser):
         try:
             # Попожить связку userid musicbamdname группу
             cur.execute(
-                "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('" + userid + "', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('" + musicbandname + "')))")
+                "INSERT INTO public.vkuser_musicband(vkuserid, musicbandid)	VALUES ('" + str(userid) + "', (SELECT musicbandid FROM public.musicband WHERE nameband = upper('" + str(musicbandname) + "')))")
             conn.commit()
             print("Положил")
         except psycopg2.DatabaseError as e:
@@ -379,7 +379,7 @@ def program(audios, catUser):
         try:
             # Попожить пользователя
             # TODO имя пользователя?
-            cur.execute("INSERT INTO public.vkuser (uservkid) VALUES ('" + userid + "')")
+            cur.execute("INSERT INTO public.vkuser (uservkid) VALUES ('" + str(userid) + "')")
             conn.commit()
             print("Положил пользователя")
         except psycopg2.DatabaseError as e:
@@ -390,11 +390,14 @@ def program(audios, catUser):
 
     # Функиця парсинг найденного массива музыкальных групп
     def viewMusic(array):
-        for i in range(0, len(array)):
-            setMusic(array[i].text)
-            print(i, array[i].text)
-            setUserMusic(audio, array[i].text)
-
+        for i in array:
+            try:
+                print(i.text,"---------------------------------------------------------")
+                setMusic(i.text)
+               # print(i, array[i].text)
+                setUserMusic(audio, i.text)
+            except Exception as e:
+                print("РАСПРЕДЕЛЕНИЕ CSS УПАЛО =============", e)
     # Функция очистки музыкальных исполнителей
     def cleaningMusicBand(nameband):
         try:
@@ -615,6 +618,10 @@ def program(audios, catUser):
         print("Не удалось подключиться к БД")
     # Создаем курсор для работы
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+
+
+
 
     """
     try:
@@ -838,7 +845,7 @@ def program(audios, catUser):
 
     # Разбираем список пользователей
     for audio in audios:
-        urlaudio = baseurl + 'audios' + audio
+        urlaudio = baseurl + 'audios' + str(audio)
         try:
             mydriver.get(urlaudio)
             print(urlaudio)
@@ -848,20 +855,21 @@ def program(audios, catUser):
                     mydriver.execute_script("window.scrollBy(0,1000)")
                 setUser(audio)
                 setUserInfo(audio)
-                content = mydriver.find_elements_by_css_selector('a.audio_row__performer')
+                content = mydriver.find_elements_by_css_selector('.audio_row__performers')
                 print("\nКоличество треков = ", len(content))
                 viewMusic(content)
                 print("sleep")
                 time.sleep(0.5)
             else:
-                print("Доступ к аудио закрыт id", audio)
+                print("Доступ к аудио закрыт id", str(audio))
                 continue
         except:
             print("Не удалось обратиться к url")
             continue
         print("REFRESH страницы")
         mydriver.refresh()
-
+    print("ПАУЗА")
+    time.sleep(20)
     # ---------------------------------ОЧИИСТКА ПЕРВОНАЧАЛЬНАЯ ОТ МУСОРА РЕГУЛЯРКА--------------------------------------
     try:
         cur.execute("SELECT musicbandid, nameband FROM musicband")
@@ -919,11 +927,13 @@ def program(audios, catUser):
             conn.rollback()
         print('Error %s' % e)
         print("ЧТО то пошло не так")
-
+    copyMusic()
     # Закрываем соединение с БД
     cur.close()
     conn.close()
     print("FINISH")
+
+
 
     trees = tree.DecisionTreeClassifier(max_depth=30)
     if catUser == 0:
@@ -932,6 +942,7 @@ def program(audios, catUser):
     else:
         learntree.tableLearn(1)
         learntree.treeLearn(False, trees)
+
 
 
 def main():

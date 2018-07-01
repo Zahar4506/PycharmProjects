@@ -272,6 +272,7 @@ def tableLearn(categ):
             print("ЗАПИСЬ", indexU)
             if categ == 0:
 
+
                 with open_file('files/output12.csv', 'r') as infile:
                     dfaOut.to_csv('files/output12.csv', mode='a', header=False)
 
@@ -279,8 +280,10 @@ def tableLearn(categ):
                 print("ЗАПИСАНО")
                 # f.close()
             else:
-                dfaau.to_csv('files/output1User.csv')
-                dfaOut.to_csv('files/output1.csv', mode='a')
+
+                with open_file('files/output12.csv', 'r') as infile:
+                    dfaOut.to_csv('files/output12.csv', mode='a', header=False)
+                dfaau.to_csv('files/output12User.csv')
                 print("ЗАПИСАНО 1")
         except:
             print("Упала запись в файл")
@@ -504,10 +507,11 @@ def main():
     #     print('Error %s' % e)
     #     print("ЧТО то пошло не так")
 
-    # tableLearn(0)
+    # tableLearn(1)
 
     trees = tree.DecisionTreeClassifier(max_depth=30)
     print("файл обучения")
+    # treeLearn(False, trees)
     # treeLearn(True, trees)
 
 # with open('files/treesdump.pkl', 'rb') as output_file:

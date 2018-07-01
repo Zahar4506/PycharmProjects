@@ -2458,3 +2458,592 @@ Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrp
 1530290556745	Marionette	INFO	Listening on port 3636
 1530290557543	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530294774774	geckodriver	INFO	geckodriver 0.19.1
+1530294774790	geckodriver	INFO	Listening on 127.0.0.1:3917
+1530294775173	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.zmiKRfxjcd45"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530294785284	Marionette	INFO	Listening on port 3922
+1530294786112	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+[Parent 6384, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 6384, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 8560, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7196, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 6384, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530295456730	geckodriver	INFO	geckodriver 0.19.1
+1530295456743	geckodriver	INFO	Listening on 127.0.0.1:4072
+1530295457204	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.QhrQjXAtedMi"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530295461439	Marionette	INFO	Listening on port 4077
+1530295461928	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+1530296144025	geckodriver	INFO	geckodriver 0.19.1
+1530296144032	geckodriver	INFO	Listening on 127.0.0.1:12538
+1530296144568	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.oTYqkR5j9Ou9"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530296148645	Marionette	INFO	Listening on port 12543
+1530296148809	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+[Parent 11240, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[GFX1-]: Receive IPC[GF X1-]: Receive IPC close with reason=AbnormalShutdownc
+lose with reason=AbnormalShutdown
+1530296391576	geckodriver	INFO	geckodriver 0.19.1
+1530296391587	geckodriver	INFO	Listening on 127.0.0.1:13369
+1530296392157	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.rbCMcOcR5v4u"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530296394794	Marionette	INFO	Listening on port 13374
+1530296395297	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530297340985	geckodriver	INFO	geckodriver 0.19.1
+1530297340995	geckodriver	INFO	Listening on 127.0.0.1:14925
+1530297341379	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.Ah6qozwbyPcE"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530297344981	Marionette	INFO	Listening on port 14930
+1530297345601	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530297415688	geckodriver	INFO	geckodriver 0.19.1
+1530297415698	geckodriver	INFO	Listening on 127.0.0.1:15369
+1530297416262	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.ersrdHwuRfYI"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530297418799	Marionette	INFO	Listening on port 15374
+1530297418909	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+[Parent 10864, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11588, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11588, Chrome_ChildThread] WARNING: pipe error: 109: file z:/buil[Parent 10864, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 10864, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1530298120080	geckodriver	INFO	geckodriver 0.19.1
+1530298120092	geckodriver	INFO	Listening on 127.0.0.1:16917
+1530298120570	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.kDsa6R4LVAS5"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530298124315	Marionette	INFO	Listening on port 16922
+1530298124799	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530298195810	geckodriver	INFO	geckodriver 0.19.1
+1530298195825	geckodriver	INFO	Listening on 127.0.0.1:17008
+1530298196386	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.aq8iEqjUSvL2"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530298200407	Marionette	INFO	Listening on port 17013
+1530298200669	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530298260256	geckodriver	INFO	geckodriver 0.19.1
+1530298260267	geckodriver	INFO	Listening on 127.0.0.1:17100
+1530298260829	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.nqc2he4l12oV"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530298264011	Marionette	INFO	Listening on port 17105
+1530298265045	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Child 5932, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 5932, Chrome_ChildThread] WARNING: pipe error: 109: [Parent 11240, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13236, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13236, *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530298451524	geckodriver	INFO	geckodriver 0.19.1
+1530298451535	geckodriver	INFO	Listening on 127.0.0.1:17455
+1530298452101	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.zBZHgswrhMTY"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530298454873	Marionette	INFO	Listening on port 17460
+1530298455221	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530298709683	geckodriver	INFO	geckodriver 0.19.1
+1530298709691	geckodriver	INFO	Listening on 127.0.0.1:17799
+1530298710211	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.tMdVUtPGIcU8"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530298713873	Marionette	INFO	Listening on port 17804
+1530298714429	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530299092313	geckodriver	INFO	geckodriver 0.19.1
+1530299092329	geckodriver	INFO	Listening on 127.0.0.1:17914
+1530299092843	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.T4EHjZoA1Y00"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530299096308	Marionette	INFO	Listening on port 17919
+1530299097061	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530299620588	geckodriver	INFO	geckodriver 0.19.1
+1530299620597	geckodriver	INFO	Listening on 127.0.0.1:18370
+1530299621026	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.mziWlpiXKUge"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530299625066	Marionette	INFO	Listening on port 18375
+1530299625280	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530299751295	geckodriver	INFO	geckodriver 0.19.1
+1530299751302	geckodriver	INFO	Listening on 127.0.0.1:18685
+1530299751858	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.pAPJQ4edH3gq"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530299754705	Marionette	INFO	Listening on port 18690
+1530299754977	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530299827052	geckodriver	INFO	geckodriver 0.19.1
+1530299827062	geckodriver	INFO	Listening on 127.0.0.1:18997
+1530299827627	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.GPjoBOyGg1tB"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530299830547	Marionette	INFO	Listening on port 19002
+1530299830773	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530300017269	geckodriver	INFO	geckodriver 0.19.1
+1530300017279	geckodriver	INFO	Listening on 127.0.0.1:19224
+1530300017788	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.fEH2CIGAhjzf"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530300021061	Marionette	INFO	Listening on port 19229
+1530300022003	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530300159673	geckodriver	INFO	geckodriver 0.19.1
+1530300159681	geckodriver	INFO	Listening on 127.0.0.1:19556
+1530300160248	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.sFjfSCZUVQLY"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530300163308	Marionette	INFO	Listening on port 19561
+1530300163388	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530300292633	geckodriver	INFO	geckodriver 0.19.1
+1530300292645	geckodriver	INFO	Listening on 127.0.0.1:19861
+1530300293214	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.9CsTehIX0sFN"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530300297136	Marionette	INFO	Listening on port 19866
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530300297433	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+[Parent 13220, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13220, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 13220, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12592, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12592, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/sr
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+1530300593048	geckodriver	INFO	geckodriver 0.19.1
+1530300593055	geckodriver	INFO	Listening on 127.0.0.1:21744
+1530300593613	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.c1ik7mZQxHrL"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530300596655	Marionette	INFO	Listening on port 21749
+1530300596780	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530300657517	geckodriver	INFO	geckodriver 0.19.1
+1530300657528	geckodriver	INFO	Listening on 127.0.0.1:22092
+1530300658087	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.8MyijDhUn5pN"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530300660956	Marionette	INFO	Listening on port 22097
+1530300661220	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+[Parent 12696, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8856, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530300924594	geckodriver	INFO	geckodriver 0.19.1
+1530300924610	geckodriver	INFO	Listening on 127.0.0.1:23821
+1530300924892	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.HQRyYm9QNyZp"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530300928197	Marionette	INFO	Listening on port 23826
+1530300929108	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+[Parent 7128, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 7128, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 7128, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8872, Chro[GPU 4668, Chrome_Ch
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530301084687	geckodriver	INFO	geckodriver 0.19.1
+1530301084710	geckodriver	INFO	Listening on 127.0.0.1:27705
+1530301085085	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.ukjCMdMdLw01"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301090846	Marionette	INFO	Listening on port 27710
+1530301091759	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+[Child 7316, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7316, Chro[Child 11300, Chr[Parent 3656, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11668, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11668, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ip
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530301189761	geckodriver	INFO	geckodriver 0.19.1
+1530301189768	geckodriver	INFO	Listening on 127.0.0.1:29760
+1530301190331	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.aeQojRz7jM4D"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301192922	Marionette	INFO	Listening on port 29765
+1530301192961	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+1530301258227	geckodriver	INFO	geckodriver 0.19.1
+1530301258233	geckodriver	INFO	Listening on 127.0.0.1:30098
+1530301258808	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.baryRhygkCAZ"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301261793	Marionette	INFO	Listening on port 30103
+1530301261924	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+[Child 3964, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3964, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12892, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12892, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12572, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12572, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win[GPU 9472, Chrome_ChildThread] WARNING: pipe error:
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530301400355	geckodriver	INFO	geckodriver 0.19.1
+1530301400365	geckodriver	INFO	Listening on 127.0.0.1:33387
+1530301400889	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.XNSRJhek2h3a"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301404175	Marionette	INFO	Listening on port 33392
+1530301405109	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+1530301489460	geckodriver	INFO	geckodriver 0.19.1
+1530301489470	geckodriver	INFO	Listening on 127.0.0.1:33723
+1530301490041	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.mxYAIXmetH6r"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301492972	Marionette	INFO	Listening on port 33728
+1530301493159	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+1530301613565	geckodriver	INFO	geckodriver 0.19.1
+1530301613575	geckodriver	INFO	Listening on 127.0.0.1:35475
+1530301614136	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.fNsRlNRLvjBU"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301616664	Marionette	INFO	Listening on port 35480
+1530301616763	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+[Parent 12996, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1532, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1532, Chrom[Parent 12996, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12996, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7916, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7916, Chrome_ChildThread] WARNING: pipe e[GPU 2108, Ch
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530301689747	geckodriver	INFO	geckodriver 0.19.1
+1530301689754	geckodriver	INFO	Listening on 127.0.0.1:37377
+1530301690316	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.gitCBLqjiLDD"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301693110	Marionette	INFO	Listening on port 37382
+1530301693434	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+[Parent 500, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10052, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10052, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 500, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11948, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11948, Chrome_ChildThread] WA[Parent 500, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530301820592	geckodriver	INFO	geckodriver 0.19.1
+1530301820604	geckodriver	INFO	Listening on 127.0.0.1:39797
+1530301821048	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.9OQpSkurxmv1"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301824383	Marionette	INFO	Listening on port 39802
+1530301825268	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+[Parent 10764, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4180, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4180, Chrome_ChildTh1530301979849	geckodriver	INFO	geckodriver 0.19.1
+1530301979861	geckodriver	INFO	Listening on 127.0.0.1:43362
+1530301980421	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.BbXw9jvXQvUI"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530301983381	Marionette	INFO	Listening on port 43367
+1530301983542	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3iLhy4/yp/l/ru_RU/-ziOA1lk2iX.js, line 49: Error: Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings. TAAL[2]
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+JavaScript error: https://vk.com/js/cmodules/web/common_web.js?3_79430209486, line 1: SecurityError: Permission denied to access property "_decodeEr" on cross-origin object
+JavaScript error: https://vk.com/js/al/audio.js?1008296479, line 1: TypeError: t.filter is not a function
+[Parent 216, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12264, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11856, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11856, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, lin[Parent 216, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1530369386125	geckodriver	INFO	geckodriver 0.19.1
+1530369386146	geckodriver	INFO	Listening on 127.0.0.1:48968
+1530369386308	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.j2u5H0OdenpP"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530369392385	Marionette	INFO	Listening on port 48973
+1530369393364	Marionette	WARN	TLS certificate errors will be ignored for this session
+1530369395307	geckodriver	INFO	geckodriver 0.19.1
+1530369395339	geckodriver	INFO	Listening on 127.0.0.1:49005
+1530369395978	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.Xm9OyXNgLCQv"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530369438692	geckodriver	INFO	geckodriver 0.19.1
+1530369438758	geckodriver	INFO	Listening on 127.0.0.1:49069
+1530369439388	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.nRhJgC5lKsoa"
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Zleha\AppData\Local\openvr\openvrpaths.vrpath
+1530369445797	Marionette	INFO	Listening on port 49074
+1530369446163	Marionette	WARN	TLS certificate errors will be ignored for this session
+1530369451247	geckodriver	INFO	geckodriver 0.19.1
+1530369451294	geckodriver	INFO	Listening on 127.0.0.1:49137
+1530369451908	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Zleha\\AppData\\Local\\Temp\\rust_mozprofile.k7fFvK6SxVEZ"
